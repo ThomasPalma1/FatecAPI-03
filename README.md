@@ -27,6 +27,8 @@
  
  - [Gustavo Oliveira](https://www.linkedin.com/in/gustavo-oliveira-353647207/ "Linkedin") <i>(Development Team)</i>
 
- - [Lucca Santiago Almeida](https://www.linkedin.com/in/lucca-santiago-5244bb1a1/ "Linkedin") <i>(Development Team)</i>
+ - [Lucca Almeida](https://www.linkedin.com/in/lucca-santiago-5244bb1a1/ "Linkedin") <i>(Development Team)</i>
+              
+ - [Thomas Palma](https://www.linkedin.com/in/thomas-palma-0764b81b3/ "Linkedin") <i>(Development Team)</i>    
 
- - [Sofia Laura da Silva Correa]() <i>(Development Team)</i>
+ - [Sofia Correa]() <i>(Development Team)</i>
