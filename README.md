@@ -83,6 +83,6 @@ Tecnologias | Usamos para
   </tr>
   <tr>
     <td align="center"><img style="border-radius: 50%;" src="https://github.com/ThomasPalma1/FatecAPI-03/blob/main/docs/wireframes/ion-x/Produtos.png" width="500px;" alt=""/><br /><sub><b>Produtos</b></sub></td>
-    <td align="center"><img style="border-radius: 50%;" src="https://github.com/ThomasPalma1/FatecAPI-03/blob/main/docs/wireframes/ion-x/Cadastro%20Prospect(2).png" width="500px" height="300px;" alt=""/><br /><sub><b>Cadastro de Cliente</b></sub></td>
+    <td align="center"><img style="border-radius: 50%;" src="https://github.com/ThomasPalma1/FatecAPI-03/blob/main/docs/wireframes/ion-x/Cadastro%20Prospect(2).png" width="500px";" alt=""/><br /><sub><b>Cadastro de Cliente</b></sub></td>
   </tr>
 </table>
