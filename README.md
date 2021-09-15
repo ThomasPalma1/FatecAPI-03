@@ -33,6 +33,45 @@ Com  o aumento  na  quantidade  de  clientes,  cresce  a  complexidade  de  mant
 <h2>🎯Objetivo do projeto</h2>
 Propor para IONIC health uma plataforma de gestão de relacionamento com o cliente onde será acompanhado cada detalhe da etapa do processo de venda com cada cliente fornecendo informações de forma ágil, afim de gerenciar a venda de seus produtos de forma eficiente.
        
+<h2>📑Branches de cada entrega</h2>
+
+[<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
+       <table>
+              <thead>
+                     <th width=100px>Entregas</th>
+                     <th>Descrições</th>
+                     <th width=215px>Datas</th>
+                     <th width=100px>Links</th>
+              </thead>
+              <tbody>
+                     <tr>
+                            <td>Sprint 1</td>
+                            <td><p align = "justify">Adicionar texto.</p></td>
+                            <td>Adicionar data.</td>
+                            <td><p><a href="https://github.com/roogercamargo/FatecAPI-02/tree/entrega-01"><img src="https://img.shields.io/badge/Visualizar-informational?style=for-the-badge"></a></p></td>
+                     </tr>
+                     <tr>
+                            <td>Sprint 2</td>
+                            <td><p align = "justify">Adicionar texto.</p></td>
+                            <td>Adicionar data.</td>
+                            <td><p><a href="https://github.com/roogercamargo/FatecAPI-02/tree/entrega-02"><img src="https://img.shields.io/badge/Visualizar-informational?style=for-the-badge"></a></p></td>
+                     </tr>
+                     <tr>
+                            <td>Sprint 3</td>
+                            <td><p align = "justify">Adicionar texto.</p></td>
+                            <td>Adicionar data.</td>
+                            <td><p><a href="https://github.com/roogercamargo/FatecAPI-02/tree/entrega-03"><img src="https://img.shields.io/badge/Visualizar-informational?style=for-the-badge"></a></p></td>
+                     </tr>
+                      <tr>
+                            <td>Sprint 4</td>
+                            <td><p align = "justify">Adicionar texto.</p></td>
+                            <td>Adicionar data.</td>
+                            <td><p><a href="https://github.com/roogercamargo/FatecAPI-02/tree/entrega-04"><img src="https://img.shields.io/badge/Visualizar-informational?style=for-the-badge"></a></p></td>
+                     </tr>
+              </tbody>
+       </table>
+</section>
+ 
 <h2>👥Equipe Soshiki</h2>
 
 | [Gabriel de Oliveira](https://www.linkedin.com/in/gabriel-de-oliveira-88a9461b3/ "Linkedin") | Product Owner | 
