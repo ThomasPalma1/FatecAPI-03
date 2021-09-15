@@ -47,25 +47,25 @@ Propor para IONIC health uma plataforma de gestão de relacionamento com o clien
                      <tr>
                             <td>Sprint 1</td>
                             <td><p align = "justify">Adicionar texto.</p></td>
-                            <td>Adicionar data.</td>
+                            <td>19/09/2021</td>
                             <td><p><a href="https://github.com/roogercamargo/FatecAPI-02/tree/entrega-01"><img src="https://img.shields.io/badge/Visualizar-informational?style=for-the-badge"></a></p></td>
                      </tr>
                      <tr>
                             <td>Sprint 2</td>
                             <td><p align = "justify">Adicionar texto.</p></td>
-                            <td>Adicionar data.</td>
+                            <td>10/10/2021</td>
                             <td><p><a href="https://github.com/roogercamargo/FatecAPI-02/tree/entrega-02"><img src="https://img.shields.io/badge/Visualizar-informational?style=for-the-badge"></a></p></td>
                      </tr>
                      <tr>
                             <td>Sprint 3</td>
                             <td><p align = "justify">Adicionar texto.</p></td>
-                            <td>Adicionar data.</td>
+                            <td>07/11/2021</td>
                             <td><p><a href="https://github.com/roogercamargo/FatecAPI-02/tree/entrega-03"><img src="https://img.shields.io/badge/Visualizar-informational?style=for-the-badge"></a></p></td>
                      </tr>
                       <tr>
                             <td>Sprint 4</td>
                             <td><p align = "justify">Adicionar texto.</p></td>
-                            <td>Adicionar data.</td>
+                            <td>28/11/2021</td>
                             <td><p><a href="https://github.com/roogercamargo/FatecAPI-02/tree/entrega-04"><img src="https://img.shields.io/badge/Visualizar-informational?style=for-the-badge"></a></p></td>
                      </tr>
               </tbody>
