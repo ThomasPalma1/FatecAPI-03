@@ -19,6 +19,7 @@
 <h2>📋Menu de Navegação</h2>
 
 
+       
  - [Descrição](#descrição)
  - [Objetivo do Projeto](#objetivo-do-projeto)
  - [Equipe Soshiki](#equipe-soshiki)
@@ -28,7 +29,7 @@
  - [Backlog do projeto](#backlog-do-projeto)   
        
 <h2>📜Descrição</h2>
-Com  o aumento  na  quantidade  de  clientes,  cresce  a  complexidade  de  manter  um  bom  relacionamento com todos eles. Para isso é necessário uma plataforma para melhor gerenciamento de contatos e vendas com cada um deles. A plataforma web deve realizar a organização dos contatos, a gestão de pipeline, o monitoramento e acompanhamento de clientes.Seu layout deve ser de fácil personalização, trazendo autonomia para a gestão da plataforma.
+Com  o aumento  na  quantidade  de  clientes,  cresce  a  complexidade  de  manter  um  bom  relacionamento com todos eles. Para isso é necessário uma plataforma para melhor gerenciamento de contatos e vendas com cada um deles. A plataforma web deve realizar a organização dos contatos, a gestão de pipeline, o monitoramento e acompanhamento de clientes. Seu layout deve ser de fácil personalização, trazendo autonomia para a gestão da plataforma.
 
 <h2>🎯Objetivo do projeto</h2>
 Propor para IONIC health uma plataforma de gestão de relacionamento com o cliente onde será acompanhado cada detalhe da etapa do processo de venda com cada cliente fornecendo informações de forma ágil, afim de gerenciar a venda de seus produtos de forma eficiente.
@@ -36,44 +37,45 @@ Propor para IONIC health uma plataforma de gestão de relacionamento com o clien
 <h2>📑Branches de cada entrega</h2>
 
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
-       <table>
-              <thead>
-                     <th width=100px>Entregas</th>
-                     <th>Descrições</th>
-                     <th width=215px>Datas</th>
-                     <th width=100px>Links</th>
-              </thead>
-              <tbody>
-                     <tr>
-                            <td>Sprint 1</td>
-                            <td><p align = "justify">Adicionar texto.</p></td>
-                            <td>19/09/2021</td>
-                            <td><p><a href="https://github.com/roogercamargo/FatecAPI-02/tree/entrega-01"><img src="https://img.shields.io/badge/Visualizar-informational?style=for-the-badge"></a></p></td>
-                     </tr>
-                     <tr>
-                            <td>Sprint 2</td>
-                            <td><p align = "justify">Adicionar texto.</p></td>
-                            <td>10/10/2021</td>
-                            <td><p><a href="https://github.com/roogercamargo/FatecAPI-02/tree/entrega-02"><img src="https://img.shields.io/badge/Visualizar-informational?style=for-the-badge"></a></p></td>
-                     </tr>
-                     <tr>
-                            <td>Sprint 3</td>
-                            <td><p align = "justify">Adicionar texto.</p></td>
-                            <td>07/11/2021</td>
-                            <td><p><a href="https://github.com/roogercamargo/FatecAPI-02/tree/entrega-03"><img src="https://img.shields.io/badge/Visualizar-informational?style=for-the-badge"></a></p></td>
-                     </tr>
-                      <tr>
-                            <td>Sprint 4</td>
-                            <td><p align = "justify">Adicionar texto.</p></td>
-                            <td>28/11/2021</td>
-                            <td><p><a href="https://github.com/roogercamargo/FatecAPI-02/tree/entrega-04"><img src="https://img.shields.io/badge/Visualizar-informational?style=for-the-badge"></a></p></td>
-                     </tr>
-              </tbody>
-       </table>
+       
+<table border="1">
+    <tr>
+        <td style="text-align: center; vertical-align: middle;">Entregas</td>
+        <td style="text-align: center; vertical-align: middle;">Descrições</td>
+        <td style="text-align: center; vertical-align: middle;">Datas</td>
+        <td style="text-align: center; vertical-align: middle;">Links</td>
+     <tr>
+        <td style="text-align: center; vertical-align: middle;">Sprint 1</td> 
+        <td style="text-align: center; vertical-align: middle;">Adicionar texto</td>
+        <td style="text-align: center; vertical-align: middle;">19/09/2021</td>
+        <td style="text-align: center; vertical-align: middle;"> <p><a href="https://github.com/roogercamargo/FatecAPI-03/tree/entrega-01">Visualizar</a></p> </td>
+    </tr>
+    <tr>
+        <td style="text-align: center; vertical-align: middle;">Sprint 2</td> 
+        <td style="text-align: center; vertical-align: middle;">Adicionar texto</td>
+        <td style="text-align: center; vertical-align: middle;">10/10/2021</td>
+        <td style="text-align: center; vertical-align: middle;"> <p><a href="https://github.com/roogercamargo/FatecAPI-03/tree/entrega-02">Visualizar</a></p> </td>
+    </tr>
+     <tr>
+        <td style="text-align: center; vertical-align: middle;">Sprint 3</td> 
+        <td style="text-align: center; vertical-align: middle;">Adicionar texto</td>
+        <td style="text-align: center; vertical-align: middle;">07/11/2021</td>
+        <td style="text-align: center; vertical-align: middle;"> <p><a href="https://github.com/roogercamargo/FatecAPI-03/tree/entrega-03">Visualizar</a></p> </td>
+    </tr>
+     <tr>
+        <td style="text-align: center; vertical-align: middle;">Sprint 4</td> 
+        <td style="text-align: center; vertical-align: middle;">Adicionar texto</td>
+        <td style="text-align: center; vertical-align: middle;">28/11/2021</td>
+        <td style="text-align: center; vertical-align: middle;"> <p><a href="https://github.com/roogercamargo/FatecAPI-03/tree/entrega-04">Visualizar</a></p> </td>
+    </tr>
+</table>
+       
+
+
 </section>
  
 <h2>👥Equipe Soshiki</h2>
-
+              
 | [Gabriel de Oliveira](https://www.linkedin.com/in/gabriel-de-oliveira-88a9461b3/ "Linkedin") | Product Owner | 
 |----------|-------------|
 | **[Rogério Camargo](https://www.linkedin.com/in/rog%C3%A9rio-camargo-3a01191a5/ "Linkedin")**| **Scrum Master** |
