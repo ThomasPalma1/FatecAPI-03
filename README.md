@@ -16,7 +16,7 @@
 <h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/main/docs/wireframes/ion-x/Logo%20ion-x.png" width="100px">
 
 
-<h2>📋 Menu de Navegação</h2>
+<h2>📋Menu de Navegação</h2>
 
 
  - [Descrição](#descrição)
