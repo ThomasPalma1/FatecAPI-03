@@ -127,3 +127,15 @@ position: inherit;
           font-size: 3.5rem;
         }
       }
+      
+      
+      
+.btn-danger{
+	color: #fff;
+    background-color: #F12B2C;
+    border-color: #F12B2C;
+    position: absolute;
+  	top: 3%;
+    left: 89%;
+    width: 40px;
+}

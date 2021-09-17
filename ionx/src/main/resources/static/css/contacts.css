@@ -148,3 +148,14 @@ b{
   font-size: 12px;
   font-weight: bold;
 }
+
+.btn {
+    color: #fff;
+    background-color: #F12B2C;
+    border-color: #F12B2C;
+    position: absolute;
+    top: 33%;
+    left: 84%;
+    width:40px;
+    
+}
