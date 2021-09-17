@@ -48,25 +48,25 @@ Propor para IONIC health uma plataforma de gestão de relacionamento com o clien
         <td style="text-align: center; vertical-align: middle;">Sprint 1</td> 
         <td style="text-align: center; vertical-align: middle;">Adicionar texto</td>
         <td style="text-align: center; vertical-align: middle;">19/09/2021</td>
-        <td style="text-align: center; vertical-align: middle;"> <p><a href="https://github.com/roogercamargo/FatecAPI-03/tree/entrega-01">Visualizar</a></p> </td>
+        <td style="text-align: center; vertical-align: middle;"> <p><a href="https://github.com/ThomasPalma1/FatecAPI-03/tree/entrega-01">Visualizar</a></p> </td>
     </tr>
     <tr>
         <td style="text-align: center; vertical-align: middle;">Sprint 2</td> 
         <td style="text-align: center; vertical-align: middle;">Adicionar texto</td>
         <td style="text-align: center; vertical-align: middle;">10/10/2021</td>
-        <td style="text-align: center; vertical-align: middle;"> <p><a href="https://github.com/roogercamargo/FatecAPI-03/tree/entrega-02">Visualizar</a></p> </td>
+        <td style="text-align: center; vertical-align: middle;"> <p></p> </td>
     </tr>
      <tr>
         <td style="text-align: center; vertical-align: middle;">Sprint 3</td> 
         <td style="text-align: center; vertical-align: middle;">Adicionar texto</td>
         <td style="text-align: center; vertical-align: middle;">07/11/2021</td>
-        <td style="text-align: center; vertical-align: middle;"> <p><a href="https://github.com/roogercamargo/FatecAPI-03/tree/entrega-03">Visualizar</a></p> </td>
+        <td style="text-align: center; vertical-align: middle;"> <p></p> </td>
     </tr>
      <tr>
         <td style="text-align: center; vertical-align: middle;">Sprint 4</td> 
         <td style="text-align: center; vertical-align: middle;">Adicionar texto</td>
         <td style="text-align: center; vertical-align: middle;">28/11/2021</td>
-        <td style="text-align: center; vertical-align: middle;"> <p><a href="https://github.com/roogercamargo/FatecAPI-03/tree/entrega-04">Visualizar</a></p> </td>
+        <td style="text-align: center; vertical-align: middle;"> <p></p> </td>
     </tr>
 </table>
        
