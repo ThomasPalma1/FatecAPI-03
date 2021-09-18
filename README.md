@@ -16,14 +16,14 @@
 <h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/main/docs/wireframes/ion-x/Logo%20ion-x.png" width="100px">
 
 
-<h2>📜Menu de Navegação</h2>
+<h2>📋Menu de Navegação</h2>
  
 - [Descrição](#descrição)
 - [Objetivo do Projeto](#objetivo-do-projeto)
 - [O que entregamos](#o-que-entregamos)
-- [Valor da entrega](#qual-o-valor)
+- [Valor da entrega](#qual-o-valor-da-entrega)
 - [Backlog e User Stories](#backlog-e-user-stories)
-- [Gráfico de Burndown](#burndown-da-sprint)
+- [Gráfico de Burndown](#grafico-de-burndown-da-sprint-1)
 - [Funcionamento da ferramenta](#funcionamento-da-ferramenta)
 - [Modelo Conceitual - Diagrama de Entidade e Relacionamento](#modelo-conceitual---diagrama-de-entidade-e-relacionamento)
 
@@ -34,16 +34,39 @@ Com  o aumento  na  quantidade  de  clientes,  cresce  a  complexidade  de  mant
 <h2>🎯Objetivo do projeto</h2>
 Propor para IONIC health uma plataforma de gestão de relacionamento com o cliente onde será acompanhado cada detalhe da etapa do processo de venda com cada cliente fornecendo informações de forma ágil, afim de gerenciar a venda de seus produtos de forma eficiente.
 
-<h2>Backlog e User stories</h2>
+<h2>📑O que entregamos? </h2>
+Para esta sprint entregamos o cadastro de produtos e o cadastro de clientes.
+       
+<h1 align="center"><img src=""></h1>
+       
+       
+<h2>🪙Qual o valor da entrega?</h2>
+É muito importante para uma plataforma de gestão de clientes ter visualização do cadastro do seu cliente e o cadastro dos seus produtos, onde os mesmo são a base do tipo do sistema pedido.
+       
+       
+<h2>🧾Backlog e User stories</h2>
 
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
 
 <h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/main/docs/userStories/User%20stories%201.png"></h1>
        
-<h2>Gráfico de burndown da <i>Sprint 01</i></h2> 
+<h2>Gráfico de burndown da <i>Sprint 1</i></h2> 
 
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
 
 <h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/c2c0a75c6695902e9b02496c1b65df20963c05b2/docs/Burndown/Burndown%20Sprint1.png" width=550px height=300px></h1>
 
+<h2>💻Funcionamento da ferramenta</h2>
+       
+[<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
+      
+<h1 align="center"><img src=""></h1>
+       
+<h2> Modelo Conceitual - Diagrama de Entidade e Relacionamento </h2>
+       
+[<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
+       
+<h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/entrega-01/docs/DER%20Sprint%201.jpg"></h1>
+       
+       
 <p align="center"><a href="https://github.com/ThomasPalma1/FatecAPI-03"><img src="https://img.shields.io/badge/Retornar%20a%20main-informational?style=for-the-badge" width="14.4%"></a></p>
