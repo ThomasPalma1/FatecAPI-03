@@ -52,19 +52,19 @@ Propor para IONIC health uma plataforma de gestão de relacionamento com o clien
     </tr>
     <tr>
         <td style="text-align: center; vertical-align: middle;">Sprint 2</td> 
-        <td style="text-align: center; vertical-align: middle;">Adicionar texto</td>
+        <td style="text-align: center; vertical-align: middle;">Em desenvolvimento</td>
         <td style="text-align: center; vertical-align: middle;">10/10/2021</td>
         <td style="text-align: center; vertical-align: middle;"> <p></p> </td>
     </tr>
      <tr>
         <td style="text-align: center; vertical-align: middle;">Sprint 3</td> 
-        <td style="text-align: center; vertical-align: middle;">Adicionar texto</td>
+        <td style="text-align: center; vertical-align: middle;">Em desenvolvimento</td>
         <td style="text-align: center; vertical-align: middle;">07/11/2021</td>
         <td style="text-align: center; vertical-align: middle;"> <p></p> </td>
     </tr>
      <tr>
         <td style="text-align: center; vertical-align: middle;">Sprint 4</td> 
-        <td style="text-align: center; vertical-align: middle;">Adicionar texto</td>
+        <td style="text-align: center; vertical-align: middle;">Em desenvolvimento</td>
         <td style="text-align: center; vertical-align: middle;">28/11/2021</td>
         <td style="text-align: center; vertical-align: middle;"> <p></p> </td>
     </tr>
@@ -103,6 +103,18 @@ Tecnologias | Usamos para
 <img src="https://img.shields.io/badge/Eclipse-2C2255?style=for-the-badge&logo=eclipse&logoColor=white"> | Eclipse é uma IDE de código aberto que junta linguagens para o desenvolvimento de softwares tornando os processos e aplicações ágeis. |
 <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white"> | O Spring é um framework para o Java que facilita a criação utilizando módulos independentes. |</p>
 
+<h2><i>Cards das entregas</i></h2>
+
+[<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
+              
+<img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/main/docs/userStories/User%20stories.png">
+              
+<h2><i>Backlog do projeto</i></h2>
+              
+[<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
+
+<img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/main/docs/Backlog%20do%20projeto/Backlog%20total.png">
+              
 ---
       
 <h2 style="font-family:roboto;">Wireframes do projeto</h2>
