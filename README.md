@@ -60,7 +60,7 @@ Para esta sprint entregamos o cadastro de produtos e o cadastro de clientes.
        
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
       
-<h1 align="center"><img src=""></h1>
+<h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/entrega-01/docs/gifSprint1.gif"></h1>
        
 <h2> Modelo Conceitual - Diagrama de Entidade e Relacionamento </h2>
        
