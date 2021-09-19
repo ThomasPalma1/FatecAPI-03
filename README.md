@@ -35,14 +35,10 @@ Com  o aumento  na  quantidade  de  clientes,  cresce  a  complexidade  de  mant
 Propor para IONIC health uma plataforma de gestão de relacionamento com o cliente onde será acompanhado cada detalhe da etapa do processo de venda com cada cliente fornecendo informações de forma ágil, afim de gerenciar a venda de seus produtos de forma eficiente.
 
 <h2>📑O que entregamos? </h2>
-Para esta sprint entregamos o cadastro de produtos e o cadastro de clientes.
-       
-<h1 align="center"><img src=""></h1>
-       
-       
-<h2>🪙Qual o valor da entrega?</h2>
-É muito importante para uma plataforma de gestão de clientes ter visualização do cadastro do seu cliente e o cadastro dos seus produtos, onde os mesmo são a base do tipo do sistema pedido.
-       
+Para essa primeira entrega foi desenvolvido o cadastro dos produtos e prospects. O usuário responsável pelo cadastro deve inserir o nome do produto, uma imagem ilustrativa de sua preferência e uma simples descrição. O cadastro das prospects consiste em: o usuário poderá preencher informações a respeito do contato principal, informações sobre a empresa ou cliente que irá adquirir o produto e adicionar os produtos que lhe causou interesse.
+
+<h2>:heavy_check_mark:Qual o valor da entrega?</h2>
+É muito importante para uma plataforma de gestão de clientes poder realizar a visualização do cadastro do seu cliente e também o cadastro dos seus produtos, onde os mesmo são a base do tipo do sistema pedido.
        
 <h2>🧾Backlog e User stories</h2>
 
@@ -50,7 +46,7 @@ Para esta sprint entregamos o cadastro de produtos e o cadastro de clientes.
 
 <h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/main/docs/userStories/User%20stories%201.png"></h1>
        
-<h2>Gráfico de burndown da <i>Sprint 1</i></h2> 
+<h2>:chart_with_upwards_trend:Gráfico de burndown da <i>Sprint 1</i></h2> 
 
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
 
