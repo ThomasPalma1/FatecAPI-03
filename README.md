@@ -40,25 +40,25 @@ Para essa primeira entrega foi desenvolvido o cadastro dos produtos e prospects.
 <h2>:heavy_check_mark:Qual o valor da entrega?</h2>
 É muito importante para uma plataforma de gestão de clientes poder realizar a visualização do cadastro do seu cliente e também o cadastro dos seus produtos, onde os mesmo são a base do tipo do sistema pedido.
        
-<h2>🧾Backlog e User stories</h2>
+<h2>:blue_book::date:<i>Backlog</i> e <i>User stories</i></h2>
 
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
 
 <h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/main/docs/userStories/User%20stories%201.png"></h1>
        
-<h2>:chart_with_upwards_trend:Gráfico de burndown da <i>Sprint 1</i></h2> 
+<h2>:chart_with_upwards_trend:Gráfico de <i>burndown</i> da <i>Sprint 1</i></h2> 
 
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
 
 <h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/c2c0a75c6695902e9b02496c1b65df20963c05b2/docs/Burndown/Burndown%20Sprint1.png" width=550px height=300px></h1>
 
-<h2>💻Funcionamento da ferramenta</h2>
+<h2>:computer::movie_camera:Funcionamento da ferramenta</h2>
        
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
       
 <h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/entrega-01/docs/gifSprint1.gif"></h1>
        
-<h2> Modelo Conceitual - Diagrama de Entidade e Relacionamento </h2>
+<h2>:globe_with_meridians:Modelo Conceitual - Diagrama de Entidade e Relacionamento </h2>
        
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
        
