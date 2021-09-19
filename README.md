@@ -76,6 +76,8 @@ Propor para IONIC health uma plataforma de gestão de relacionamento com o clien
  
 <h2>👥Equipe Soshiki</h2>
               
+ [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação) 
+              
 | [Gabriel de Oliveira](https://www.linkedin.com/in/gabriel-de-oliveira-88a9461b3/ "Linkedin") | Product Owner | 
 |----------|-------------|
 | **[Rogério Camargo](https://www.linkedin.com/in/rog%C3%A9rio-camargo-3a01191a5/ "Linkedin")**| **Scrum Master** |
@@ -88,6 +90,7 @@ Propor para IONIC health uma plataforma de gestão de relacionamento com o clien
 
 <h2>⚙Ferramentas utilizadas</h2>
 
+[<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
 
 >Um desafio mais complexo precisa de ferramentas mais capacitadas capazes de relacionar entre si e executar um bom resultado.
 
@@ -118,6 +121,9 @@ Tecnologias | Usamos para
 ---
       
 <h2 style="font-family:roboto;">Wireframes do projeto</h2>
+              
+[<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
+              
 <p align="justify" style="font-family:roboto;"> Desenvolvemos os wireframes levando em consideração as necessidades do cliente, buscando o equilibrio entre simples e funcional. Utilizando os princípios de UX e UI (clique sobre a imagem para melhor vizualização)</p>
    
   
