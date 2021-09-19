@@ -46,7 +46,7 @@ Propor para IONIC health uma plataforma de gestão de relacionamento com o clien
         <td style="text-align: center; vertical-align: middle;">Links</td>
      <tr>
         <td style="text-align: center; vertical-align: middle;">Sprint 1</td> 
-        <td style="text-align: center; vertical-align: middle;">Desenvolvido o Cadastro dos Produtos e também uma tela de Cadastro de Clientes (Prospect) com informaçoes do cliente e seu nível de interesse, juntamente com uma tela de contatos.</td>
+        <td style="text-align: center; vertical-align: middle;">Desenvolvido o Cadastro dos Produtos e também uma tela de Cadastro de Clientes (Prospect) com informações do cliente e seu nível de interesse, juntamente com uma tela de contatos.</td>
         <td style="text-align: center; vertical-align: middle;">19/09/2021</td>
         <td style="text-align: center; vertical-align: middle;"> <p><a href="https://github.com/ThomasPalma1/FatecAPI-03/tree/entrega-01">Visualizar</a></p> </td>
     </tr>
