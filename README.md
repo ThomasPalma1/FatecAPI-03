@@ -16,7 +16,7 @@
 <h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/main/docs/wireframes/ion-x/Logo%20ion-x.png" width="100px">
 
 
-<h2>📋 Menu de Navegação</h2>
+<h2>📋Menu de Navegação</h2>
 
 
        
@@ -28,13 +28,13 @@
  - [Wireframes do projeto](#wireframes-do-projeto)
  - [Backlog do projeto](#backlog-do-projeto)   
        
-<h2>📜 Descrição</h2>
+<h2>📜Descrição</h2>
 Com  o aumento  na  quantidade  de  clientes,  cresce  a  complexidade  de  manter  um  bom  relacionamento com todos eles. Para isso é necessário uma plataforma para melhor gerenciamento de contatos e vendas com cada um deles. A plataforma web deve realizar a organização dos contatos, a gestão de pipeline, o monitoramento e acompanhamento de clientes. Seu layout deve ser de fácil personalização, trazendo autonomia para a gestão da plataforma.
 
-<h2>🎯 Objetivo do projeto</h2>
+<h2>🎯Objetivo do projeto</h2>
 Propor para IONIC health uma plataforma de gestão de relacionamento com o cliente onde será acompanhado cada detalhe da etapa do processo de venda com cada cliente fornecendo informações de forma ágil, afim de gerenciar a venda de seus produtos de forma eficiente.
        
-<h2>:open_file_folder: Branches de cada entrega</h2>
+<h2>:open_file_folder:Branches de cada entrega</h2>
 
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
        
@@ -74,7 +74,7 @@ Propor para IONIC health uma plataforma de gestão de relacionamento com o clien
 
 </section>
  
-<h2>👥 Equipe Soshiki</h2>
+<h2>👥Equipe Soshiki</h2>
               
  [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação) 
               
@@ -88,7 +88,7 @@ Propor para IONIC health uma plataforma de gestão de relacionamento com o clien
 | [Thomas Palma](https://www.linkedin.com/in/thomas-palma-0764b81b3/ "Linkedin") | *Development Team* |
 | [Sofia Correa]() | Development Team |
 
-<h2>:gear: Ferramentas utilizadas</h2>
+<h2>:gear:Ferramentas utilizadas</h2>
 
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
 
@@ -106,13 +106,13 @@ Tecnologias | Usamos para
 <img src="https://img.shields.io/badge/Eclipse-2C2255?style=for-the-badge&logo=eclipse&logoColor=white"> | Eclipse é uma IDE de código aberto que junta linguagens para o desenvolvimento de softwares tornando os processos e aplicações ágeis. |
 <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white"> | O Spring é um framework para o Java que facilita a criação utilizando módulos independentes. |</p>
 
-<h2><i>:date: Cards</i> das entregas</h2>
+<h2><i>:date:Cards</i> das entregas</h2>
 
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
               
 <img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/main/docs/userStories/User%20stories.png">
               
-<h2>:blue_book: <i>Backlog</i> do projeto</h2>
+<h2>:blue_book:<i>Backlog</i> do projeto</h2>
               
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
 
@@ -120,7 +120,7 @@ Tecnologias | Usamos para
               
 ---
       
-<h2 style="font-family:roboto;">:computer: <i>Wireframes</i> do projeto</h2>
+<h2 style="font-family:roboto;">:computer:<i>Wireframes</i> do projeto</h2>
               
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
               
