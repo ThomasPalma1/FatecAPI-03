@@ -70,6 +70,7 @@ Para essa primeira entrega foi desenvolvido o cadastro dos produtos e prospects.
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
       
 <h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/entrega-01/docs/gifSprint1.gif"></h1>
+<p>Caso deseje ver o vídeo com mais qualidade, assista-o no <a href="https://www.youtube.com/watch?v=E_aqDpTrn7M&feature=youtu.be">YouTube!</a></p>
        
 <h2>📌Modelo Conceitual - Diagrama de Entidade e Relacionamento</h2>
        
