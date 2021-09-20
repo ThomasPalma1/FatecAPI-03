@@ -23,7 +23,7 @@
 - [O que entregamos](#o-que-entregamos)
 - [Valor da entrega](#qual-o-valor-da-entrega)
 - [Backlog e User Stories](#backlog-e-user-stories)
-- [Gráfico de Burndown](#grafico-de-burndown-da-sprint-1)
+- [Gráfico de Burndown](#burndown-da-sprint)
 - [Funcionamento da ferramenta](#funcionamento-da-ferramenta)
 - [Modelo Conceitual - Diagrama de Entidade e Relacionamento](#modelo-conceitual---diagrama-de-entidade-e-relacionamento)
 
@@ -59,7 +59,8 @@ Para essa primeira entrega foi desenvolvido o cadastro dos produtos e prospects.
 
 <h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/main/docs/userStories/User%20stories%201.png"></h1>
        
-<h2>📊Gráfico de <i>burndown</i> da <i>Sprint 1</i></h2> 
+<h2>📊Burndown da Sprint</h2>
+       
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
 
 <h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/c2c0a75c6695902e9b02496c1b65df20963c05b2/docs/Burndown/Burndown%20Sprint1.png" width=550px height=300px></h1>
@@ -70,7 +71,7 @@ Para essa primeira entrega foi desenvolvido o cadastro dos produtos e prospects.
       
 <h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/entrega-01/docs/gifSprint1.gif"></h1>
        
-<h2>📌Modelo Conceitual - Diagrama de Entidade e Relacionamento </h2>
+<h2>📌Modelo Conceitual - Diagrama de Entidade e Relacionamento</h2>
        
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
        
