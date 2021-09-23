@@ -1,21 +1,21 @@
 <!doctype html>
-<html xmlns:th="http://www.thymeleaf.org" lang="pt-br">
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Cadastro de Produtos</title>
+    <title>Prospects</title>
 
     <link rel="sortcut icon" href="../imgs/logo.ico" type="image/x-icon"/>
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sidebars/">
 
     
     <!-- Bootstrap and CSS style -->
- <link href="/webjars/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="../css/index.css" rel="stylesheet">
+<link href="../css/negocios.css" rel="stylesheet">
 <link href="../css/sidebars.css" rel="stylesheet">
-<link href="../css/cadas_products.css" rel="stylesheet">
 <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/dashboard/">
-
 
 
   </head>
@@ -64,6 +64,10 @@
     <path style="fill:#ffff;" d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
   </symbol>
 
+    <symbol id="bi bi-three-dots" width="18" height="25" fill="currentColor" viewBox="0 0 16 16">
+    <path style="fill: #C2CFE0;"d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+    </symbol>
+
 </svg>
 
 <!-- end svg icons -->
@@ -83,7 +87,7 @@
 
     <center><h6> Nome de usuário</h6></center> 
 
-        <br>
+    <br>
     <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
         <a href="/" class="nav-link text-black" aria-current="page">
@@ -155,44 +159,100 @@
 
 <br><br><br>
 
+<!-- conteudo da page -->
+
 <div class="container">
+  
+  <select class="form-select" aria-label="Default select example" style="height: 50px;width: 95%;">
+  <option selected>Filtrar por:</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+</select>
+<br><br><br>
 
-<h1 class="title">Adicionar Produtos</h1>
-<br>
-<p class="text">Preencha os campos abaixo para cadastrar um novo produto na plataforma.<br>
-As informações poderão ser alteradas após o cadastro.</p>
-<br>
 
-  <form class="prospect" th:action="@{/produtos/salvar}" enctype="multipart/form-data" th:method="${produto.id} == 0 ? post : put" th:object="${produto}">
-   <input id="id" type="hidden" th:field="*{id}"/>
-   <div class="mb-3">
-      <label class="form-label" for="nome">Nome do Produto</label>
-      <input class="form-control" id="nome" type="text" th:field="*{nome}" placeholder="Digite o nome do produto">
-      <div th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></div>
+<div th:if="${prospects!= null}">
+
+		<div th:if="${mensagem != null}">
+            <div class="alert alert-info" role="alert">
+                <span th:text="${mensagem}">mensagem</span>
+            </div>
+        </div>
+ 
+  <div class="boards">
+        <div class="board">
+            <h3 class="contato">PRIMEIRO CONTATO</h3>
+            <div class="dropzone">
+                <div class="card" draggable="true" th:each="prospect : ${prospects}">
+                    <div class="card-list-item-button">
+                      <svg class="bi bi-three-dots" width="16" height="16"><use xlink:href="#bi bi-three-dots"/></svg>
+                    </div>
+                    <div class="content"  th:text="${prospect.nome}"> Theressa Webb</div>
+                      <p></p>
+                      <p th:text="${prospect.cargo}">Cargo</p>
+                      <p th:text="${prospect.empresa}">Empresa</p>
+                      <div th:switch="${prospect.level}" >
+        			  <span th:case="'Alta'" class="temperature-alta" th:text="${prospect.level}"></span>
+        			  <span th:case="'Normal'"class="temperature-normal" th:text="${prospect.level}"></span>
+        			  <span th:case="'Baixa'"class="temperature-baixa" th:text="${prospect.level}"></span>
+        			  </div>
+                    </div>
+                </div>
+            </div>
+            
+        <div class="board">
+            <h3 class="necessidades">NECESSIDADES</h3>
+            <div class="dropzone">
+              
+            </div>
+        </div>
+        
+        <div class="board">
+            <h3 class="proposta">PROPOSTA</h3>
+            <div class="dropzone">
+
+            </div>
+        </div>
+        
+        <div class="board">
+            <h3 class="vistoria">1ª VISTORIA</h3>
+            <div class="dropzone">
+ 
+            </div>
+        </div>
+            
+        </div>
+        
+<div th:if="${#lists.isEmpty(prospects)}">
+        <div class="alert alert-info" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign"></span>
+            Nenhuma prospect cadastrada.
+        </div>
     </div>
-    
-  <div class="mb-3">
-      <label for="formFile" class="form-label">Escolha uma imagem</label>
-      <input class="form-control" type="file" name ="file"  placeholder="Insira uma imagem" accept="image/png, image/jpeg">
-  </div>
-   
-    
-    <div class="mb-3">
-    <label for="form-label">Descrição</label>
-    <textarea class="form-control-textarea" id="descricao" th:field="*{descricao}" placeholder="descreva seu produto aqui..." required></textarea>
-    </div>
-    <br><br>
-    <center><button class="btn-send">Cadastrar</button></center>
+</div>
 
- <br><br>
-</form>
+
+    </div>
+
+    
+
+
+
+
+
+</main>
+
 
 
 
 <footer>
-  
-    
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js" defer></script>
+   
+
 </footer>
 
- 
-</div>
+
+</body>
+</html>

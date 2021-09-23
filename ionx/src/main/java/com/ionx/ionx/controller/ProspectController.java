@@ -30,6 +30,12 @@ public class ProspectController {
 		return new ModelAndView("prospect/list", model);
 	}
 	
+	@GetMapping("/prospect")
+	public ModelAndView negocios(ModelMap model) {
+		model.addAttribute("prospects", prospectService.recuperar());
+		return new ModelAndView("prospect/negocios", model);
+	}
+	
 	//Associar com add.html
     @GetMapping("/cadastro")
     public ModelAndView preSalvar(@ModelAttribute("prospect") Prospect prospect, ModelMap model) {
