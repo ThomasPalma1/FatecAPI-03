@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-br">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Prospects</title>
+    <title>Dasboard</title>
 
     <link rel="sortcut icon" href="../imgs/logo.ico" type="image/x-icon"/>
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sidebars/">
@@ -13,7 +13,7 @@
     <!-- Bootstrap and CSS style -->
 <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="../css/index.css" rel="stylesheet">
-<link href="../css/negocios.css" rel="stylesheet">
+<link href="../css/perfil_clientes.css" rel="stylesheet">
 <link href="../css/sidebars.css" rel="stylesheet">
 <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/dashboard/">
 
@@ -127,7 +127,6 @@
       </li>
     </ul>
     <hr>
-    
 <a href="#" class="nav-link text-black"><svg class="bi me-2" width="16" height="16"><use xlink:href="#bi bi-people"/></svg>Gerenciar perfis
         </a>
 <a href="#" class="nav-link text-black"><svg class="bi me-2" width="16" height="16"><use xlink:href="#bi bi-gear"/></svg>Configurações
@@ -162,81 +161,68 @@
 <!-- conteudo da page -->
 
 <div class="container">
-  
-  <select class="form-select" aria-label="Default select example" style="height: 50px;width: 95%;">
-  <option selected>Filtrar por:</option>
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-</select>
-<br><br><br>
 
-
-<div th:if="${prospects!= null}">
-
-		<div th:if="${mensagem != null}">
-            <div class="alert alert-info" role="alert">
-                <span th:text="${mensagem}">mensagem</span>
-            </div>
-        </div>
- 
-  <div class="boards">
-        <div class="board">
-            <h3 class="contato">PRIMEIRO CONTATO</h3>
-            <div class="dropzone">
-                <div class="card" draggable="true" th:each="prospect : ${prospects}">
-                    <div class="card-list-item-button">
-                      <svg class="bi bi-three-dots" width="16" height="16"><use xlink:href="#bi bi-three-dots"/></svg>
-                    </div>
-                   <a th:href="@{/prospects/details(id=${prospect.id})}" class="content"  th:text="${prospect.nome}">Theressa Webb</a> 
-                      <p></p>
-                      <p th:text="${prospect.cargo}">Cargo</p>
-                      <p th:text="${prospect.empresa}">Empresa</p>
-                      <div th:switch="${prospect.level}" >
-        			  <span th:case="'Alta'" class="temperature-alta" th:text="${prospect.level}"></span>
-        			  <span th:case="'Normal'"class="temperature-normal" th:text="${prospect.level}"></span>
-        			  <span th:case="'Baixa'"class="temperature-baixa" th:text="${prospect.level}"></span>
-        			  </div>
-                    </div>
-                </div>
-            </div>
-            
-        <div class="board">
-            <h3 class="necessidades">NECESSIDADES</h3>
-            <div class="dropzone">
-              
-            </div>
-        </div>
-        
-        <div class="board">
-            <h3 class="proposta">PROPOSTA</h3>
-            <div class="dropzone">
-
-            </div>
-        </div>
-        
-        <div class="board">
-            <h3 class="vistoria">1ª VISTORIA</h3>
-            <div class="dropzone">
- 
-            </div>
-        </div>
-            
-        </div>
-        
-<div th:if="${#lists.isEmpty(prospects)}">
-        <div class="alert alert-info" role="alert">
-            <span class="glyphicon glyphicon-exclamation-sign"></span>
-            Nenhuma prospect cadastrada.
-        </div>
+  <div class="row">
+  <div class="col">
+  <div class="dados">
+    <div th:switch="${prospect.level}" >
+    <span th:case="'Alta'" class="temperature-alta" th:text="${prospect.level}"></span>
+    <span th:case="'Normal'"class="temperature-normal" th:text="${prospect.level}"></span>
+    <span th:case="'Baixa'"class="temperature-baixa" th:text="${prospect.level}"></span>
     </div>
+    <h1 class="title">Dados Prospect</h1>
+    <br>
+    
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3668.3811534822344!2d-45.791961148911426!3d-23.15628495256989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc4d04ad05c80f%3A0x3a3cb86c6a09f490!2sIonic%20health!5e0!3m2!1spt-BR!2sbr!4v1632755641609!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <h1 class="text" th:text="${prospect.nome}">Devon Lane</h1>
+    <p th:text="${prospect.cargo}">Nursing Assistant</p>
+    <br>
+    <h1 class="text" th:text="${prospect.empresa}">Johnson & Johnson</h1>
+    <p th:text="${prospect.cidade}">São josé dos campos</p>
+    <br>
+    <p th:text="${prospect.telefone}">(270) 555-0117</p>
+    <p th:text="${prospect.email}">devon.lane@example.com</p>
+    <br>
+  </div>
+</div>
+
 </div>
 
 
+  <br>
+  <div class="row">
+<section class="columns">
+  
+  <div class="column">
+    <h2 class="title">Histórico de contato</h2>
+    <p></p>
+  </div>
+  
+  <div class="column">
+    <h2 class="title">Produtos de interesse</h2>
+   <br>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+      <label class="form-check-label" for="flexCheckChecked" th:text="${prospect.produtEscolhido}">
+        nCommand
+      </label>
     </div>
 
-    
 
+  </div>
+  
+  <div class="column">
+    <h2 class="title">Melhor hora para</h2>
+    <br><br>
+    <h2 class="title2">Chamar</h2>
+    <p class="text">18:00</p>
+    <h2 class="title2">E-mail</h2>
+    <p class="text">19:00</p>
+  </div>
+  
+</section></div>
+
+</div>
 
 
 
@@ -248,7 +234,7 @@
 
 <footer>
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/script.js" defer></script>
+    
    
 
 </footer>

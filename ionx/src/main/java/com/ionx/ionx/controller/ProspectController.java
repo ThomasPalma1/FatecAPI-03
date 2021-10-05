@@ -35,7 +35,7 @@ public class ProspectController {
 		model.addAttribute("prospects", prospectService.recuperar());
 		return new ModelAndView("prospect/negocios", model);
 	}
-	
+
 	//Associar com add.html
     @GetMapping("/cadastro")
     public ModelAndView preSalvar(@ModelAttribute("prospect") Prospect prospect, ModelMap model) {
@@ -72,5 +72,15 @@ public class ProspectController {
         return "redirect:/prospects/listar";
     }
 
+	
+	@GetMapping("/details")
+	public ModelAndView detalhes(ModelMap model, @RequestParam("id") long id, RedirectAttributes attr) {
+		Prospect prospect = prospectService.recuperarPorId(id);
+        model.addAttribute("prospect", prospect);
+		return new ModelAndView("prospect/prospect_detalhes", model);
+	}
+	
+    
+    
     
 }
