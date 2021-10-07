@@ -28,7 +28,7 @@ public class AuthController {
 
 		User user = userRepository.findByEmail(email);
 
-		if (user != null && user.getSenha() == senha) {
+		if (user != null && senha.equals(user.getSenha())) {
 
 			HttpSession session = ((HttpServletRequest) request).getSession(true);
 
