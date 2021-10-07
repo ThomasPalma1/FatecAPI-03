@@ -60,9 +60,10 @@ public class ProspectController {
     public ModelAndView preAtualizar(@RequestParam("id") long id, ModelMap model) {
     	Prospect prospect = prospectService.recuperarPorId(id);
         model.addAttribute("prospect", prospect);
+        model.addAttribute("produtos", produtoService.recuperar());
         return new ModelAndView("/prospect/add", model);
     }
-
+    
     //Remover prospect
 
     @GetMapping("/remover")
