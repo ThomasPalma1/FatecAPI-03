@@ -31,7 +31,7 @@ form.prospect{
 }
 
 .form-control{
-	width: 70%;
+	width: 65%;
 }
 
 input[type="time" i] {
@@ -67,7 +67,7 @@ label.hora{
 
 .form-control-end{
 	display: block;
-    width: 90%;
+    width: 89%;
     padding: .375rem .75rem;
     font-size: 1rem;
     font-weight: 400;
@@ -99,7 +99,7 @@ label.hora{
 
 .form-control-cargo{
 	display: block;
-    width: 30%;
+    width: 34%;
     padding: .375rem .75rem;
     font-size: 1rem;
     font-weight: 400;
@@ -113,15 +113,65 @@ label.hora{
     
 }
 
+input#estado.form-control{
+	display: block;
+    width: 38%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+  	margin-right: 80%;
+    
+}
+
+input#cidade.form-control{
+	display: block;
+    width: 38%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+  	margin-right: 80%;
+    
+}
+
+input#cnpj.form-control-number{
+	display: block;
+    width: 38%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+  	margin-right: 80%;
+    
+}
+
+
 .row.g-3{
 	margin-right: 25%;
 }
 
-.form-select-temp{
+.form-select{
 	
 	position: absolute;
-	height: 65px;
-	margin-top: -3%;
+	width: 8.5%;
+	height: 35px;
+	margin-top: -1.5%;
 	margin-left: 15%;
 	margin-right: 25%;
 	margin-bottom: 10%;

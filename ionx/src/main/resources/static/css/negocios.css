@@ -49,7 +49,50 @@ h3.vistoria{
     font-size: 21px;
 }
 
+h3.prod-equipamento{
+    padding: 16px;
+    margin: 0;
+    color: #2D3748;
+    box-shadow:  0 -6px 0px #8B00F9;
+    background: #FFFFFF;
+    font-size: 21px;
+}
 
+h3.vistoria2{
+    padding: 16px;
+    margin: 0;
+    color: #2D3748;
+    box-shadow:  0 -6px 0px #F9003C;
+    background: #FFFFFF;
+    font-size: 21px;
+}
+
+h3.implantacao{
+    padding: 16px;
+    margin: 0;
+    color: #2D3748;
+    box-shadow:  0 -6px 0px #8BBCF4;
+    background: #FFFFFF;
+    font-size: 21px;
+}
+
+h3.capacitacao{
+    padding: 16px;
+    margin: 0;
+    color: #2D3748;
+    box-shadow:  0 -6px 0px #2D3748;
+    background: #FFFFFF;
+    font-size: 21px;
+}
+
+h3.suporte{
+    padding: 16px;
+    margin: 0;
+    color: #2D3748;
+    box-shadow:  0 -6px 0px #598325;
+    background: #FFFFFF;
+    font-size: 21px;
+}
 
 .dropzone {
     padding: 16px;
@@ -160,8 +203,43 @@ h3.vistoria{
     font-weight: bold;
 }
 
+.temperature-fechado {
+    position: absolute;
+    text-align: right;
+    top: 80%;
+    left: 75%;
+    width: 54px;
+    height: 24px;
+    background: #7DE1E0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 45%;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.temperature-perdido {
+    position: absolute;
+    text-align: right;
+    top: 80%;
+    left: 75%;
+    width: 54px;
+    height: 24px;
+    background: #90A0B7;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 45%;
+    font-size: 12px;
+    font-weight: bold;
+}
+
 .btn-group, .btn-group-vertical {
     position: relative;
     display: block;
     vertical-align: middle;
 }
+

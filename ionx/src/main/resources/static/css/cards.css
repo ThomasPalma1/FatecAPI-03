@@ -137,6 +137,10 @@ a {
     text-decoration: underline;
 }
 
+a:hover {
+    color: #6c757d;
+}
+
 .btn-group, .btn-group-vertical {
     position: relative;
     display: inline-flex;

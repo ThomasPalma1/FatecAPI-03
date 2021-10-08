@@ -114,6 +114,40 @@
     font-weight: bold;
 }
 
+.temperature-fechado {
+    float: right;
+    text-align: center;
+    top: 21%;
+    left: 90%;
+    width: 54px;
+    height: 24px;
+    background:  #7DE1E0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 45%;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.temperature-perdido {
+    float: right;
+    text-align: center;
+    top: 21%;
+    left: 90%;
+    width: 54px;
+    height: 24px;
+    background:  #90A0B7;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 45%;
+    font-size: 12px;
+    font-weight: bold;
+}
+
 
 
 h1.title{

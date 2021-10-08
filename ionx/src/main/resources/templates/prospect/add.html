@@ -252,10 +252,12 @@ As informações poderão ser alteradas após o cadastro.</p>
       <label class="form-check-label" for="inlineCheckbox1" th:text="${produto.nome}" >nMonitor</label>
       <div th:if="${#fields.hasErrors('produtEscolhido')}" th:errors="*{produtEscolhido}"></div>
     </div>  
-  <select class="form-select-temp" multiple aria-label="multiple select example" th:field="*{level}">
+  <select class="form-select" aria-label="Default select example" th:field="*{level}">
     <option value="Alta">Alta</option>
     <option value="Normal">Normal</option>
     <option value="Baixa">Baixa</option>
+    <option value="Baixa">Fechado</option>
+    <option value="Baixa">Perdido</option>
   </select>
   <br><br>
   <br><br>

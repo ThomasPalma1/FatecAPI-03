@@ -149,6 +149,40 @@ b{
   font-weight: bold;
 }
 
+.temperature-fechado {
+  position: relative;
+  text-align: right;
+  top: -257px;
+  left: 96%;
+  width: 54px;
+  height: 24px;
+  background: #7DE1E0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 45%;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.temperature-perdido {
+  position: relative;
+  text-align: right;
+  top: -257px;
+  left: 96%;
+  width: 54px;
+  height: 24px;
+  background: #90A0B7	;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 45%;
+  font-size: 12px;
+  font-weight: bold;
+}
+
 .btn {
     color: #fff;
     background-color: #F12B2C;
@@ -163,6 +197,10 @@ b{
 a {
     color: #212529;
     text-decoration: underline;
+}
+
+a:hover {
+    color: #6c757d;
 }
 
 .btn-group, .btn-group-vertical {
