@@ -12,14 +12,23 @@ public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	
-	@Column(name="email", nullable=false)
+
+	@Column(name = "nome")
+	private String nome;
+
+	@Column(name = "sobrenome")
+	private String sobrenome;
+
+	@Column(name = "contato")
+	private String contato;
+
+	@Column(name = "email", nullable = false)
 	private String email;
-	
-	@Column(name="senha", nullable=false)
+
+	@Column(name = "senha", nullable = false)
 	private String senha;
-	
-	@Column(name="tipo", nullable=false)
+
+	@Column(name = "tipo", nullable = false)
 	private String tipo;
 
 	public long getId() {
@@ -53,7 +62,29 @@ public class User {
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
-	
-	
-	
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getSobrenome() {
+		return sobrenome;
+	}
+
+	public void setSobrenome(String sobrenome) {
+		this.sobrenome = sobrenome;
+	}
+
+	public String getContato() {
+		return contato;
+	}
+
+	public void setContato(String contato) {
+		this.contato = contato;
+	}
+
 }

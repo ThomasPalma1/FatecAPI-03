@@ -15,19 +15,27 @@ import com.ionx.ionx.service.UserService;
 @RequestMapping("/users")
 
 public class UserController {
-	@Autowired	
+	@Autowired
 	UserRepository userRepository;
-	
+
 	private final UserService userService;
+
 	public UserController(@Lazy UserService userService) {
 		this.userService = userService;
 	}
-	
+
 	@PostMapping("/create")
 	User newUser(@RequestBody User newUser) {
-		return userService.save(newUser);
+		User user = new User();
+
+		user.setNome(newUser.getNome());
+		user.setSobrenome(newUser.getSobrenome());
+		user.setContato(newUser.getContato());
+		user.setEmail(newUser.getEmail());
+		user.setSenha(newUser.getSenha());
+		user.setTipo("padrao");
+
+		return userRepository.save(user);
 	}
-	
-	
-	
+
 }

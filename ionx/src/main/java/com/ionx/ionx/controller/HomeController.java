@@ -30,9 +30,10 @@ public class HomeController {
 	public String cadastro() {
 		return "cadastro/cadastro";
 	}
-	
+
 	@RequestMapping("/realizarLogin")
 	public String realizarLogin() {
 		return "cadastro/cadastro";
 	}
+
 }
