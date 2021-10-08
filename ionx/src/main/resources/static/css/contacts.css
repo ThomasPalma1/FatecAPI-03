@@ -101,8 +101,8 @@ b{
 .temperature-alta {
   position: relative;
   text-align: right;
-  top: -316px;
-  left: 95%;
+  top: -257px;
+  left: 96%;
   width: 54px;
   height: 24px;
   background: #F12B2C;
@@ -118,8 +118,8 @@ b{
 .temperature-normal {
   position: relative;
   text-align: right;
-  top: -316px;
-  left: 95%;
+  top: -257px;
+  left: 96%;
   width: 54px;
   height: 24px;
   background: #29CC97;
@@ -135,8 +135,8 @@ b{
 .temperature-baixa {
   position: relative;
   text-align: right;
-  top: -316px;
-  left: 95%;
+  top: -257px;
+  left: 96%;
   width: 54px;
   height: 24px;
   background: #FEC400;
@@ -158,4 +158,13 @@ b{
     left: 84%;
     width:40px;
     
+}
+
+a {
+    color: #212529;
+    text-decoration: underline;
+}
+
+.btn-group, .btn-group-vertical {
+    float: right;
 }

@@ -2,6 +2,7 @@
 .boards {
     display: flex;
     margin-top: 32px;
+    overflow-x: auto;
 }
 
 .board {
@@ -157,4 +158,10 @@ h3.vistoria{
     border-radius: 45%;
     font-size: 12px;
     font-weight: bold;
+}
+
+.btn-group, .btn-group-vertical {
+    position: relative;
+    display: block;
+    vertical-align: middle;
 }

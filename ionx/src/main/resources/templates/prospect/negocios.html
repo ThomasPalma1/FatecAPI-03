@@ -2,7 +2,7 @@
 <html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     
     <title>Prospects</title>
 
@@ -186,9 +186,16 @@
             <div class="dropzone">
                 <div class="card" draggable="true" th:each="prospect : ${prospects}">
                     <div class="card-list-item-button">
-                      <svg class="bi bi-three-dots" width="16" height="16"><use xlink:href="#bi bi-three-dots"/></svg>
+                    	<div class="btn-group dropend">
+					  <a type="button" class="bi bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false">
+					    <svg class="bi bi-three-dots" width="16" height="16"><use xlink:href="#bi bi-three-dots"/></svg>
+					  </a>
+                      
+					  <ul class="dropdown-menu">
+					    <li><a class="dropdown-item" th:href="@{/prospects/details(id=${prospect.id})}">Detalhes</a></li>
+					  </ul>
                     </div>
-                   <a th:href="@{/prospects/details(id=${prospect.id})}" class="content"  th:text="${prospect.nome}">Theressa Webb</a> 
+                   <p class="content"  th:text="${prospect.nome}">Theressa Webb</p> 
                       <p></p>
                       <p th:text="${prospect.cargo}">Cargo</p>
                       <p th:text="${prospect.empresa}">Empresa</p>
@@ -200,7 +207,7 @@
                     </div>
                 </div>
             </div>
-            
+        </div>
         <div class="board">
             <h3 class="necessidades">NECESSIDADES</h3>
             <div class="dropzone">
