@@ -117,13 +117,13 @@ Tecnologias | Usamos para
 
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
               
-<img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/main/docs/userStories/User%20stories.png">
+<img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/main/docs/userStories/User%20stories.png" width="850px">
               
 <h2>📘<i>Backlog</i> do projeto</h2>
               
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
 
-<img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/main/docs/Backlog%20do%20projeto/Backlog%20total.png">
+<img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/main/docs/Backlog%20do%20projeto/Backlog%20total.png" width="650px">
               
 ---
       
