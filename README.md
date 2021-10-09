@@ -21,7 +21,7 @@
 - [Descrição](#descrição)
 - [Objetivo do Projeto](#objetivo-do-projeto)
 - [O que entregamos](#o-que-entregamos)
-- [Valor da entrega](#qual-o-valor-da-entrega)
+- [Valor da entrega](#valor-da-entrega)
 - [Backlog e User Stories](#backlog-e-user-stories)
 - [Gráfico de Burndown](#burndown-da-sprint)
 - [Funcionamento da ferramenta](#funcionamento-da-ferramenta)
@@ -43,14 +43,27 @@ Propor para IONIC health uma plataforma de gestão de relacionamento com o clien
 <h2>📑O que entregamos</h2>
        
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
-              
+       
+Para essa segunda Entrega, nosso foco foi no Pipeline de vendas, essencial para se ter controle de cada cliente e da etapa em que se encontra no processo. Com o Pipeline, é possível localizar de forma fácil os clientes, acessar suas informações e alterar o estágio da venda apenas arrastando os Cards. Agora todas as informações cadastradas podem ser alteradas, Além disso a Ionic pode adicionar novos produtos à plataforma, assim, ao adicionar clientes novos produtos cadastrados já poderão ser adicionados como produtos de interesse do cliente.
 
-
-<h2>✔Qual o valor da entrega</h2>
+<h2>✔Valor da entrega</h2>
  
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
        
+<h2>📌Pipeline de vendas</h2>
+Com o pipeline de vendas, a empresa pode detectar vendas que estejam estagnadas, evitando assim sua perda. Na aba de pipelines, ficam a mostra os clientes que foram adicionados em suas respectivas colunas dependendo do estágio em que a venda se encontra, o estágio da venda poderá ser alterado a qualquer momento, basta arrastar o Card para o estágio atual. Para saber mais informações referentes ao cliente, é possível acessar o Card clicando sobre ele.
 
+(Inserir vídeo aqui)
+       
+<h2>📌Alteração de informações</h2>
+Foi adicionado possibilidade de alteração de todas as informações cadastradas na plataforma, de clientes e de produtos, para que todos os dados se mantenham atualizados evitando defasagem de informações, mantendo a plataforma sempre atualizada.
+
+(Inserir vídeo aqui)
+       
+<h2>📌Adicionar Produtos</h2>
+Ao adicionar produtos a plataforma auxília a empresa ao manter atualizado seu portifólio de produtos que serão oferecidos aos clientes. A empresa pode adicionar Título, descrição e imagem referente ao produto, então ele estará cadastrado na plataforma, sempre que um covo cliente for adicionado, os novos produtos estarão disponíveis para serem marcados como produtos de interesse.
+       
+(Inserir vídeo aqui)
        
 <h2>📘<i>Backlog</i> e <i>User stories</i></h2>
 
@@ -62,7 +75,7 @@ Propor para IONIC health uma plataforma de gestão de relacionamento com o clien
        
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
 
-<h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/entrega-02/docs/em%20desenvolvimento.png" width=550px height=300px></h1>
+<h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/main/docs/Burndown/Burndown%20Sprint2.png" width=750px height=400px></h1>
 
 <h2>🎥Funcionamento da ferramenta</h2>
        
