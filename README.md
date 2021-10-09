@@ -59,19 +59,19 @@ Propor para IONIC health uma plataforma de gestão de relacionamento com o clien
     </tr>
     <tr>
         <td style="text-align: center; vertical-align: middle;">Sprint 2</td> 
-        <td style="text-align: center; vertical-align: middle;">Em desenvolvimento</td>
+        <td style="text-align: center; vertical-align: middle;">O foco dessa entrega é o Pipeline de vendas, principal ferramenta de um CRM, onde os clientes poderão ser localizados por etapa em que se encontram no processo de venda, com maior detalhamento de cada negócio. O cliente também tem a possibilidade de adicionar, remover e alterar os produtos que a empresa oferece, mantendo a plataforma sempre atualizada.</td>
         <td style="text-align: center; vertical-align: middle;">10/10/2021</td>
         <td style="text-align: center; vertical-align: middle;"> <p></p> </td>
     </tr>
      <tr>
         <td style="text-align: center; vertical-align: middle;">Sprint 3</td> 
-        <td style="text-align: center; vertical-align: middle;">Em desenvolvimento</td>
+        <td style="text-align: center; vertical-align: middle;">Dashboards são importantíssimos para se ter um controle do processo, nessa Sprint iremos dar ao cliente gráficos que mostram o desempenho das vendas. Para que a plataforma tenha segurança, teremos cadastro de colaboradores de sales, Gerentes e Diretoria terão gerenciamento de Perfis que tem acesso a plataforma</td>
         <td style="text-align: center; vertical-align: middle;">07/11/2021</td>
         <td style="text-align: center; vertical-align: middle;"> <p></p> </td>
     </tr>
      <tr>
         <td style="text-align: center; vertical-align: middle;">Sprint 4</td> 
-        <td style="text-align: center; vertical-align: middle;">Em desenvolvimento</td>
+        <td style="text-align: center; vertical-align: middle;">Funcionalidades extras como formulário de interesse para os clientes. Aprimoramento de busca dentro da plataforma e de filtros de busca.</td>
         <td style="text-align: center; vertical-align: middle;">28/11/2021</td>
         <td style="text-align: center; vertical-align: middle;"> <p></p> </td>
     </tr>
