@@ -61,7 +61,7 @@ Propor para IONIC health uma plataforma de gestão de relacionamento com o clien
         <td style="text-align: center; vertical-align: middle;">Sprint 2</td> 
         <td style="text-align: center; vertical-align: middle;">O foco dessa entrega é o Pipeline de vendas, principal ferramenta de um CRM, onde os clientes poderão ser localizados por etapa em que se encontram no processo de venda, com maior detalhamento de cada negócio. O cliente também tem a possibilidade de adicionar, remover e alterar os produtos que a empresa oferece, mantendo a plataforma sempre atualizada.</td>
         <td style="text-align: center; vertical-align: middle;">10/10/2021</td>
-        <td style="text-align: center; vertical-align: middle;"> <p></p> </td>
+        <td style="text-align: center; vertical-align: middle;"> <p><a href="https://github.com/ThomasPalma1/FatecAPI-03/tree/entrega-02">Visualizar</a></p> </td>
     </tr>
      <tr>
         <td style="text-align: center; vertical-align: middle;">Sprint 3</td> 
@@ -85,15 +85,20 @@ Propor para IONIC health uma plataforma de gestão de relacionamento com o clien
               
  [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação) 
               
-| [Gabriel de Oliveira](https://www.linkedin.com/in/gabriel-de-oliveira-88a9461b3/ "Linkedin") | Product Owner | 
-|----------|-------------|
-| **[Rogério Camargo](https://www.linkedin.com/in/rog%C3%A9rio-camargo-3a01191a5/ "Linkedin")**| **Scrum Master** |
-| [Juliane Freitas](https://www.linkedin.com/in/juliane-freitas-9b6287163 "Linkedin") | *Development Team* |
-| [Pedro Ferreira](https://www.linkedin.com/in/pedro-ferreira-6a8417190/ "Linkedin") | *Development Team* |
-| [Gustavo Oliveira](https://www.linkedin.com/in/gustavo-oliveira-353647207/ "Linkedin") | *Development Team* |
-| [Lucca Almeida](https://www.linkedin.com/in/lucca-santiago-5244bb1a1/ "Linkedin") | *Development Team* |
-| [Thomas Palma](https://www.linkedin.com/in/thomas-palma-0764b81b3/ "Linkedin") | *Development Team* |
-| [Sofia Correa]() | Development Team |
+<table align="center">
+  <tr>
+    <td align="center"><a href="https://www.linkedin.com/in/rog%C3%A9rio-camargo-3a01191a5/"><img style="border-radius: 50%;" src="https://github.com/ThomasPalma1/FatecAPI-03/blob/main/docs/Equipe/Rog%C3%A9rio.jpg" width="100px;" alt=""/><br /><sub><b>Rogério Camargo</b></sub></a><br/><sub><b>Scrum Master</b></sub></td>
+     <td align="center"><a href="https://www.linkedin.com/in/gabriel-de-oliveira-88a9461b3/"><img style="border-radius: 50%;" src="https://github.com/ThomasPalma1/FatecAPI-03/blob/main/docs/Equipe/Gabriel.jpeg" width="100px;" alt=""/><br/><sub><b>Gabriel de Oliveira</b></sub></a><br/><sub><b>Product Owner</b></sub></td>
+    <td align="center"><a href="https://www.linkedin.com/in/juliane-freitas-9b6287163"><img style="border-radius: 50%;" src="https://github.com/ThomasPalma1/FatecAPI-03/blob/main/docs/Equipe/Juliane.jfif" width="100px;" alt=""/><br /><sub><b>Juliane Freitas</b></sub></a><br/><sub><b>Development Team</b></sub></td>
+    <td align="center"><a href="https://www.linkedin.com/in/pedro-ferreira-6a8417190/"><img style="border-radius: 50%;" src="https://github.com/ThomasPalma1/FatecAPI-03/blob/main/docs/Equipe/pedro.jpg" width="100px;" alt=""/><br /><sub><b>Pedro Ferreira</b></sub></a><br/><sub><b>Development Team</b></sub></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://www.linkedin.com/in/gustavo-oliveira-353647207/"><img style="border-radius: 50%;" src="https://github.com/ThomasPalma1/FatecAPI-03/blob/main/docs/Equipe/Gustavo.jfif" width="100px;" alt=""/><br /><sub><b>Gustavo Oliveira</b></sub></a><br/><sub><b>Development Team</b></sub></td>
+    <td align="center"><a href="https://www.linkedin.com/in/lucca-santiago-5244bb1a1/"><img style="border-radius: 50%;" src="https://github.com/ThomasPalma1/FatecAPI-03/blob/main/docs/Equipe/Lucca.jpeg" width="100px;" alt=""/><br /><sub><b>Lucca Almeida</b></sub></a><br/><sub><b>Development Team</b></sub></td>
+   <td align="center"><a href="https://www.linkedin.com/in/thomas-palma-0764b81b3/"><img style="border-radius: 50%;" src="https://github.com/ThomasPalma1/FatecAPI-03/blob/main/docs/Equipe/Thomas.jfif" width="100px;" alt=""/><br /><sub><b>Thomas Palma</b></sub></a><br/><sub><b>Development Team</b></sub></td>
+    <td align="center"><a href=""><img style="border-radius: 50%;" src="https://github.com/ThomasPalma1/FatecAPI-03/blob/main/docs/Equipe/Sofia.jfif" width="100px;" alt=""/><br /><sub><b>Sofia Correa</b></sub></a><br/><sub><b>Development Team</b></sub></td>
+  </tr>
+</table>
 
 <h2>⚙Ferramentas utilizadas</h2>
 
@@ -126,6 +131,22 @@ Tecnologias | Usamos para
 <img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/main/docs/Backlog%20do%20projeto/Backlog%20total.png" width="650px">
               
 ---
+              
+<h2 style="font-family:roboto;">💻<i>Fluxo da plataforma para time de Sales</i> do projeto</h2>
+              
+[<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
+              
+<p align="justify" style="font-family:roboto;">Exemplo de fluxo da plataforma para time de Sales, com acesso restrito (Após a liberação dos Gestores, o acesso é total)</p>
+
+<img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/main/docs/Backlog%20do%20projeto/Plataforma%20restrita.png" width="850">
+       
+<h2 style="font-family:roboto;">💻<i>Fluxo da plataforma para Gestores</i> do projeto</h2>
+              
+[<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
+              
+<p align="justify" style="font-family:roboto;">Exemplo de fluxo da plataforma para Gestores (clique na imagem para melhor visualização)</p>
+
+<img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/main/docs/Backlog%20do%20projeto/Plataforma.png" width="900">
       
 <h2 style="font-family:roboto;">💻<i>Wireframes</i> do projeto</h2>
               
