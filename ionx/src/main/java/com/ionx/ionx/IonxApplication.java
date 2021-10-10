@@ -1,5 +1,7 @@
 package com.ionx.ionx;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +18,9 @@ public class IonxApplication  implements CommandLineRunner{
 	UserRepository userRepository;
 
 	public static void main(String[] args) {
+		LocalDateTime now = LocalDateTime.now();
+		 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+		 now.format(formatter);
 		SpringApplication.run(IonxApplication.class, args);
 	}
 	@Override

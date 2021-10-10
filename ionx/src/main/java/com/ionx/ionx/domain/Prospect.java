@@ -1,5 +1,7 @@
 package com.ionx.ionx.domain;
 
+import java.util.List;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -29,6 +31,7 @@ public class Prospect {
 	@NotBlank
     @Column(nullable = false)
     private String empresa;
+
 	
 	@NotBlank
     @Column(nullable = false)
@@ -95,7 +98,8 @@ public class Prospect {
 		this.produtEscolhido = produtEscolhido;
 	}
 	
-	@OneToMany(mappedBy = "prospect", cascade = CascadeType.ALL)
+	 @OneToMany(mappedBy = "prospect", cascade = CascadeType.ALL)
+	 private List<History> historys;
 
     public long getId() {
         return id;
@@ -187,5 +191,12 @@ public class Prospect {
         this.cnpj = cnpj;
     }
 
+    public List<History> getHistorys() {
+        return historys;
+    }
+
+    public void setHistorys(List<History> historys) {
+        this.historys = historys;
+    }
 }
 	

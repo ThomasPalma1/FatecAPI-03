@@ -9,7 +9,7 @@ b{
 
 .card-contatos{
   width: 95%;
-  height: 105px;
+  height: 150px;
   margin-right: 5%;
   margin-bottom: 2%;
   background-color: white;
@@ -183,16 +183,7 @@ b{
   font-weight: bold;
 }
 
-.btn {
-    color: #fff;
-    background-color: #F12B2C;
-    border-color: #F12B2C;
-    position: absolute;
-    top: 33%;
-    left: 84%;
-    width:40px;
-    
-}
+
 
 a {
     color: #212529;
@@ -201,8 +192,4 @@ a {
 
 a:hover {
     color: #6c757d;
-}
-
-.btn-group, .btn-group-vertical {
-    float: right;
 }

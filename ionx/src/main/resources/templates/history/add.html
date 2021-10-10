@@ -2,20 +2,20 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="pt-br">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Dasboard</title>
+    <title>Cadastro de Produtos</title>
 
-    <link rel="sortcut icon" href="../imgs/logo.ico" type="image/x-icon"/>
+    <link rel="sortcut icon" href="/imgs/logo.ico" type="image/x-icon"/>
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sidebars/">
 
     
     <!-- Bootstrap and CSS style -->
-<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="../css/index.css" rel="stylesheet">
-<link href="../css/perfil_clientes.css" rel="stylesheet">
-<link href="../css/sidebars.css" rel="stylesheet">
+ <link href="/webjars/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="/css/index.css" rel="stylesheet">
+<link href="/css/sidebars.css" rel="stylesheet">
+<link href="/css/cadas_products.css" rel="stylesheet">
 <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/dashboard/">
+
 
 
   </head>
@@ -64,13 +64,9 @@
     <path style="fill:#ffff;" d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
   </symbol>
 
-    <symbol id="bi bi-three-dots" width="18" height="25" fill="currentColor" viewBox="0 0 16 16">
-    <path style="fill: #C2CFE0;"d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
-    </symbol>
-    
-    <symbol id="bi bi-power" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16">
+	<symbol id="bi bi-power" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16">
   			<path d="M7.5 1v7h1V1h-1zM3 8.812a4.999 4.999 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812z"/>
-		</symbol>
+	</symbol>
 
 </svg>
 
@@ -84,14 +80,14 @@
   <div class="d-flex flex-column flex-shrink-0 p-3 text-black bg-white" style="width: 280px; height: 100vh;">
 
     <br>
-    <center><img class="logo" src="../imgs/logo.png" alt="logo preto"></center>
+    <center><img class="logo" src="/imgs/logo.png" alt="logo preto"></center>
     <br>
     <br>
     <br>
 
     <center><h6> Nome de usuário</h6></center> 
 
-    <br>
+        <br>
     <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
         <a href="/home" class="nav-link text-black" aria-current="page">
@@ -131,11 +127,12 @@
       </li>
     </ul>
     <hr>
-		<a href="#" class="nav-link text-black"><svg class="bi me-2" width="16" height="16"><use xlink:href="#bi bi-people"/></svg>Gerenciar perfis
+    
+<a href="#" class="nav-link text-black"><svg class="bi me-2" width="16" height="16"><use xlink:href="#bi bi-people"/></svg>Gerenciar perfis
         </a>
-		<a href="#" class="nav-link text-black"><svg class="bi me-2" width="16" height="16"><use xlink:href="#bi bi-gear"/></svg>Configurações
+<a href="#" class="nav-link text-black"><svg class="bi me-2" width="16" height="16"><use xlink:href="#bi bi-gear"/></svg>Configurações
         </a>
-        <a href="#" class="nav-link text-black" onclick="logout(event)"><svg class="bi-power" width="20" height="16">
+<a href="#" class="nav-link text-black" onclick="logout(event)"><svg class="bi-power" width="20" height="16">
 					<use xlink:href="#bi bi-power" /></svg> Sair </a>	
     </div>
   </div>
@@ -164,96 +161,40 @@
 
 <br><br><br>
 
-<!-- conteudo da page -->
-
 <div class="container">
 
-  <div class="row">
-  <div class="col">
-  <div class="dados">
-    <div th:switch="${prospect.level}" >
-    <span th:case="'Alta'" class="temperature-alta" th:text="${prospect.level}"></span>
-    <span th:case="'Normal'"class="temperature-normal" th:text="${prospect.level}"></span>
-    <span th:case="'Baixa'"class="temperature-baixa" th:text="${prospect.level}"></span>
-    </div>
-    <h1 class="title">Dados Prospect</h1>
-    <br>
-    
-   <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3668.3811534822344!2d-45.791961148911426!3d-23.15628495256989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc4d04ad05c80f%3A0x3a3cb86c6a09f490!2sIonic%20health!5e0!3m2!1spt-BR!2sbr!4v1632755641609!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy"></iframe> --> 
-    <h1 class="text" th:text="${prospect.nome}">Devon Lane</h1>
-    <p th:text="${prospect.cargo}">Nursing Assistant</p>
-    <br>
-    <h1 class="text" th:text="${prospect.empresa}">Johnson & Johnson</h1>
-    <p th:text="${prospect.cidade}">São josé dos campos</p>
-    <br>
-    <p th:text="${prospect.telefone}">(270) 555-0117</p>
-    <p th:text="${prospect.email}">devon.lane@example.com</p>
-    <br>
-  </div>
-</div>
+<h1 class="title">Adicionar Histórico</h1>
+<br>
+<p class="text">Preencha os campos abaixo para cadastrar um novo histórico na plataforma.<br></p>
+<br>
 
-</div>
+  <form th:action="@{/prospects/{prospectId}/historys/salvar(prospectId=${prospectId})}"
+      th:method="${history.id} == 0 ? post : put" th:object="${history}">
+        <div class="row">
+            <input id="id" type="hidden" th:field="*{id}"/>
+           <div class="mb-3">
+    		<label for="form-label">Descrição</label>
+   			 <textarea class="form-control-textarea" id="descricaoHistory" th:field="*{descricaoHistory}" placeholder="Descreva o histórico..." required></textarea>
+   			 <div th:if="${#fields.hasErrors('descricaoHistory')}" th:errors="*{descricaoHistory}"></div>
+    	  </div>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit">Salvar</button>
+        </div>
 
-
-  <br>
-  <div class="row">
-<section class="columns">
-  
-  <div class="column">
-    <h2 class="title">Histórico de contato</h2>
-    <p>
-        <a class="btn btn-primary" th:href="@{/prospects/{id}/historys/listar(id=${prospect.id})}">
-          Visualizar histórico</a>
-    </p>
-  </div>
-  
-  <div class="column">
-    <h2 class="title">Produtos de interesse</h2>
-   <br>
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-      <label class="form-check-label" for="flexCheckChecked" th:text="${prospect.produtEscolhido}">
-        nCommand
-      </label>
-    </div>
-
-
-  </div>
-  
-<!-- <div class="column">
-    <h2 class="title">Melhor hora para</h2>
-    <br><br>
-    <h2 class="title2">Chamar</h2>
-    <p class="text">18:00</p>
-    <h2 class="title2">E-mail</h2>
-    <p class="text">19:00</p>
-  </div> -->
-  
-</section></div>
-
-</div>
+    </form>
 
 
 
-
-</main>
-
-
-
-
-<footer>
-    <script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
+			<footer>
+				<script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
 				<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"
 					referrerpolicy="no-referrer"></script>
 				<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 				<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 				<script src="/js/function.js"></script>
-    
-   
+			</footer>
 
-</footer>
-
-
-</body>
-</html>
+ 
+</div>

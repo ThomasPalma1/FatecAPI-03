@@ -22,4 +22,5 @@ public class ConfigSpringMvc extends WebMvcConfigurerAdapter {
 		registry.addViewController("/").setViewName("home");
 		registry.addViewController("/home").setViewName("home");
 	}
+	
 }
