@@ -49,6 +49,8 @@ Para essa segunda Entrega, nosso foco foi no Pipeline de vendas, essencial para 
 <h2>✔Valor da entrega</h2>
  
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
+
+É importante ter fácil controle dos clientes para plataforma e a identificação da etapa do processo. A informações serem alteradas e adicionadas são essênciais e a segurança ao logar na plataforma é muito importante por este motivo as telas foram adicionadas. O valor deste entrega foi entregar um manuseio fácil, rápido e seguro, em questão de Pipeline por conter muitas informações de muitos clientes é necessário ter uma boa visualização e organização.
        
 <h2>📌Pipeline de vendas</h2>
 Com o pipeline de vendas, a empresa pode detectar vendas que estejam estagnadas, evitando assim sua perda. Na aba de pipelines, ficam a mostra os clientes que foram adicionados em suas respectivas colunas dependendo do estágio em que a venda se encontra, o estágio da venda poderá ser alterado a qualquer momento, basta arrastar o Card para o estágio atual. Para saber mais informações referentes ao cliente, é possível acessar o Card clicando sobre ele.
