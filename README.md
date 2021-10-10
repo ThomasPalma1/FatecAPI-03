@@ -44,7 +44,7 @@ Propor para IONIC health uma plataforma de gestão de relacionamento com o clien
        
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
        
-Para essa segunda Entrega, nosso foco foi no Pipeline de vendas, essencial para se ter controle de cada cliente e da etapa em que se encontra no processo. Com o Pipeline, é possível localizar de forma fácil os clientes, acessar suas informações e alterar o estágio da venda apenas arrastando os Cards. Agora todas as informações cadastradas podem ser alteradas, Além disso a Ionic pode adicionar novos produtos à plataforma, assim, ao adicionar clientes novos produtos cadastrados já poderão ser adicionados como produtos de interesse do cliente.
+Para essa segunda Entrega, nosso foco foi no Pipeline de vendas, essencial para se ter controle de cada cliente e da etapa em que se encontra no processo. Com o Pipeline, é possível localizar de forma fácil os clientes, acessar suas informações e alterar o estágio da venda apenas arrastando os Cards. Agora todas as informações cadastradas podem ser alteradas, Além disso a Ionic pode adicionar novos produtos à plataforma, assim, ao adicionar clientes novos produtos cadastrados já poderão ser adicionados como produtos de interesse do cliente. Enriquecemos o fluxo da plataforma acrescentando duas novas tela. Uma de cadastro e a outra de login, que fortalece a segurança e a identificação de cada usuário.
 
 <h2>✔Valor da entrega</h2>
  
