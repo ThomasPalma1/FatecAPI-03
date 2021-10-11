@@ -91,7 +91,7 @@ Ao adicionar produtos a plataforma auxília a empresa ao manter atualizado seu p
        
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
        
-<h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/entrega-02/docs/bd2.png"></h1>
+<h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/entrega-02/docs/bd-02.png"></h1>
        
        
 <p align="center"><a href="https://github.com/ThomasPalma1/FatecAPI-03"><img src="https://img.shields.io/badge/Retornar%20a%20main-informational?style=for-the-badge" width="14.4%"></a></p>
