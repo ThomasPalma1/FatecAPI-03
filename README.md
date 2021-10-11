@@ -25,6 +25,7 @@
 - [Backlog e User Stories](#backlog-e-user-stories)
 - [Gráfico de Burndown](#burndown-da-sprint)
 - [Funcionamento da ferramenta](#funcionamento-da-ferramenta)
+- [Modelo Conceitual - Diagrama de Entidade e Relacionamento](#modelo-conceitual---diagrama-de-entidade-e-relacionamento)
 
        
 <h2>📜Descrição</h2>
@@ -44,11 +45,13 @@ Propor para IONIC health uma plataforma de gestão de relacionamento com o clien
        
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
        
-Para essa segunda Entrega, nosso foco foi no Pipeline de vendas, essencial para se ter controle de cada cliente e da etapa em que se encontra no processo. Com o Pipeline, é possível localizar de forma fácil os clientes, acessar suas informações e alterar o estágio da venda apenas arrastando os Cards. Agora todas as informações cadastradas podem ser alteradas, Além disso a Ionic pode adicionar novos produtos à plataforma, assim, ao adicionar clientes novos produtos cadastrados já poderão ser adicionados como produtos de interesse do cliente.
+Para essa segunda Entrega, nosso foco foi no Pipeline de vendas, essencial para se ter controle de cada cliente e da etapa em que se encontra no processo. Com o Pipeline, é possível localizar de forma fácil os clientes, acessar suas informações e alterar o estágio da venda apenas arrastando os Cards. Agora todas as informações cadastradas podem ser alteradas, Além disso a Ionic pode adicionar novos produtos à plataforma, assim, ao adicionar clientes novos produtos cadastrados já poderão ser adicionados como produtos de interesse do cliente. Enriquecemos o fluxo da plataforma acrescentando duas novas tela. Uma de cadastro e a outra de login, que fortalece a segurança e a identificação de cada usuário.
 
 <h2>✔Valor da entrega</h2>
  
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
+
+É importante ter fácil controle dos clientes para plataforma e a identificação da etapa do processo. A informações serem alteradas e adicionadas são essênciais e a segurança ao logar na plataforma é muito importante por este motivo as telas foram adicionadas. O valor deste entrega foi entregar um manuseio fácil, rápido e seguro, em questão de Pipeline por conter muitas informações de muitos clientes é necessário ter uma boa visualização e organização.
        
 <h2>📌Pipeline de vendas</h2>
 Com o pipeline de vendas, a empresa pode detectar vendas que estejam estagnadas, evitando assim sua perda. Na aba de pipelines, ficam a mostra os clientes que foram adicionados em suas respectivas colunas dependendo do estágio em que a venda se encontra, o estágio da venda poderá ser alterado a qualquer momento, basta arrastar o Card para o estágio atual. Para saber mais informações referentes ao cliente, é possível acessar o Card clicando sobre ele.
@@ -81,10 +84,14 @@ Ao adicionar produtos a plataforma auxília a empresa ao manter atualizado seu p
        
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
       
-<h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/entrega-02/docs/em%20desenvolvimento.png"></h1>
+<h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/978510f33bf8ffc66488e1cfbaf3c24309b5aa50/docs/gifSprint2.gif"></h1>
 <p>Caso deseje ver o vídeo com mais qualidade, assista-o no <a href="">YouTube!</a></p>
        
-
+<h2>📌Modelo Conceitual - Diagrama de Entidade e Relacionamento</h2>
+       
+[<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
+       
+<h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/entrega-02/docs/bd2.png"></h1>
        
        
 <p align="center"><a href="https://github.com/ThomasPalma1/FatecAPI-03"><img src="https://img.shields.io/badge/Retornar%20a%20main-informational?style=for-the-badge" width="14.4%"></a></p>
