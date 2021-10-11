@@ -86,7 +86,11 @@ Ao adicionar produtos a plataforma auxília a empresa ao manter atualizado seu p
 <h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/978510f33bf8ffc66488e1cfbaf3c24309b5aa50/docs/gifSprint2.gif"></h1>
 <p>Caso deseje ver o vídeo com mais qualidade, assista-o no <a href="">YouTube!</a></p>
        
-
+<h2>📌Modelo Conceitual - Diagrama de Entidade e Relacionamento</h2>
+       
+[<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
+       
+<h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/entrega-02/docs/bd2.png"></h1>
        
        
 <p align="center"><a href="https://github.com/ThomasPalma1/FatecAPI-03"><img src="https://img.shields.io/badge/Retornar%20a%20main-informational?style=for-the-badge" width="14.4%"></a></p>
