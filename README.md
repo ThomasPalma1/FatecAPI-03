@@ -53,20 +53,25 @@ Para essa segunda Entrega, nosso foco foi no Pipeline de vendas, essencial para 
 
 É importante ter fácil controle dos clientes para plataforma e a identificação da etapa do processo. A informações serem alteradas e adicionadas são essênciais e a segurança ao logar na plataforma é muito importante por este motivo as telas foram adicionadas. O valor deste entrega foi entregar um manuseio fácil, rápido e seguro, em questão de Pipeline por conter muitas informações de muitos clientes é necessário ter uma boa visualização e organização.
        
+>*Caso deseje ver o vídeo completo e com mais qualidade, assista-o no <a href="https://youtu.be/LOqKLea3SW0">YouTube!</a>*
+       
 <h2>📌Pipeline de vendas</h2>
 Com o pipeline de vendas, a empresa pode detectar vendas que estejam estagnadas, evitando assim sua perda. Na aba de pipelines, ficam a mostra os clientes que foram adicionados em suas respectivas colunas dependendo do estágio em que a venda se encontra, o estágio da venda poderá ser alterado a qualquer momento, basta arrastar o Card para o estágio atual. Para saber mais informações referentes ao cliente, é possível acessar o Card clicando sobre ele.
 
-(Inserir vídeo aqui)
+<h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/entrega-02/docs/V%C3%ADdeos%20de%20entrega/Sprint2/Pipeline.gif"></h1>
        
 <h2>📌Alteração de informações</h2>
 Foi adicionado possibilidade de alteração de todas as informações cadastradas na plataforma, de clientes e de produtos, para que todos os dados se mantenham atualizados evitando defasagem de informações, mantendo a plataforma sempre atualizada.
-
-(Inserir vídeo aqui)
+       
+<h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/entrega-02/docs/V%C3%ADdeos%20de%20entrega/Sprint2/edicao.gif"></h1>
        
 <h2>📌Adicionar Produtos</h2>
 Ao adicionar produtos a plataforma auxília a empresa ao manter atualizado seu portifólio de produtos que serão oferecidos aos clientes. A empresa pode adicionar Título, descrição e imagem referente ao produto, então ele estará cadastrado na plataforma, sempre que um covo cliente for adicionado, os novos produtos estarão disponíveis para serem marcados como produtos de interesse.
        
-(Inserir vídeo aqui)
+<h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/entrega-02/docs/V%C3%ADdeos%20de%20entrega/Sprint2/Produtos.gif"></h1>
+       
+>*Caso deseje ver o vídeo completo e com mais qualidade, assista-o no <a href="https://youtu.be/LOqKLea3SW0">YouTube!</a>*
+
        
 <h2>📘<i>Backlog</i> e <i>User stories</i></h2>
 
