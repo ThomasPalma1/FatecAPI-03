@@ -2,8 +2,10 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="pt-br">
   <head>
     <meta charset="utf-8">
+        
+
     
-    <title>Dasboard</title>
+    <title>Contatos</title>
 
     <link rel="sortcut icon" href="../imgs/logo.ico" type="image/x-icon"/>
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sidebars/">
@@ -62,6 +64,14 @@
   <symbol id="bi bi-bell" viewBox="0 0 16 16">
     <path style="fill:#ffff;" d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
   </symbol>
+  
+  <symbol id="bi bi-power" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+  <path d="M7.5 1v7h1V1h-1zM3 8.812a4.999 4.999 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812z"/>
+  </symbol>
+	
+	<symbol id="bi bi-power" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16">
+	<path d="M7.5 1v7h1V1h-1zM3 8.812a4.999 4.999 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812z"/>
+	</symbol>
 
 </svg>
 
@@ -85,13 +95,13 @@
       <br>
     <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
-        <a href="/" class="nav-link text-black" aria-current="page">
+        <a href="/home" class="nav-link text-black" aria-current="page">
           <svg class="bi me-2" width="16" height="16"><use xlink:href="#bi bi-speedometer2"/></svg>
           Dashboard
         </a>
       </li>
       <li>
-        <a href="#" class="nav-link text-black">
+        <a href="/prospects/prospect" class="nav-link text-black">
           <svg class="bi me-2" width="16" height="16"><use xlink:href="#bi bi-hdd-stack"/></svg>
           Prospect
         </a>
@@ -127,6 +137,8 @@
         </a>
 <a href="#" class="nav-link text-black"><svg class="bi me-2" width="16" height="16"><use xlink:href="#bi bi-gear"/></svg>Configurações
         </a>
+<a href="#" class="nav-link text-black" onclick="logout(event)"><svg class="bi-power" width="20" height="16">
+					<use xlink:href="#bi bi-power" /></svg> Sair </a>	
     </div>
   </div>
 
@@ -182,24 +194,28 @@
     <div class="col-md-6" th:each="produto : ${produtos}">
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-          
+           <div class="btn-group dropend">
+					  <a type="button" class="bi bi-three-dots" data-bs-toggle="dropdown" aria-expanded="false">
+					    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+  				 		<path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg>
+					  </a>
+                      <ul class="dropdown-menu">
+					    <li><a class="dropdown-item" th:href="@{/produtos/atualizar(id=${produto.id})}">Editar</a></li>
+					    <li><a class="dropdown-item" th:href="@{/produtos/remover(id=${produto.id})}">Apagar</a></li>
+					  </ul>
+         		 </div>
           <div class="mb-1 text-muted"><div th:text="${produto.descricao}"></div></div>
           
         </div>
         <div class="col-auto d-none d-lg-block">              
      
-		<img alt="" th:src="@{'getimage/'+${produto.photo}}" width="90%" height="150" class="bd-placeholder-img">
-		   <a class="btn btn-sm btn-danger" th:href="@{/produtos/remover(id=${produto.id})}">
-         
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-  		<path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"></path>
- 		<path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"></path>
-		</svg>
-		</a>
+			<img alt="" th:src="@{'getimage/'+${produto.photo}}" width="90%" height="150" class="bd-placeholder-img">
+		   	  	 
         </div>
-      </div>
-      </div>
- </div>
+        
+      			</div>
+      		</div>
+ 		</div>
     </div>
 </div>
 
@@ -224,8 +240,14 @@
 
 
 <footer>
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
     
+    			<script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"
+					referrerpolicy="no-referrer"></script>
+				<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+				<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+				<script src="/js/function.js"></script>
     
 
 </footer>

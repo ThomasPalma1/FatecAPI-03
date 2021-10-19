@@ -30,6 +30,12 @@ public class ProspectController {
 		return new ModelAndView("prospect/list", model);
 	}
 	
+	@GetMapping("/prospect")
+	public ModelAndView negocios(ModelMap model) {
+		model.addAttribute("prospects", prospectService.recuperar());
+		return new ModelAndView("prospect/negocios", model);
+	}
+
 	//Associar com add.html
     @GetMapping("/cadastro")
     public ModelAndView preSalvar(@ModelAttribute("prospect") Prospect prospect, ModelMap model) {
@@ -54,9 +60,10 @@ public class ProspectController {
     public ModelAndView preAtualizar(@RequestParam("id") long id, ModelMap model) {
     	Prospect prospect = prospectService.recuperarPorId(id);
         model.addAttribute("prospect", prospect);
+        model.addAttribute("produtos", produtoService.recuperar());
         return new ModelAndView("/prospect/add", model);
     }
-
+    
     //Remover prospect
 
     @GetMapping("/remover")
@@ -66,5 +73,15 @@ public class ProspectController {
         return "redirect:/prospects/listar";
     }
 
+	
+	@GetMapping("/details")
+	public ModelAndView detalhes(ModelMap model, @RequestParam("id") long id, RedirectAttributes attr) {
+		Prospect prospect = prospectService.recuperarPorId(id);
+        model.addAttribute("prospect", prospect);
+		return new ModelAndView("prospect/prospect_detalhes", model);
+	}
+	
+    
+    
     
 }

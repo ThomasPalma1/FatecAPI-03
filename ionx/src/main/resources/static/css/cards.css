@@ -130,12 +130,20 @@ position: inherit;
       
       
       
-.btn-danger{
-	color: #fff;
-    background-color: #F12B2C;
-    border-color: #F12B2C;
-    position: absolute;
-  	top: 3%;
-    left: 89%;
-    width: 40px;
+
+
+a {
+    color: #f8f9fa;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #6c757d;
+}
+
+.btn-group, .btn-group-vertical {
+    position: relative;
+    display: inline-flex;
+    vertical-align: middle;
+    left: 175%;
 }
