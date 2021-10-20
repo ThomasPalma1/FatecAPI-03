@@ -181,35 +181,39 @@ As informações poderão ser alteradas após o cadastro.</p>
   	<div class="mb-3">
       <label for="formGroupExampleInput2" class="form-label">Cargo</label>
       <input class="form-control-cargo" placeholder="ex. Gestor de conta" id="cargo" type="text" th:field="*{cargo}"/>
-      <div th:if="${#fields.hasErrors('cargo')}" th:errors="*cargo}"></div>
+      <div th:if="${#fields.hasErrors('cargo')}" th:errors="*{cargo}"></div>
   	</div>
   
       <div class="row g-3">
         <div class="col">
           <label for="formGroupExampleInput" class="form-label">Contato</label>
           <input class="form-control" placeholder="(99)9 9999-9999" maxlength="15" name="phone" id="telefone" type="text" th:field="*{telefone}"/>
-          <div th:if="${#fields.hasErrors('telefone')}" th:errors="*telefone}"></div>
+          <div th:if="${#fields.hasErrors('telefone')}" th:errors="*{telefone}"></div>
         </div>
         
-       <div class="col-md-4">
-          
-          <div></div>
+        <div class="col">
+          <label for="appt" class="hora">Melhor horário para:</label><br><br>
+          <label for="formGroupExampleInput" class="form-label-lig">Ligação</label><br>
+          <input type="time" id="hrtel" name="hrtel" min="08:00" max="19:00" th:field="*{hrtel}" required/>
+          <div th:if="${#fields.hasErrors('hrtel')}" th:errors="*{hrtel}"></div>
         </div>
       </div>
+        
       
       <div class="row g-3">
         <div class="col">
         <br>
           <label for="formGroupExampleInput" class="form-label">E-mail</label>
           <input class="form-control" placeholder="exemplo@exemplo.com" id="email" type="text" th:field="*{email}"/>
-          <div th:if="${#fields.hasErrors('email')}" th:errors="*email}"></div>
+          <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
         </div>
+       
         
-     
-        
-        <div class="col-md-4"><br><br>
-          
-		 <div></div>
+    	<div class="col">
+          <br>
+          <label for="formGroupExampleInput" class="form-label-email">E-mail</label><br>
+          <input type="time" id="hremail" name="hremail" min="08:00" max="19:00" th:field="*{hremail}" required>
+          <div th:if="${#fields.hasErrors('hremail')}" th:errors="*{hremail}"></div>
         </div>
       </div>
       <hr>
