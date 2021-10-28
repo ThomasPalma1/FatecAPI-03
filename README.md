@@ -77,7 +77,7 @@ Ao adicionar produtos a plataforma auxília a empresa ao manter atualizado seu p
 
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
 
-<h1 align="center"><img src="docs/userStories/User stories 2.png"></h1>
+<h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/main/docs/userStories/user-stories-2.png"></h1>
        
 <h2>📊Burndown da Sprint</h2>
        
