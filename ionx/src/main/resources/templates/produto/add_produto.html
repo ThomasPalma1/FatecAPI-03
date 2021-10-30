@@ -67,97 +67,109 @@
 	<symbol id="bi bi-power" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16">
   			<path d="M7.5 1v7h1V1h-1zM3 8.812a4.999 4.999 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812z"/>
 	</symbol>
+	
+	<symbol id="bi bi-justify" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+  			  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+		</symbol>
 
 </svg>
 
 <!-- end svg icons -->
 
-<!-- Sidebar inicio -->
+<input type="checkbox" id="menu-control"/>
+	<div class="sidenav" id="menu">
+		
+		<div class="d-flex flex-column flex-shrink-0 p-3 text-black bg-white" style="width: 280px; height: 100vh;">
+			<label for="menu-control"><svg
+							class="bi bi-justify" width="16" height="16"><use xlink:href="#bi bi-justify" />
+			</svg></label>
+			<br>
+			<center>
+				<img class="logo" src="../imgs/logo.png" alt="logo preto">
+			</center>
+			<br> <br> <br>
 
+			<center>
+				<h6>Nome de usuário</h6>
+			</center>
 
-<div class="sidenav">
-  <h1 class="visually-hidden"></h1>
-  <div class="d-flex flex-column flex-shrink-0 p-3 text-black bg-white" style="width: 280px; height: 100vh;">
-
-    <br>
-    <center><img class="logo" src="../imgs/logo.png" alt="logo preto"></center>
-    <br>
-    <br>
-    <br>
-
-    <center><h6> Nome de usuário</h6></center> 
-
-        <br>
-    <ul class="nav nav-pills flex-column mb-auto">
-      <li class="nav-item">
-        <a href="/home" class="nav-link text-black" aria-current="page">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#bi bi-speedometer2"/></svg>
-          Dashboard
-        </a>
-      </li>
-      <li>
-        <a href="/prospects/prospect" class="nav-link text-black">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#bi bi-hdd-stack"/></svg>
-          Prospect
-        </a>
-      </li>
-      <li>
-        <a  href="/prospects/listar" class="nav-link text-black">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#bi bi-telephone"/></svg>
-          Contatos
-        </a>
-      </li>
-      <li>
-        <a href="/produtos/listar" class="nav-link text-black">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
-          Produtos
-        </a>
-      </li>
-       <li>
-        <a th:href="@{/prospects/cadastro}" class="nav-link text-black">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#bi bi-plus-square-dotted"/></svg>
-          Cadastrar prospects
-        </a>
-      </li>
-      <li>
-        <a th:href="@{/produtos/cadastro}" class="nav-link text-black">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#bi bi-pencil-square"/></svg>
-          Cadastrar produtos
-        </a>
-      </li>
-    </ul>
-    <hr>
-    
-<a href="#" class="nav-link text-black"><svg class="bi me-2" width="16" height="16"><use xlink:href="#bi bi-people"/></svg>Gerenciar perfis
-        </a>
-<a href="#" class="nav-link text-black"><svg class="bi me-2" width="16" height="16"><use xlink:href="#bi bi-gear"/></svg>Configurações
-        </a>
-<a href="#" class="nav-link text-black" onclick="logout(event)"><svg class="bi-power" width="20" height="16">
+			<br>
+			<ul class="nav nav-pills flex-column mb-auto">
+				<li class="nav-item"><a href="/home" class="nav-link text-black" aria-current="page"> <svg
+							class="bi me-2" width="16" height="16">
+							<use xlink:href="#bi bi-speedometer2" />
+						</svg> Dashboard
+					</a></li>
+				<li><a href="/prospects/prospect" class="nav-link text-black">
+						<svg class="bi me-2" width="16" height="16">
+							<use xlink:href="#bi bi-hdd-stack" />
+						</svg> Prospect
+					</a></li>
+				<li><a href="/prospects/listar" class="nav-link text-black">
+						<svg class="bi me-2" width="16" height="16">
+							<use xlink:href="#bi bi-telephone" />
+						</svg> Contatos
+					</a></li>
+				<li><a href="/produtos/listar" class="nav-link text-black">
+						<svg class="bi me-2" width="16" height="16">
+							<use xlink:href="#grid" />
+						</svg> Produtos
+					</a></li>
+				<li><a th:href="@{/prospects/cadastro}" class="nav-link text-black"> <svg class="bi me-2" width="16"
+							height="16">
+							<use xlink:href="#bi bi-plus-square-dotted" />
+						</svg> Cadastrar
+						prospects
+					</a></li>
+				<li><a th:href="@{/produtos/cadastro}" class="nav-link text-black"> <svg class="bi me-2" width="16"
+							height="16">
+							<use xlink:href="#bi bi-pencil-square" />
+						</svg> Cadastrar produtos
+					</a></li>
+			</ul>
+			<hr>
+	
+			<a href="#" class="nav-link text-black"><svg class="bi me-2" width="16" height="16">
+					<use xlink:href="#bi bi-people" /></svg>Gerenciar perfis </a> 
+			<a href="#" class="nav-link text-black"><svg class="bi me-2" width="16"	height="16">
+					<use xlink:href="#bi bi-gear" /></svg>Configurações </a>
+			<a href="#" class="nav-link text-black" onclick="logout(event)"><svg class="bi-power" width="20" height="16">
 					<use xlink:href="#bi bi-power" /></svg> Sair </a>	
-    </div>
-  </div>
+			
+		</div>
+		 
+	</div>
 
-  <!-- fim sidebar -->
+	<!-- fim sidebar -->
 
 
-  <!-- incio navbar -->
-<div class="main">
+	<!-- incio navbar -->
+	<div class="main">
+		
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+			<label for="menu-control"><svg
+							class="bi bi-justify" width="16" height="16"><use xlink:href="#bi bi-justify" />
+			</svg></label>
+				<form>
+				
+					<input type="search" name="search" placeholder="Buscar contatos">
+				</form>
+				<ul class="nav navbar-nav">
+					<button type="button" class="icon-button">
+						<svg class="bi-bell" width="25" height="25">
+							<use xlink:href="#bi bi-bell" />
+						</svg>
+						<span class="icon-button__badge">99+</span>
+					</button>
+					
+				</ul>
+				
+			</div>
+			
+		</nav>
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <form>
-      <input type="search" name="search" placeholder="Buscar contatos">
-    </form>
-    <ul class="nav navbar-nav">
-        <button type="button" class="icon-button">
-            <svg class="bi-bell" width="25" height="25"><use xlink:href="#bi bi-bell"/></svg>
-            <span class="icon-button__badge">99+</span>
-         </button>
-      </ul>
-  </div>
-</nav>
-
-<!-- fim navbar -->
+		<!-- fim navbar -->
 
 <br><br><br>
 

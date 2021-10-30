@@ -1,26 +1,26 @@
 <!doctype html>
-<html xmlns:th="http://www.thymeleaf.org" lang="pt-br">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Dasboard</title>
+<html lang="pt-br">
 
-    <link rel="sortcut icon" href="../imgs/logo.ico" type="image/x-icon"/>
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sidebars/">
+<head>
+	<meta charset="utf-8">
 
-    
-    <!-- Bootstrap and CSS style -->
-<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="../css/index.css" rel="stylesheet">
-<link href="../css/perfil_clientes.css" rel="stylesheet">
-<link href="../css/sidebars.css" rel="stylesheet">
-<link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/dashboard/">
+	<title>Dashboard</title>
+
+	<link rel="sortcut icon" href="/imgs/logo.ico" type="image/x-icon" />
+	<link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sidebars/">
 
 
-  </head>
-  <body>
- 
+	<!-- Bootstrap and CSS style -->
+	<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/index.css" rel="stylesheet">
+	<link href="css/sidebars.css" rel="stylesheet">
+	<link href="css/admin.css" rel="stylesheet">
+	
+	<link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/dashboard/">
+
+
+</head>
+
 <body>
 
 	<!-- svg icons -->
@@ -79,10 +79,6 @@
 		
 		<symbol id="bi bi-power" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16">
   			<path d="M7.5 1v7h1V1h-1zM3 8.812a4.999 4.999 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812z"/>
-		</symbol>
-		
-		<symbol id="bi bi-justify" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-  			  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
 		</symbol>
 		
 		<symbol id="bi bi-justify" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
@@ -190,99 +186,75 @@
 
 		<!-- fim navbar -->
 
+		<br>
+		<br>
+		<br>
 
+		<!-- conteudo da page -->
+
+		<div class="container">
+
+		<br><br><br>
+
+
+<h1>Gerenciamento de perfis</h1>
 <br><br><br>
 
-<!-- conteudo da page -->
-
-<div class="container">
-
-  <div class="row">
-  <div class="col">
-  <div class="dados">
-    <div th:switch="${prospect.level}" >
-    <span th:case="'Alta'" class="temperature-alta" th:text="${prospect.level}"></span>
-    <span th:case="'Normal'"class="temperature-normal" th:text="${prospect.level}"></span>
-    <span th:case="'Baixa'"class="temperature-baixa" th:text="${prospect.level}"></span>
-    </div>
-    <h1 class="title">Dados Prospect</h1>
-    <br>
-    
-   <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3668.3811534822344!2d-45.791961148911426!3d-23.15628495256989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc4d04ad05c80f%3A0x3a3cb86c6a09f490!2sIonic%20health!5e0!3m2!1spt-BR!2sbr!4v1632755641609!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy"></iframe> --> 
-    <h1 class="text" th:text="${prospect.nome}">Devon Lane</h1>
-    <p th:text="${prospect.cargo}">Nursing Assistant</p>
-    <br>
-    <h1 class="text" th:text="${prospect.empresa}">Johnson & Johnson</h1>
-    <p th:text="${prospect.cidade}">São josé dos campos</p>
-    <br>
-    <p th:text="${prospect.telefone}">(270) 555-0117</p>
-    <p th:text="${prospect.email}">devon.lane@example.com</p>
-    <br>
-  </div>
-</div>
-
-</div>
-
-
-  <br>
-  <div class="row">
-<section class="columns">
-  
-  <div class="column">
-    <h2 class="title">Histórico de contato</h2>
-    <p>
-        <a class="btn btn-primary" th:href="@{/prospects/{id}/historys/listar(id=${prospect.id})}">
-          Visualizar histórico</a>
-    </p>
-  </div>
-  
-  <div class="column">
-    <h2 class="title">Produtos de interesse</h2>
-   <br>
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-      <label class="form-check-label" for="flexCheckChecked" th:text="${prospect.produtEscolhido}">
-        nCommand
-      </label>
-    </div>
-
-
-  </div>
-  
-<div class="column">
-    <h2 class="title">Melhor hora para</h2>
-    <br><br>
-    <h2 class="title2">Chamar</h2>
-    <p class="text" th:text="${prospect.hrtel}">18:00</p>
-    <h2 class="title2">E-mail</h2>
-    <p class="text" th:text="${prospect.hremail}">19:00</p>
-  </div>
-  
-</section></div>
-
+<div class="table-responsive">
+<table class="table table-bordered table-hover">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Usuário</th>
+      <th scope="col">E-mail</th>
+      <th scope="col">Nivel de acesso</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Albert Flores</td>
+      <td>albert.cruz@example.com</td>
+      <td><select class="form-select" >
+		  <option selected>Status...</option>
+		  <option value="1">Administrador</option>
+		  <option value="2">Vendedor</option>
+		  <option value="3">Gerente</option>
+		</select>
+	</td>
+    </tr>
+        <tr>
+      <th scope="row">2</th>
+      <td>Floyd Miles</td>
+      <td>albert.cruz@example.com</td>
+      <td><select class="form-select" >
+		  <option selected>Status...</option>
+		  <option value="1">Administrador</option>
+		  <option value="2">Vendedor</option>
+		  <option value="3">Gerente</option>
+		</select>
+	</td>
+    </tr>
+        <tr>
+      <th scope="row">3</th>
+      <td>Jenny Wilson</td>
+      <td>albert.cruz@example.com</td>
+      <td><select class="form-select" >
+		  <option selected>Status...</option>
+		  <option value="1">Administrador</option>
+		  <option value="2">Vendedor</option>
+		  <option value="3">Gerente</option>
+		</select>
+	</td>
+    </tr>
+  </tbody>
+</table>
 </div>
 
 
+</div>
 
-
-</main>
-
-
-
-
-<footer>
-    <script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"
-					referrerpolicy="no-referrer"></script>
-				<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-				<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-				<script src="/js/function.js"></script>
-    
-   
-
-</footer>
-
-
+</div>
+</div>
 </body>
 </html>
