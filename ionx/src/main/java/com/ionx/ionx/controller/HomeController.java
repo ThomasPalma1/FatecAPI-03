@@ -35,5 +35,10 @@ public class HomeController {
 	public String realizarLogin() {
 		return "cadastro/cadastro";
 	}
+	@RequestMapping("/adminconfig")
+		public String adminconfig() {
+		return "admin";
+	}
+
 
 }

@@ -144,7 +144,7 @@
 			</ul>
 			<hr>
 	
-			<a href="#" class="nav-link text-black"><svg class="bi me-2" width="16" height="16">
+			<a href="adminconfig" class="nav-link text-black"><svg class="bi me-2" width="16" height="16">
 					<use xlink:href="#bi bi-people" /></svg>Gerenciar perfis </a> 
 			<a href="#" class="nav-link text-black"><svg class="bi me-2" width="16"	height="16">
 					<use xlink:href="#bi bi-gear" /></svg>Configurações </a>
@@ -210,43 +210,7 @@
       <th scope="col">Nivel de acesso</th>
     </tr>
   </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Albert Flores</td>
-      <td>albert.cruz@example.com</td>
-      <td><select class="form-select" >
-		  <option selected>Status...</option>
-		  <option value="1">Administrador</option>
-		  <option value="2">Vendedor</option>
-		  <option value="3">Gerente</option>
-		</select>
-	</td>
-    </tr>
-        <tr>
-      <th scope="row">2</th>
-      <td>Floyd Miles</td>
-      <td>albert.cruz@example.com</td>
-      <td><select class="form-select" >
-		  <option selected>Status...</option>
-		  <option value="1">Administrador</option>
-		  <option value="2">Vendedor</option>
-		  <option value="3">Gerente</option>
-		</select>
-	</td>
-    </tr>
-        <tr>
-      <th scope="row">3</th>
-      <td>Jenny Wilson</td>
-      <td>albert.cruz@example.com</td>
-      <td><select class="form-select" >
-		  <option selected>Status...</option>
-		  <option value="1">Administrador</option>
-		  <option value="2">Vendedor</option>
-		  <option value="3">Gerente</option>
-		</select>
-	</td>
-    </tr>
+  <tbody id="usersList">
   </tbody>
 </table>
 </div>
@@ -256,5 +220,14 @@
 
 </div>
 </div>
+<script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"
+					referrerpolicy="no-referrer"></script>
+				<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+				<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+				<script src="/js/function.js"></script>
+<script>allUsers(event);</script>
+
 </body>
 </html>
