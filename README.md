@@ -45,12 +45,14 @@ Propor para IONIC health uma plataforma de gestão de relacionamento com o clien
        
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
        
-
+Nesta terceira entrega criamos um sistema de cadastro para que possa tornar a plataforma mais segura, por a plataforma conter muitas informações e por necessidade de segurança. Este sistema basea-se em uma hierarquia de cargos e permissões, onde o Administrador da plataforma pode gerenciar tudo, o Gerente pode gerenciar clientes e funcionários e etc... Entretanto usuário recém cadastrados terão poucas permissões, e muitas delas somente visuais, e não gerenciais. Uma funcionalidade que não é imprescindivel mas é muito útil e eficaz, são as dashboards. Os gráficos trarão informações sobre as vendas, nelas teremos informações gerais de clientes e vendas, gráfico para os processos do clientes assim dandio uma visualização geral bem melhor.
 
 <h2>✔Valor da entrega</h2>
  
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
 
+O sistema de cadastro é muito importante, além de ser um sistema muito seguro, deixa toda plataforma organizada em questão de distinguir usuários. Enquanto dashboards agrega a visualização e gerenciamentos de possíveis projetos maiores.
+       
 <h2>📘<i>Backlog</i> e <i>User stories</i></h2>
 
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
@@ -63,6 +65,27 @@ Propor para IONIC health uma plataforma de gestão de relacionamento com o clien
 
 <h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/main/docs/Burndown/Burndown%20Sprint3.png" width=750px height=400px></h1>
 
+<h2>🖥️Sistema de Cadastro</h2>
+<p>Veja como funciona o sistema de cadastro no <a href="https://github.com/ThomasPalma1/FatecAPI-03/blob/entrega-03/README.md#O-que-entregamos">O que entregamos</a>.</p>
+       
+<table align="center">
+    <tr>
+    <td align="center"><img style="border-radius: 50%;" src="https://github.com/ThomasPalma1/FatecAPI-03/blob/main/docs/usuario_comum_permissoes.mp4" width="500px;" /><br /><sub><b>Usuário comum</b></sub></td>
+    <td align="center"><img style="border-radius: 50%;" src="https://github.com/ThomasPalma1/FatecAPI-03/blob/main/docs/adm_permissoes.mp4" width="500px;" /><br /><sub><b>Administrador</b></sub></td>  
+    </tr>
+</table>
+       
+<h2>📈Gráficos</h2>
+<p>Veja que tipos de informções serão vistas nos gráficos no <a href="https://github.com/ThomasPalma1/FatecAPI-03/blob/entrega-03/README.md#O-que-entregamos">O que entregamos</a>.</p>
+       
+<table align="center">
+    <tr>
+    <td align="center"><img style="border-radius: 50%;" src="https://github.com/ThomasPalma1/FatecAPI-03/blob/main/docs/grafico_1.mp4" width="500px;" /><br /><sub><b>Usuário comum</b></sub></td>
+    <td align="center"><img style="border-radius: 50%;" src="https://github.com/ThomasPalma1/FatecAPI-03/blob/main/docs/grafico_2.mp4" width="500px;" /><br /><sub><b>Administrador</b></sub></td>  
+    </tr>
+</table>    
+       
+       
 <h2>🎥Funcionamento da ferramenta</h2>
        
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
