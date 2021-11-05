@@ -117,10 +117,13 @@ function allUsers(event) {
 						let tdNivelAcesso = document.createElement("td");
 
 						let selectNivelAcesso = document.createElement("select");
+						selectNivelAcesso.onchange = function() { updatePosition(responseUsers.data[i].id) };
 						selectNivelAcesso.classList.add("form-select");
+						selectNivelAcesso.id = responseUsers.data[i].id;
 
 						let defaultOption = document.createElement("option");
-						defaultOption.textContent = "Status...";
+						defaultOption.textContent = "Status";
+						defaultOption.disabled = true;
 						selectNivelAcesso.appendChild(defaultOption);
 						for (let x = 0; x < responsePositions.data.length; x++) {
 							let option = document.createElement("option");
@@ -165,5 +168,29 @@ function allUsers(event) {
 				})
 		})
 		.catch(function(error) {
+		})
+}
+function updatePosition(id) {
+	let choice = document.getElementById(id).selectedIndex;
+
+	axios({
+		method: 'post',
+		url: '/users/updatePosition',
+		params: {
+			userID: id,
+			selectedPosition: choice
+		}
+	})
+		.then(function(response) {
+			let status = response.status;
+			if (status === 200) {
+				Swal.fire({
+					position: 'center',
+					icon: 'success',
+					title: 'Alteração salva!',
+					showConfirmButton: false,
+					timer: 950
+				})
+			}
 		})
 }

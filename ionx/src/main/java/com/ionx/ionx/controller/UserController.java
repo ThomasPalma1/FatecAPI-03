@@ -2,12 +2,17 @@ package com.ionx.ionx.controller;
 
 import java.util.List;
 
+import javax.persistence.OrderBy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ionx.ionx.domain.Positions;
@@ -45,5 +50,15 @@ public class UserController {
 	@GetMapping("/all")
 	List<User> getAllUser() {
 		return userRepository.findAll();
+	}
+
+	@PostMapping("/updatePosition")
+	public ResponseEntity<?> updatePosition(@RequestParam("userID") String id,
+			@RequestParam("selectedPosition") String position) {
+		User user = userRepository.findById(Long.parseLong(id)).get();
+		user.setPosition(new Positions(Integer.parseInt(position)));
+		userRepository.save(user);
+
+		return new ResponseEntity<Boolean>(true, HttpStatus.OK);
 	}
 }

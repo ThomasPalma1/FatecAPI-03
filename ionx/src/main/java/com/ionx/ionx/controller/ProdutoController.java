@@ -42,32 +42,31 @@ public class ProdutoController {
 
 	// Metódo para salvar --> Tipo POST
 	@PostMapping("/salvar")
-    public String salvar(@Valid @ModelAttribute("produto") Produto produto, @RequestParam("file") MultipartFile photo, ModelMap model, BindingResult result, RedirectAttributes attr) {
+	public String salvar(@Valid @ModelAttribute("produto") Produto produto, @RequestParam("file") MultipartFile photo,
+			ModelMap model, BindingResult result, RedirectAttributes attr) {
 		if (result.hasErrors()) {
-            return "/produto/add_produto";
-        }
-		
-        if (photo.isEmpty()) {
-        	return "produto";
-        }
-        
-        Path path = Paths.get("uploads/");
-        try {
-        	InputStream inputStream = photo.getInputStream();
-        	Files.copy(inputStream, path.resolve(photo.getOriginalFilename()),
-        			StandardCopyOption.REPLACE_EXISTING);
-        	
-        	produto.setPhoto(photo.getOriginalFilename().toLowerCase());
-        } catch(Exception e) {
-        	e.printStackTrace();
-        }
+			return "/produto/add_produto";
+		}
 
-        produtoService.salvar(produto);
-        attr.addFlashAttribute("mensagem", "Produto salvo com sucesso.");
-        return "redirect:/produtos/listar";
-    }
-	
-	
+		if (photo.isEmpty()) {
+			return "produto";
+		}
+
+		Path path = Paths.get("uploads/");
+		try {
+			InputStream inputStream = photo.getInputStream();
+			Files.copy(inputStream, path.resolve(photo.getOriginalFilename()), StandardCopyOption.REPLACE_EXISTING);
+
+			produto.setPhoto(photo.getOriginalFilename().toLowerCase());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		produtoService.salvar(produto);
+		attr.addFlashAttribute("mensagem", "Produto salvo com sucesso.");
+		return "redirect:/produtos/listar";
+	}
+
 	// Atualização de produtos
 	@GetMapping("/atualizar")
 	public ModelAndView preAtualizar(@RequestParam("id") long id, ModelMap model) {
