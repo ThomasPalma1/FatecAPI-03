@@ -31,8 +31,8 @@ public class User {
 	private String senha;
 
 	@OneToOne
-	@JoinColumn(name = "idPositions", referencedColumnName = "id")
-	private Positions idPosition;
+	@JoinColumn(name = "position", referencedColumnName = "id")
+	private Positions position;
 
 	public long getId() {
 		return id;
@@ -78,16 +78,16 @@ public class User {
 		return contato;
 	}
 
+	public Positions getPosition() {
+		return position;
+	}
+
+	public void setPosition(Positions position) {
+		this.position = position;
+	}
+
 	public void setContato(String contato) {
 		this.contato = contato;
-	}
-
-	public Positions getIdPosition() {
-		return idPosition;
-	}
-
-	public void setIdPosition(Positions idPosition) {
-		this.idPosition = idPosition;
 	}
 
 }

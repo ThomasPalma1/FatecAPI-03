@@ -46,7 +46,7 @@ public class IonxApplication  implements CommandLineRunner{
 			admin.setNome("admin");
 			admin.setEmail("admin");
 			admin.setSenha("admin");
-			admin.setIdPosition(new Positions(1));
+			admin.setPosition(new Positions(1));
 			userRepository.save(admin);
 		}
 	}

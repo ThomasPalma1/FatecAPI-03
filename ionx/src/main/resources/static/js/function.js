@@ -126,8 +126,7 @@ function allUsers(event) {
 							let option = document.createElement("option");
 							option.value = responsePositions.data[x].id;
 							option.textContent = responsePositions.data[x].nome;
-
-							if (responseUsers.data[i].idPosition.id === responsePositions.data[x].id) {
+							if (responseUsers.data[i].position.id === responsePositions.data[x].id) {
 								option.selected = true;
 							}
 

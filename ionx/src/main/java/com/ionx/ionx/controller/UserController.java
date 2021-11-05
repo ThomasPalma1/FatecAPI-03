@@ -37,7 +37,7 @@ public class UserController {
 		user.setContato(newUser.getContato());
 		user.setEmail(newUser.getEmail());
 		user.setSenha(newUser.getSenha());
-		user.setIdPosition(new Positions(4));
+		user.setPosition(new Positions(4));
 
 		return userRepository.save(user);
 	}

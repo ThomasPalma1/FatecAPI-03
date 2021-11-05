@@ -1,5 +1,8 @@
 package com.ionx.ionx.controller;
 
+import javax.servlet.ServletRequest;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,9 +41,18 @@ public class ProspectController {
 
 	//Associar com add.html
     @GetMapping("/cadastro")
-    public ModelAndView preSalvar(@ModelAttribute("prospect") Prospect prospect, ModelMap model) {
+    public ModelAndView preSalvar(ServletRequest request, ModelMap model, @ModelAttribute("prospect") Prospect prospect){
     	model.addAttribute("produtos", produtoService.recuperar());
-    	return new ModelAndView("prospect/add", model);
+    	HttpSession session = ((HttpServletRequest) request).getSession(true);
+		
+		String permissao = session.getAttribute("tipo").toString();
+		if(permissao.equals("1")) {
+			return new ModelAndView("prospect/add", model);
+		}
+		else {
+			return new ModelAndView("home", model);
+		}
+    	
     }
     
     //Metódo para salvar --> Tipo POST
