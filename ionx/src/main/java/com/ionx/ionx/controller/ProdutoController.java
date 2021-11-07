@@ -32,9 +32,20 @@ public class ProdutoController {
 
 	// Associar com list.html
 	@GetMapping("/listar")
-	public ModelAndView listar(ModelMap model) {
+	public ModelAndView listar(ServletRequest request, ModelMap model) {
 		model.addAttribute("produtos", produtoService.recuperar());
-		return new ModelAndView("produto/list_produto", model);
+		
+		HttpSession session = ((HttpServletRequest) request).getSession(true);
+		
+		String permissao = session.getAttribute("tipo").toString();
+		if(permissao.equals("1")) {
+			
+			return new ModelAndView("produto/list_produto", model);
+		}
+		
+		else {
+			return new ModelAndView("produto/list_produtoIndefinido", model);
+		}
 	}
 
 	// Associar com add.html

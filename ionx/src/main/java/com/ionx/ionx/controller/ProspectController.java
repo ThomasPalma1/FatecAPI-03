@@ -28,9 +28,19 @@ public class ProspectController {
 	
 	//Associar com list.html
 	@GetMapping("/listar")
-	public ModelAndView listar(ModelMap model) {
+	public ModelAndView listar(ServletRequest request, ModelMap model) {
 		model.addAttribute("prospects", prospectService.recuperar());
-		return new ModelAndView("prospect/list", model);
+		HttpSession session = ((HttpServletRequest) request).getSession(true);
+		
+		String permissao = session.getAttribute("tipo").toString();
+		if(permissao.equals("1")) {
+			
+			return new ModelAndView("prospect/list", model);
+		}
+		else {
+			return new ModelAndView("prospect/listIndefinido", model);
+		}
+		
 	}
 	
 	@GetMapping("/prospect")

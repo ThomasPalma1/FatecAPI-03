@@ -224,14 +224,8 @@
 			</div>
 			<div class="card">
 				<div class="card-body">
-					<h5 class="card-title">Open</h5>
-					<p class="card-text">43</p>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card-body">
-					<h5 class="card-title">On hold</h5>
-					<p class="card-text">43</p>
+					<h5 class="card-title">Vendas Fechadas</h5>
+					<p class="card-text" id="fechado"></p>
 				</div>
 			</div>
 			<br><br>
@@ -276,12 +270,14 @@
 				            
 				            item.id = contatos++;
 				            
-				            var res = document.querySelector('p#res');
-				            res.innerHTML += `${contatos}`;
+				            
 				        });
-				        
-				        
-						
+				        var res = document.querySelector('p#res');
+			            res.innerHTML += `${contatos}`;
+			            
+			            var fechado = document.querySelector('p#fechado');
+			            fechado.innerHTML += `${FECHADO}`;
+			            
 				        quantidades.push(ALTA);
 				         quantidades.push(NORMAL);
 				         quantidades.push(BAIXA);
@@ -298,11 +294,12 @@
 				document.addEventListener('DOMContentLoaded', function () {
 					        const chart = Highcharts.chart('container', {
 					            chart: {
-					                type: 'bar'
+					                type: 'column'
 					            },
 					            title: {
 					                text: 'QUANTIDADE DE PIPELINES POR STATUS'
 					            },
+					            colors: ['#212529', '#343a40', '#495057', '#6c757d', '#adb5bd'],
 					            xAxis: {
 					                categories: ['Alta', 'Normal', 'Baixa', 'Perdido', 'Fechado']
 					            },
@@ -312,7 +309,9 @@
 					                }
 					            },
 					            series: [{
-					              data: [quantidades[0], quantidades[1], quantidades[2], quantidades[3], quantidades[4]]
+					              name: 'Pipelines',
+					              data: [quantidades[0], quantidades[1], quantidades[2], quantidades[3], quantidades[4]],
+					              colorByPoint: true
 					            }]
 					        });
 					    });
@@ -324,9 +323,11 @@
 				        $.each(dados, function(index1, item1) {
 				            
 				        	item1.id = produtos++;
-				        	var prod = document.querySelector('p#prod');
-				            prod.innerHTML += `${produtos}`;
+				        	
 				        })
+				        
+				        var prod = document.querySelector('p#prod');
+			            prod.innerHTML += `${produtos}`;
 				    }
 				
 					
