@@ -1,5 +1,9 @@
 package com.ionx.ionx.controller;
 
+import javax.servlet.ServletRequest;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -22,8 +26,20 @@ public class HomeController {
 	}
 
 	@RequestMapping("/home")
-	public String home() {
-		return "home";
+	public String home(ServletRequest request) {
+		
+
+		HttpSession session = ((HttpServletRequest) request).getSession(true);
+		
+		String permissao = session.getAttribute("tipo").toString();
+		if(permissao.equals("1")) {
+			
+			return "home";
+		}
+		
+		else {
+			return "homeIndefinido";
+		}
 	}
 
 	@RequestMapping("/cadastro")
@@ -36,9 +52,21 @@ public class HomeController {
 		return "cadastro/cadastro";
 	}
 	@RequestMapping("/adminconfig")
-		public String adminconfig() {
-		return "admin";
+		public String adminconfig(ServletRequest request) {
+		
+		HttpSession session = ((HttpServletRequest) request).getSession(true);
+		
+		String permissao = session.getAttribute("tipo").toString();
+		if(permissao.equals("1")) {
+			
+			return "admin";
+		}
+		
+		else {
+			return "homeIndefinido";
+		}
 	}
+
 
 
 }
