@@ -16,11 +16,18 @@
 	<link href="/css/sidebars.css" rel="stylesheet">
 	<link href="/css/cards.css" rel="stylesheet">
 	<link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/dashboard/">
-
-
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous"></script>
+      <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+      <script src="https://code.highcharts.com/highcharts.js"></script>
+	 
+	
 </head>
 
 <body>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"></script>
 
 	<!-- svg icons -->
 
@@ -192,7 +199,8 @@
 		<!-- conteudo da page -->
 
 		<div class="container">
-			
+		
+		
 			<select class="form-select" aria-label="Default select example" style="height: 50px; width: 95%;">
 				<option selected>Filtrar por:</option>
 				<option value="1">1</option>
@@ -204,14 +212,14 @@
 
 			<div class="card">
 				<div class="card-body">
-					<h5 class="card-title">Unresolved</h5>
-					<p class="card-text">60</p>
+					<h5 class="card-title">Contatos</h5>
+					<p class="card-text" id="res"></p>
 				</div>
 			</div>
 			<div class="card">
 				<div class="card-body">
-					<h5 class="card-title">Overdue</h5>
-					<p class="card-text">16</p>
+					<h5 class="card-title">Produtos</h5>
+					<p class="card-text" id="prod"></p>
 				</div>
 			</div>
 			<div class="card">
@@ -226,6 +234,110 @@
 					<p class="card-text">43</p>
 				</div>
 			</div>
+			<br><br>
+			
+		
+</div>
+	<div id="container" class = "container"style="width:70%; height:400px;"></div>
+
+
+<script>
+			var quantidades = [];
+	        var ALTA = 0;
+	        var NORMAL = 0;
+	        var BAIXA = 0;
+	        var PERDIDO = 0;
+	        var FECHADO = 0;
+	        var contatos = 0;
+	        var produtos = 0;
+		
+				$.ajax({
+					url: "/prospectcharts",
+					success: function(data) {
+				        $.each(data, function(index, item) {
+				            if (item.level == "Alta"){
+				            	ALTA++;
+				            }
+				            
+				            else if (item.level == "Normal"){
+				            	NORMAL++;
+				            }
+				            
+				            else if (item.level == "Baixa"){
+				            	BAIXA++;
+				            }
+				            
+				            else if (item.level == "Perdido"){
+				            	PERDIDO++;
+				            }
+				            else{
+				            	FECHADO++;
+				            }
+				            
+				            item.id = contatos++;
+				            
+				            var res = document.querySelector('p#res');
+				            res.innerHTML += `${contatos}`;
+				        });
+				        
+				        
+						
+				        quantidades.push(ALTA);
+				         quantidades.push(NORMAL);
+				         quantidades.push(BAIXA);
+				         quantidades.push(PERDIDO);
+				         quantidades.push(FECHADO);
+	
+				    }
+				
+					
+					
+				})
+				
+				
+				document.addEventListener('DOMContentLoaded', function () {
+					        const chart = Highcharts.chart('container', {
+					            chart: {
+					                type: 'bar'
+					            },
+					            title: {
+					                text: 'QUANTIDADE DE PIPELINES POR STATUS'
+					            },
+					            xAxis: {
+					                categories: ['Alta', 'Normal', 'Baixa', 'Perdido', 'Fechado']
+					            },
+					            yAxis: {
+					                title: {
+					                    text: 'Quantidade'
+					                }
+					            },
+					            series: [{
+					              data: [quantidades[0], quantidades[1], quantidades[2], quantidades[3], quantidades[4]]
+					            }]
+					        });
+					    });
+				
+				
+		        $.ajax({
+					url: "/produtocharts",
+					success: function(dados) {
+				        $.each(dados, function(index1, item1) {
+				            
+				        	item1.id = produtos++;
+				        	var prod = document.querySelector('p#prod');
+				            prod.innerHTML += `${produtos}`;
+				        })
+				    }
+				
+					
+					
+				})
+			</script>
+
+
+
+
+</div>
 
 			</main>
 

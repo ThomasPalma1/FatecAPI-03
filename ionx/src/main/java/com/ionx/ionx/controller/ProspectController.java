@@ -47,6 +47,7 @@ public class ProspectController {
 		
 		String permissao = session.getAttribute("tipo").toString();
 		if(permissao.equals("1")) {
+			
 			return new ModelAndView("prospect/add", model);
 		}
 		else {
@@ -69,20 +70,40 @@ public class ProspectController {
     
   //Atualização de prospects
     @GetMapping("/atualizar")
-    public ModelAndView preAtualizar(@RequestParam("id") long id, ModelMap model) {
-    	Prospect prospect = prospectService.recuperarPorId(id);
-        model.addAttribute("prospect", prospect);
-        model.addAttribute("produtos", produtoService.recuperar());
-        return new ModelAndView("/prospect/add", model);
+    public ModelAndView preAtualizar(ServletRequest request, @RequestParam("id") long id, ModelMap model) {
+        
+    	HttpSession session = ((HttpServletRequest) request).getSession(true);
+		
+		String permissao = session.getAttribute("tipo").toString();
+		if(permissao.equals("1")) {
+			Prospect prospect = prospectService.recuperarPorId(id);
+	        model.addAttribute("prospect", prospect);
+	        model.addAttribute("produtos", produtoService.recuperar());
+			 return new ModelAndView("/prospect/add", model);
+		}
+		
+		else {
+			return new ModelAndView ("home", model);
+		}
     }
     
     //Remover prospect
 
     @GetMapping("/remover")
-    public String remover(@RequestParam("id") long id, RedirectAttributes attr) {
-    	prospectService.excluir(id);
-        attr.addFlashAttribute("mensagem", "prospect excluído com sucesso.");
-        return "redirect:/prospects/listar";
+    public String remover(ServletRequest request, @RequestParam("id") long id, RedirectAttributes attr) {
+        HttpSession session = ((HttpServletRequest) request).getSession(true);
+		
+		String permissao = session.getAttribute("tipo").toString();
+		if(permissao.equals("1")) {
+			prospectService.excluir(id);
+	        attr.addFlashAttribute("mensagem", "prospect excluído com sucesso.");
+			return "/produto/add_produto";
+		}
+		
+		else {
+			return "home";
+		}
+		
     }
 
 	

@@ -120,6 +120,7 @@ svg.bi.bi-justify{
 	    float: right;
 }
 
-input[type="checkbox" i]{
+input#menu-control{
+	
 	display: none;
 }
