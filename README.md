@@ -90,7 +90,7 @@ O sistema de cadastro é muito importante, além de ser um sistema muito seguro,
        
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
       
-<h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/978510f33bf8ffc66488e1cfbaf3c24309b5aa50/docs/gifSprint3.gif"></h1>
+<h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/8d930ec66535152fc38634e6e44c49240e0b38fb/docs/V%C3%ADdeos%20de%20entrega/gifSprint3.gif"></h1>
 <p>Caso deseje ver o vídeo com mais qualidade, assista-o no <a href="">YouTube!</a></p>
        
 <h2>📌Modelo Conceitual - Diagrama de Entidade e Relacionamento</h2>
