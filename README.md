@@ -67,7 +67,7 @@ Propor para IONIC health uma plataforma de gestão de relacionamento com o clien
         <td style="text-align: center; vertical-align: middle;">Sprint 3</td> 
         <td style="text-align: center; vertical-align: middle;">Dashboards são importantíssimos para se ter um controle do processo, nessa Sprint iremos dar ao cliente gráficos que mostram o desempenho das vendas. Para que a plataforma tenha segurança, teremos cadastro de colaboradores de sales, Gerentes e Diretoria terão gerenciamento de Perfis que tem acesso a plataforma</td>
         <td style="text-align: center; vertical-align: middle;">07/11/2021</td>
-        <td style="text-align: center; vertical-align: middle;"> <p></p> </td>
+        <td style="text-align: center; vertical-align: middle;"> <p><a href="https://github.com/ThomasPalma1/FatecAPI-03/tree/entrega-03">Visualizar</a></p> </td>
     </tr>
      <tr>
         <td style="text-align: center; vertical-align: middle;">Sprint 4</td> 
