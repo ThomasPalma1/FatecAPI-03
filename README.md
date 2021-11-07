@@ -25,7 +25,7 @@
 - [Backlog e User Stories](#backlog-e-user-stories)
 - [Gráfico de Burndown](#burndown-da-sprint)
 - [Funcionamento da ferramenta](#funcionamento-da-ferramenta)
-- [Diagrama de Classes](#diagrama-de-classes)
+- [Modelo Conceitual - Diagrama de Entidade e Relacionamento](#modelo-conceitual---diagrama-de-entidade-e-relacionamento)
 
        
 <h2>📜Descrição</h2>
@@ -93,7 +93,7 @@ O sistema de cadastro é muito importante, além de ser um sistema muito seguro,
 <h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/978510f33bf8ffc66488e1cfbaf3c24309b5aa50/docs/gifSprint3.gif"></h1>
 <p>Caso deseje ver o vídeo com mais qualidade, assista-o no <a href="">YouTube!</a></p>
        
-<h2>📌Diagrama de Classes</h2>
+<h2>📌Modelo Conceitual - Diagrama de Entidade e Relacionamento</h2>
        
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
        
