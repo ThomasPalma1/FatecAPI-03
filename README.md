@@ -70,8 +70,8 @@ O sistema de cadastro é muito importante, além de ser um sistema muito seguro,
        
 <table align="center">
     <tr>
-    <td align="center"><img style="border-radius: 50%;" src="https://github.com/ThomasPalma1/FatecAPI-03/blob/main/docs/usuario_comum_permissoes.mp4" width="500px;" /><br /><sub><b>Usuário comum</b></sub></td>
-    <td align="center"><img style="border-radius: 50%;" src="https://github.com/ThomasPalma1/FatecAPI-03/blob/main/docs/adm_permissoes.mp4" width="500px;" /><br /><sub><b>Administrador</b></sub></td>  
+    <td align="center"><img style="border-radius: 50%;" src="https://github.com/ThomasPalma1/FatecAPI-03/blob/b9b1ae694a3b5364878b5ce7d2d25a5ea88c5439/docs/V%C3%ADdeos%20de%20entrega/Sprint3/CadastroComum.gif" width="500px;" /><br /><sub><b>Usuário comum</b></sub></td>
+    <td align="center"><img style="border-radius: 50%;" src="https://github.com/ThomasPalma1/FatecAPI-03/blob/b9b1ae694a3b5364878b5ce7d2d25a5ea88c5439/docs/V%C3%ADdeos%20de%20entrega/Sprint3/CadastroAdm_1.gif" width="500px;" /><br /><sub><b>Administrador</b></sub></td>  
     </tr>
 </table>
        
@@ -80,8 +80,8 @@ O sistema de cadastro é muito importante, além de ser um sistema muito seguro,
        
 <table align="center">
     <tr>
-    <td align="center"><img style="border-radius: 50%;" src="https://github.com/ThomasPalma1/FatecAPI-03/blob/main/docs/grafico_1.mp4" width="500px;" /><br /><sub><b>Usuário comum</b></sub></td>
-    <td align="center"><img style="border-radius: 50%;" src="https://github.com/ThomasPalma1/FatecAPI-03/blob/main/docs/grafico_2.mp4" width="500px;" /><br /><sub><b>Administrador</b></sub></td>  
+    <td align="center"><img style="border-radius: 50%;" src="https://github.com/ThomasPalma1/FatecAPI-03/blob/b9b1ae694a3b5364878b5ce7d2d25a5ea88c5439/docs/V%C3%ADdeos%20de%20entrega/Sprint3/GraficoComum.gif" width="500px;" /><br /><sub><b>Usuário comum</b></sub></td>
+    <td align="center"><img style="border-radius: 50%;" src="https://github.com/ThomasPalma1/FatecAPI-03/blob/b9b1ae694a3b5364878b5ce7d2d25a5ea88c5439/docs/V%C3%ADdeos%20de%20entrega/Sprint3/GraficoAdm.gif" width="500px;" /><br /><sub><b>Administrador</b></sub></td>  
     </tr>
 </table>    
        
