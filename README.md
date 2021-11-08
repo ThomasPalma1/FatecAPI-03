@@ -63,7 +63,7 @@ O sistema de cadastro é muito importante, além de ser um sistema muito seguro,
        
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
 
-<h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/main/docs/Burndown/Burndown%20Sprint3.png" width=750px height=400px></h1>
+<h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/6060dd55e0d75b0257ae8bf1835a4d2d65fe6f0d/docs/V%C3%ADdeos%20de%20entrega/Sprint3/BurndownSprint3.png" width=750px height=400px></h1>
 
 <h2>🖥️Sistema de Cadastro</h2>
 <p>Veja como funciona o sistema de cadastro no <a href="https://github.com/ThomasPalma1/FatecAPI-03/blob/entrega-03/README.md#O-que-entregamos">O que entregamos</a>.</p>
