@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.servlet.ServletRequest;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 @Controller
 @RequestMapping("prospects/{prospectId}/historys")
@@ -29,8 +32,17 @@ public class HistoryController {
 	    }
 
 	    @GetMapping("/cadastro")
-	    public String preSalvar(@ModelAttribute("history") History history, @PathVariable("prospectId") long prospectId) {
-	        return "/history/add";
+	    public String preSalvar(ServletRequest request, @ModelAttribute("history") History history, @PathVariable("prospectId") long prospectId) {
+	    	HttpSession session = ((HttpServletRequest) request).getSession(true);
+			
+			String permissao = session.getAttribute("tipo").toString();
+			if(permissao.equals("1")) {
+		    	return "/history/add";
+			}
+			else {
+				return "home";
+			}
+	    	
 	    }
 
 	    @PostMapping("/salvar")

@@ -34,9 +34,9 @@ public class AuthController {
 			HttpSession session = ((HttpServletRequest) request).getSession(true);
 
 			session.setAttribute("email", user.getEmail());
-			session.setAttribute("tipo", user.getTipo());
+			session.setAttribute("tipo", user.getPosition().getId());
 
-			return new ResponseEntity<String>(user.getTipo(), HttpStatus.OK);
+			return new ResponseEntity<Long>(user.getPosition().getId(), HttpStatus.OK);
 		}
 
 		return new ResponseEntity<Boolean>(false, HttpStatus.INTERNAL_SERVER_ERROR);

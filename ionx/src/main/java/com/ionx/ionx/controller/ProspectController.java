@@ -1,5 +1,8 @@
 package com.ionx.ionx.controller;
 
+import javax.servlet.ServletRequest;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,9 +28,19 @@ public class ProspectController {
 	
 	//Associar com list.html
 	@GetMapping("/listar")
-	public ModelAndView listar(ModelMap model) {
+	public ModelAndView listar(ServletRequest request, ModelMap model) {
 		model.addAttribute("prospects", prospectService.recuperar());
-		return new ModelAndView("prospect/list", model);
+		HttpSession session = ((HttpServletRequest) request).getSession(true);
+		
+		String permissao = session.getAttribute("tipo").toString();
+		if(permissao.equals("1")) {
+			
+			return new ModelAndView("prospect/list", model);
+		}
+		else {
+			return new ModelAndView("prospect/listIndefinido", model);
+		}
+		
 	}
 	
 	@GetMapping("/prospect")
@@ -38,9 +51,19 @@ public class ProspectController {
 
 	//Associar com add.html
     @GetMapping("/cadastro")
-    public ModelAndView preSalvar(@ModelAttribute("prospect") Prospect prospect, ModelMap model) {
+    public ModelAndView preSalvar(ServletRequest request, ModelMap model, @ModelAttribute("prospect") Prospect prospect){
     	model.addAttribute("produtos", produtoService.recuperar());
-    	return new ModelAndView("prospect/add", model);
+    	HttpSession session = ((HttpServletRequest) request).getSession(true);
+		
+		String permissao = session.getAttribute("tipo").toString();
+		if(permissao.equals("1")) {
+			
+			return new ModelAndView("prospect/add", model);
+		}
+		else {
+			return new ModelAndView("home", model);
+		}
+    	
     }
     
     //Metódo para salvar --> Tipo POST
@@ -57,20 +80,40 @@ public class ProspectController {
     
   //Atualização de prospects
     @GetMapping("/atualizar")
-    public ModelAndView preAtualizar(@RequestParam("id") long id, ModelMap model) {
-    	Prospect prospect = prospectService.recuperarPorId(id);
-        model.addAttribute("prospect", prospect);
-        model.addAttribute("produtos", produtoService.recuperar());
-        return new ModelAndView("/prospect/add", model);
+    public ModelAndView preAtualizar(ServletRequest request, @RequestParam("id") long id, ModelMap model) {
+        
+    	HttpSession session = ((HttpServletRequest) request).getSession(true);
+		
+		String permissao = session.getAttribute("tipo").toString();
+		if(permissao.equals("1")) {
+			Prospect prospect = prospectService.recuperarPorId(id);
+	        model.addAttribute("prospect", prospect);
+	        model.addAttribute("produtos", produtoService.recuperar());
+			 return new ModelAndView("/prospect/add", model);
+		}
+		
+		else {
+			return new ModelAndView ("home", model);
+		}
     }
     
     //Remover prospect
 
     @GetMapping("/remover")
-    public String remover(@RequestParam("id") long id, RedirectAttributes attr) {
-    	prospectService.excluir(id);
-        attr.addFlashAttribute("mensagem", "prospect excluído com sucesso.");
-        return "redirect:/prospects/listar";
+    public String remover(ServletRequest request, @RequestParam("id") long id, RedirectAttributes attr) {
+        HttpSession session = ((HttpServletRequest) request).getSession(true);
+		
+		String permissao = session.getAttribute("tipo").toString();
+		if(permissao.equals("1")) {
+			prospectService.excluir(id);
+	        attr.addFlashAttribute("mensagem", "prospect excluído com sucesso.");
+			return "/produto/add_produto";
+		}
+		
+		else {
+			return "home";
+		}
+		
     }
 
 	

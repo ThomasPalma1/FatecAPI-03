@@ -21,7 +21,7 @@ a.nav-link.text-black:hover {
 }
 
 .main {
-  margin-left: 280px; /* Same as the width of the sidenav */
+  margin-left: 0px; /* Same as the width of the sidenav */
   background-color: #54C5CE;
   height: 70px;
     
@@ -34,15 +34,17 @@ a.nav-link.text-black:hover {
   z-index: 1;
   top: 0;
   left: 0;
+  transform: translateX(-180%);
+  transition: transform 300ms ease;
   
 }
 
 
 
 input[type=search] {
-  width: 120%;
+  width: 180%;
   height: 50;
-  margin-left: 111px;
+  margin-left: -42%;
   box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -100,3 +102,25 @@ img.logo{
   font-weight: bold;
 }
 
+label[for="menu-control"]{
+ 
+  color:rgb(0, 0, 0);
+  border-radius: 3px;
+  font-weight:bold;
+  padding: 4px 8px;
+  margin-left:4px;
+  cursor: pointer;
+}
+
+#menu-control:checked + #menu{
+	transform: translateX(0px);
+}
+
+svg.bi.bi-justify{
+	    float: right;
+}
+
+input#menu-control{
+	
+	display: none;
+}

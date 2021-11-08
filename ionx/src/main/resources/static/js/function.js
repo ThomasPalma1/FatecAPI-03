@@ -6,13 +6,13 @@ function logar(event) {
 		}
 
 	})
-		.then(function (response) {
+		.then(function(response) {
 			let status = response.status;
 			if (status === 200) {
 				window.location.href = "/home";
 			}
 		})
-		.catch(function (error) {
+		.catch(function(error) {
 			Swal.fire({
 				icon: 'error',
 				title: 'Erro',
@@ -45,7 +45,7 @@ function cadastrar(event) {
 				senha: senha1,
 			}
 		})
-			.then(function (response) {
+			.then(function(response) {
 				let status = response.status;
 				if (status === 200) {
 					window.location.href = "/login";
@@ -79,7 +79,7 @@ function logout(event) {
 				method: 'get',
 				url: '/auth/logout'
 			})
-				.then(function (response) {
+				.then(function(response) {
 					let status = response.status;
 					if (status === 200) {
 						window.location.href = "/";
@@ -89,4 +89,108 @@ function logout(event) {
 	})
 
 
+}
+
+function allUsers(event) {
+	axios.get('/users/all', {}, {
+
+	})
+		.then(function(responseUsers) {
+
+			axios({
+				method: 'get',
+				url: '/positions/all'
+			})
+				.then(function(responsePositions) {
+					for (let i = 0; i < responseUsers.data.length; i++) {
+						let tr = document.createElement("tr");
+						let th = document.createElement("th");
+						th.scope = "row";
+						th.textContent = i + 1;
+
+						let tdNome = document.createElement("td");
+						tdNome.textContent = responseUsers.data[i].nome;
+
+						let tdEmail = document.createElement("td");
+						tdEmail.textContent = responseUsers.data[i].email;
+
+						let tdNivelAcesso = document.createElement("td");
+
+						let selectNivelAcesso = document.createElement("select");
+						selectNivelAcesso.onchange = function() { updatePosition(responseUsers.data[i].id) };
+						selectNivelAcesso.classList.add("form-select");
+						selectNivelAcesso.id = responseUsers.data[i].id;
+
+						let defaultOption = document.createElement("option");
+						defaultOption.textContent = "Status";
+						defaultOption.disabled = true;
+						selectNivelAcesso.appendChild(defaultOption);
+						for (let x = 0; x < responsePositions.data.length; x++) {
+							let option = document.createElement("option");
+							option.value = responsePositions.data[x].id;
+							option.textContent = responsePositions.data[x].nome;
+							if (responseUsers.data[i].position.id === responsePositions.data[x].id) {
+								option.selected = true;
+							}
+
+							selectNivelAcesso.appendChild(option);
+						}
+						tdNivelAcesso.appendChild(selectNivelAcesso);
+
+						tr.appendChild(th);
+						tr.appendChild(tdNome);
+						tr.appendChild(tdEmail);
+						tr.appendChild(tdNivelAcesso);
+
+						let tbody = document.getElementById("usersList");
+						tbody.appendChild(tr);
+					}
+
+
+
+
+
+
+
+					// <tr>
+					// 	<th scope="row">2</th>
+					// 	<td>Floyd Miles</td>
+					// 	<td>albert.cruz@example.com</td>
+					// 	<td>
+					// 		<select class="form-select" >
+					// 			<option selected>Status...</option>
+					// 			<option value="1">Administrador</option>
+					// 			<option value="2">Vendedor</option>
+					// 			<option value="3">Gerente</option>
+					// 		</select>
+					// 	</td>
+					// </tr>
+				})
+		})
+		.catch(function(error) {
+		})
+}
+function updatePosition(id) {
+	let choice = document.getElementById(id).selectedIndex;
+
+	axios({
+		method: 'post',
+		url: '/users/updatePosition',
+		params: {
+			userID: id,
+			selectedPosition: choice
+		}
+	})
+		.then(function(response) {
+			let status = response.status;
+			if (status === 200) {
+				Swal.fire({
+					position: 'center',
+					icon: 'success',
+					title: 'Alteração salva!',
+					showConfirmButton: false,
+					timer: 950
+				})
+			}
+		})
 }

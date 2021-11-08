@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 
 @Entity(name = "usuario")
 public class User {
@@ -28,8 +30,9 @@ public class User {
 	@Column(name = "senha", nullable = false)
 	private String senha;
 
-	@Column(name = "tipo", nullable = false)
-	private String tipo;
+	@OneToOne
+	@JoinColumn(name = "position", referencedColumnName = "id")
+	private Positions position;
 
 	public long getId() {
 		return id;
@@ -55,14 +58,6 @@ public class User {
 		this.senha = senha;
 	}
 
-	public String getTipo() {
-		return tipo;
-	}
-
-	public void setTipo(String tipo) {
-		this.tipo = tipo;
-	}
-
 	public String getNome() {
 		return nome;
 	}
@@ -81,6 +76,14 @@ public class User {
 
 	public String getContato() {
 		return contato;
+	}
+
+	public Positions getPosition() {
+		return position;
+	}
+
+	public void setPosition(Positions position) {
+		this.position = position;
 	}
 
 	public void setContato(String contato) {

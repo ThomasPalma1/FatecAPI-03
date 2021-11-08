@@ -1,5 +1,6 @@
 package com.ionx.ionx.domain;
 
+import java.time.LocalTime;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -11,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
@@ -56,6 +58,12 @@ public class Prospect {
 	@Size(min=2, max= 160)
 	@Column(nullable = false, length = 160)
     private String cidade;
+	
+	@NotNull
+	private LocalTime hremail;
+	
+	@NotNull
+	private LocalTime hrtel;
 	
 	@NotBlank
     @Column(nullable = false)
@@ -180,6 +188,22 @@ public class Prospect {
 
     public void setNumero(String numero) {
         this.numero = numero;
+    }
+    
+    public LocalTime getHremail() {
+        return hremail;
+    }
+
+    public void setHremail(LocalTime hremail) {
+        this.hremail = hremail;
+    }
+    
+    public LocalTime getHrtel() {
+        return hrtel;
+    }
+
+    public void setHrtel(LocalTime hrtel) {
+        this.hrtel = hrtel;
     }
     
 

@@ -16,11 +16,18 @@
 	<link href="/css/sidebars.css" rel="stylesheet">
 	<link href="/css/cards.css" rel="stylesheet">
 	<link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/dashboard/">
-
-
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous"></script>
+      <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+      <script src="https://code.highcharts.com/highcharts.js"></script>
+	 
+	
 </head>
 
 <body>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"></script>
 
 	<!-- svg icons -->
 
@@ -79,6 +86,10 @@
 		<symbol id="bi bi-power" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16">
   			<path d="M7.5 1v7h1V1h-1zM3 8.812a4.999 4.999 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812z"/>
 		</symbol>
+		
+		<symbol id="bi bi-justify" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+  			  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+		</symbol>
 
 	</svg>
 
@@ -86,11 +97,13 @@
 
 	<!-- Sidebar inicio -->
 
-
-	<div class="sidenav">
-		<h1 class="visually-hidden"></h1>
+	<input type="checkbox" id="menu-control"/>
+	<div class="sidenav" id="menu">
+		
 		<div class="d-flex flex-column flex-shrink-0 p-3 text-black bg-white" style="width: 280px; height: 100vh;">
-
+			<label for="menu-control"><svg
+							class="bi bi-justify" width="16" height="16"><use xlink:href="#bi bi-justify" />
+			</svg></label>
 			<br>
 			<center>
 				<img class="logo" src="../imgs/logo.png" alt="logo preto">
@@ -136,15 +149,16 @@
 					</a></li>
 			</ul>
 			<hr>
-
-			<a href="#" class="nav-link text-black"><svg class="bi me-2" width="16" height="16">
+	
+			<a href="adminconfig" class="nav-link text-black"><svg class="bi me-2" width="16" height="16">
 					<use xlink:href="#bi bi-people" /></svg>Gerenciar perfis </a> 
 			<a href="#" class="nav-link text-black"><svg class="bi me-2" width="16"	height="16">
 					<use xlink:href="#bi bi-gear" /></svg>Configurações </a>
 			<a href="#" class="nav-link text-black" onclick="logout(event)"><svg class="bi-power" width="20" height="16">
 					<use xlink:href="#bi bi-power" /></svg> Sair </a>	
-
+			
 		</div>
+		 
 	</div>
 
 	<!-- fim sidebar -->
@@ -152,10 +166,14 @@
 
 	<!-- incio navbar -->
 	<div class="main">
-
+		
 		<nav class="navbar navbar-inverse">
 			<div class="container-fluid">
+			<label for="menu-control"><svg
+							class="bi bi-justify" width="16" height="16"><use xlink:href="#bi bi-justify" />
+			</svg></label>
 				<form>
+				
 					<input type="search" name="search" placeholder="Buscar contatos">
 				</form>
 				<ul class="nav navbar-nav">
@@ -165,9 +183,11 @@
 						</svg>
 						<span class="icon-button__badge">99+</span>
 					</button>
+					
 				</ul>
 				
 			</div>
+			
 		</nav>
 
 		<!-- fim navbar -->
@@ -179,7 +199,8 @@
 		<!-- conteudo da page -->
 
 		<div class="container">
-
+		
+		
 			<select class="form-select" aria-label="Default select example" style="height: 50px; width: 95%;">
 				<option selected>Filtrar por:</option>
 				<option value="1">1</option>
@@ -191,28 +212,133 @@
 
 			<div class="card">
 				<div class="card-body">
-					<h5 class="card-title">Unresolved</h5>
-					<p class="card-text">60</p>
+					<h5 class="card-title">Contatos</h5>
+					<p class="card-text" id="res"></p>
 				</div>
 			</div>
 			<div class="card">
 				<div class="card-body">
-					<h5 class="card-title">Overdue</h5>
-					<p class="card-text">16</p>
+					<h5 class="card-title">Produtos</h5>
+					<p class="card-text" id="prod"></p>
 				</div>
 			</div>
 			<div class="card">
 				<div class="card-body">
-					<h5 class="card-title">Open</h5>
-					<p class="card-text">43</p>
+					<h5 class="card-title">Vendas Fechadas</h5>
+					<p class="card-text" id="fechado"></p>
 				</div>
 			</div>
-			<div class="card">
-				<div class="card-body">
-					<h5 class="card-title">On hold</h5>
-					<p class="card-text">43</p>
-				</div>
-			</div>
+			<br><br>
+			
+		
+</div>
+	<div id="container" class = "container"style="width:70%; height:400px;"></div>
+
+
+<script>
+			var quantidades = [];
+	        var ALTA = 0;
+	        var NORMAL = 0;
+	        var BAIXA = 0;
+	        var PERDIDO = 0;
+	        var FECHADO = 0;
+	        var contatos = 0;
+	        var produtos = 0;
+		
+				$.ajax({
+					url: "/prospectcharts",
+					success: function(data) {
+				        $.each(data, function(index, item) {
+				            if (item.level == "Alta"){
+				            	ALTA++;
+				            }
+				            
+				            else if (item.level == "Normal"){
+				            	NORMAL++;
+				            }
+				            
+				            else if (item.level == "Baixa"){
+				            	BAIXA++;
+				            }
+				            
+				            else if (item.level == "Perdido"){
+				            	PERDIDO++;
+				            }
+				            else{
+				            	FECHADO++;
+				            }
+				            
+				            item.id = contatos++;
+				            
+				            
+				        });
+				        var res = document.querySelector('p#res');
+			            res.innerHTML += `${contatos}`;
+			            
+			            var fechado = document.querySelector('p#fechado');
+			            fechado.innerHTML += `${FECHADO}`;
+			            
+				        quantidades.push(ALTA);
+				         quantidades.push(NORMAL);
+				         quantidades.push(BAIXA);
+				         quantidades.push(PERDIDO);
+				         quantidades.push(FECHADO);
+	
+				    }
+				
+					
+					
+				})
+				
+				
+				document.addEventListener('DOMContentLoaded', function () {
+					        const chart = Highcharts.chart('container', {
+					            chart: {
+					                type: 'column'
+					            },
+					            title: {
+					                text: 'PRIORIDADES DAS PROSPECTS'
+					            },
+					            colors: ['#212529', '#343a40', '#495057', '#6c757d', '#adb5bd'],
+					            xAxis: {
+					                categories: ['Alta', 'Normal', 'Baixa', 'Perdido', 'Fechado']
+					            },
+					            yAxis: {
+					                title: {
+					                    text: 'Quantidade'
+					                }
+					            },
+					            series: [{
+					              name: 'Prioridades',
+					              data: [quantidades[0], quantidades[1], quantidades[2], quantidades[3], quantidades[4]],
+					              colorByPoint: true
+					            }]
+					        });
+					    });
+				
+				
+		        $.ajax({
+					url: "/produtocharts",
+					success: function(dados) {
+				        $.each(dados, function(index1, item1) {
+				            
+				        	item1.id = produtos++;
+				        	
+				        })
+				        
+				        var prod = document.querySelector('p#prod');
+			            prod.innerHTML += `${produtos}`;
+				    }
+				
+					
+					
+				})
+			</script>
+
+
+
+
+</div>
 
 			</main>
 

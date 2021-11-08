@@ -98,6 +98,13 @@ b{
   overflow-y: hidden;
 }
 
+.btn-group, .btn-group-vertical {
+    position: relative;
+    display: inline-flex;
+    vertical-align: middle;
+    float: right;
+}
+
 .temperature-alta {
   position: relative;
   text-align: right;

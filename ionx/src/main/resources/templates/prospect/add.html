@@ -67,98 +67,109 @@
 	<symbol id="bi bi-power" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16">
   			<path d="M7.5 1v7h1V1h-1zM3 8.812a4.999 4.999 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812z"/>
 	</symbol>
+	
+	<symbol id="bi bi-justify" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+  			  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+		</symbol>
 
 </svg>
 
 <!-- end svg icons -->
 
-<!-- Sidebar inicio -->
+<input type="checkbox" id="menu-control"/>
+	<div class="sidenav" id="menu">
+		
+		<div class="d-flex flex-column flex-shrink-0 p-3 text-black bg-white" style="width: 280px; height: 100vh;">
+			<label for="menu-control"><svg
+							class="bi bi-justify" width="16" height="16"><use xlink:href="#bi bi-justify" />
+			</svg></label>
+			<br>
+			<center>
+				<img class="logo" src="../imgs/logo.png" alt="logo preto">
+			</center>
+			<br> <br> <br>
+
+			<center>
+				<h6>Nome de usuário</h6>
+			</center>
+
+			<br>
+			<ul class="nav nav-pills flex-column mb-auto">
+				<li class="nav-item"><a href="/home" class="nav-link text-black" aria-current="page"> <svg
+							class="bi me-2" width="16" height="16">
+							<use xlink:href="#bi bi-speedometer2" />
+						</svg> Dashboard
+					</a></li>
+				<li><a href="/prospects/prospect" class="nav-link text-black">
+						<svg class="bi me-2" width="16" height="16">
+							<use xlink:href="#bi bi-hdd-stack" />
+						</svg> Prospect
+					</a></li>
+				<li><a href="/prospects/listar" class="nav-link text-black">
+						<svg class="bi me-2" width="16" height="16">
+							<use xlink:href="#bi bi-telephone" />
+						</svg> Contatos
+					</a></li>
+				<li><a href="/produtos/listar" class="nav-link text-black">
+						<svg class="bi me-2" width="16" height="16">
+							<use xlink:href="#grid" />
+						</svg> Produtos
+					</a></li>
+				<li><a th:href="@{/prospects/cadastro}" class="nav-link text-black"> <svg class="bi me-2" width="16"
+							height="16">
+							<use xlink:href="#bi bi-plus-square-dotted" />
+						</svg> Cadastrar
+						prospects
+					</a></li>
+				<li><a th:href="@{/produtos/cadastro}" class="nav-link text-black"> <svg class="bi me-2" width="16"
+							height="16">
+							<use xlink:href="#bi bi-pencil-square" />
+						</svg> Cadastrar produtos
+					</a></li>
+			</ul>
+			<hr>
+	
+			<a href="#" class="nav-link text-black"><svg class="bi me-2" width="16" height="16">
+					<use xlink:href="#bi bi-people" /></svg>Gerenciar perfis </a> 
+			<a href="#" class="nav-link text-black"><svg class="bi me-2" width="16"	height="16">
+					<use xlink:href="#bi bi-gear" /></svg>Configurações </a>
+			<a href="#" class="nav-link text-black" onclick="logout(event)"><svg class="bi-power" width="20" height="16">
+					<use xlink:href="#bi bi-power" /></svg> Sair </a>	
+			
+		</div>
+		 
+	</div>
+
+	<!-- fim sidebar -->
 
 
-<div class="sidenav">
-  <h1 class="visually-hidden"></h1>
-  <div class="d-flex flex-column flex-shrink-0 p-3 text-black bg-white" style="width: 280px; height: 100vh;">
+	<!-- incio navbar -->
+	<div class="main">
+		
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+			<label for="menu-control"><svg
+							class="bi bi-justify" width="16" height="16"><use xlink:href="#bi bi-justify" />
+			</svg></label>
+				<form>
+				
+					<input type="search" name="search" placeholder="Buscar contatos">
+				</form>
+				<ul class="nav navbar-nav">
+					<button type="button" class="icon-button">
+						<svg class="bi-bell" width="25" height="25">
+							<use xlink:href="#bi bi-bell" />
+						</svg>
+						<span class="icon-button__badge">99+</span>
+					</button>
+					
+				</ul>
+				
+			</div>
+			
+		</nav>
 
-    <br>
-    <center><img class="logo" src="../imgs/logo.png" alt="logo preto"></center>
-    <br>
-    <br>
-    <br>
-
-    <center><h6> Nome de usuário</h6></center> 
-
-    <br>
-    <ul class="nav nav-pills flex-column mb-auto">
-      <li class="nav-item">
-        <a href="/home" class="nav-link text-black" aria-current="page">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#bi bi-speedometer2"/></svg>
-          Dashboard
-        </a>
-      </li>
-      <li>
-        <a href="/prospects/prospect" class="nav-link text-black">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#bi bi-hdd-stack"/></svg>
-          Prospect
-        </a>
-      </li>
-      <li>
-        <a  href="/prospects/listar" class="nav-link text-black">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#bi bi-telephone"/></svg>
-          Contatos
-        </a>
-      </li>
-      <li>
-        <a href="/produtos/listar" class="nav-link text-black">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
-          Produtos
-        </a>
-      </li>
-       <li>
-        <a th:href="@{/prospects/cadastro}" class="nav-link text-black">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#bi bi-plus-square-dotted"/></svg>
-          Cadastrar prospects
-        </a>
-      </li>
-      <li>
-        <a th:href="@{/produtos/cadastro}" class="nav-link text-black">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#bi bi-pencil-square"/></svg>
-          Cadastrar produtos
-        </a>
-      </li>
-    </ul>
-    <hr>
-    
-    
-<a href="#" class="nav-link text-black"><svg class="bi me-2" width="16" height="16"><use xlink:href="#bi bi-people"/></svg>Gerenciar perfis
-        </a>
-<a href="#" class="nav-link text-black"><svg class="bi me-2" width="16" height="16"><use xlink:href="#bi bi-gear"/></svg>Configurações
-        </a>
-<a href="#" class="nav-link text-black" onclick="logout(event)"><svg class="bi-power" width="20" height="16">
-					<use xlink:href="#bi bi-power" /></svg> Sair </a>
-    </div>
-  </div>
-
-  <!-- fim sidebar -->
-
-
-  <!-- incio navbar -->
-<div class="main">
-
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <form>
-      <input type="search" name="search" placeholder="Buscar contatos">
-    </form>
-    <ul class="nav navbar-nav">
-        <button type="button" class="icon-button">
-            <svg class="bi-bell" width="25" height="25"><use xlink:href="#bi bi-bell"/></svg>
-            <span class="icon-button__badge">99+</span>
-         </button>
-      </ul>
-  </div>
-</nav>
-
-<!-- fim navbar -->
+		<!-- fim navbar -->
 
 <br><br><br>
 
@@ -181,35 +192,39 @@ As informações poderão ser alteradas após o cadastro.</p>
   	<div class="mb-3">
       <label for="formGroupExampleInput2" class="form-label">Cargo</label>
       <input class="form-control-cargo" placeholder="ex. Gestor de conta" id="cargo" type="text" th:field="*{cargo}"/>
-      <div th:if="${#fields.hasErrors('cargo')}" th:errors="*cargo}"></div>
+      <div th:if="${#fields.hasErrors('cargo')}" th:errors="*{cargo}"></div>
   	</div>
   
       <div class="row g-3">
         <div class="col">
           <label for="formGroupExampleInput" class="form-label">Contato</label>
           <input class="form-control" placeholder="(99)9 9999-9999" maxlength="15" name="phone" id="telefone" type="text" th:field="*{telefone}"/>
-          <div th:if="${#fields.hasErrors('telefone')}" th:errors="*telefone}"></div>
+          <div th:if="${#fields.hasErrors('telefone')}" th:errors="*{telefone}"></div>
         </div>
         
-       <div class="col-md-4">
-          
-          <div></div>
+        <div class="col">
+          <label for="appt" class="hora">Melhor horário para:</label><br><br>
+          <label for="formGroupExampleInput" class="form-label-lig">Ligação</label><br>
+          <input type="time" id="hrtel" name="hrtel" min="08:00" max="19:00" th:field="*{hrtel}" required/>
+          <div th:if="${#fields.hasErrors('hrtel')}" th:errors="*{hrtel}"></div>
         </div>
       </div>
+        
       
       <div class="row g-3">
         <div class="col">
         <br>
           <label for="formGroupExampleInput" class="form-label">E-mail</label>
           <input class="form-control" placeholder="exemplo@exemplo.com" id="email" type="text" th:field="*{email}"/>
-          <div th:if="${#fields.hasErrors('email')}" th:errors="*email}"></div>
+          <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
         </div>
+       
         
-     
-        
-        <div class="col-md-4"><br><br>
-          
-		 <div></div>
+    	<div class="col">
+          <br>
+          <label for="formGroupExampleInput" class="form-label-email">E-mail</label><br>
+          <input type="time" id="hremail" name="hremail" min="08:00" max="19:00" th:field="*{hremail}" required>
+          <div th:if="${#fields.hasErrors('hremail')}" th:errors="*{hremail}"></div>
         </div>
       </div>
       <hr>
