@@ -4,18 +4,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+	
 
 
   <title>Cadastro</title>
 
-  <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sign-in/">
-
-
+  
 
   <!-- Bootstrap core CSS -->
   <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sign-in/">
 
 
   <!-- Custom styles for this template -->
@@ -97,12 +95,24 @@
 
     </main>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"
-    referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="/js/function.js"></script>
+  
+ 	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mask.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+    
+    $('#cep').mask('00000-000');
+    $('#input-contato').mask('(00) 00000-0000');
+    
+   
+	});
+	</script>
+  
+
 </body>
 
 </html>

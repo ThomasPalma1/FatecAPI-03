@@ -38,6 +38,30 @@ public class Prospect {
 	@NotBlank
     @Column(nullable = false)
     private String cargo;
+	
+	@NotBlank
+    @Column(nullable = false)
+    private String bairro;
+	
+	public String getBairro() {
+		return bairro;
+	}
+
+	public void setBairro(String bairro) {
+		this.bairro = bairro;
+	}
+
+	@NotBlank
+    @Column(nullable = false)
+    private String cep;
+
+	public String getCep() {
+		return cep;
+	}
+
+	public void setCep(String cep) {
+		this.cep = cep;
+	}
 
 	@NotBlank
 	@Size(min=7, max= 20)
@@ -74,9 +98,8 @@ public class Prospect {
     @Column(nullable = false)
     private String numero;
     
-	@NotBlank
-	@Size(min=11, max= 14)
-    @Column(nullable = false)
+	
+	@Size(min=11, max= 20)
     private String cnpj;
 	
 	

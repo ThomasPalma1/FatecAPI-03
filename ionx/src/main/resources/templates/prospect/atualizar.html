@@ -185,42 +185,46 @@ As informações poderão ser alteradas após o cadastro.</p>
   	 <input id="id" type="hidden" th:field="*{id}"/>
    	<div class="mb-3">
      	 <label for="formGroupExampleInput" class="form-label">Nome do Contato</label>
-      	<input class="form-control" placeholder="Digite seu primeiro nome"  id="nome" type="text" th:field="*{nome}"/>
+      	<input class="form-control" placeholder="Digite seu nome completo"  id="nome" type="text" th:field="*{nome}"/>
       	<div th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></div>
     </div>
     
   	<div class="mb-3">
       <label for="formGroupExampleInput2" class="form-label">Cargo</label>
       <input class="form-control-cargo" placeholder="ex. Gestor de conta" id="cargo" type="text" th:field="*{cargo}"/>
-      <div th:if="${#fields.hasErrors('cargo')}" th:errors="*cargo}"></div>
+      <div th:if="${#fields.hasErrors('cargo')}" th:errors="*{cargo}"></div>
   	</div>
   
       <div class="row g-3">
         <div class="col">
           <label for="formGroupExampleInput" class="form-label">Contato</label>
-          <input class="form-control" placeholder="(99)9 9999-9999" maxlength="15" name="phone" id="telefone" type="text" th:field="*{telefone}"/>
-          <div th:if="${#fields.hasErrors('telefone')}" th:errors="*telefone}"></div>
+          <input class="form-control" placeholder="(99)9 9999-9999" name="phone" id="telefone" type="text" th:field="*{telefone}"/>
+          <div th:if="${#fields.hasErrors('telefone')}" th:errors="*{telefone}"></div>
         </div>
         
-       <div class="col-md-4">
-          
-          <div></div>
+        <div class="col">
+          <label for="appt" class="hora">Melhor horário para:</label><br><br>
+          <label for="formGroupExampleInput" class="form-label-lig">Ligação</label><br>
+          <input type="time" id="hrtel" name="hrtel" min="08:00" max="19:00" th:field="*{hrtel}" required/>
+          <div th:if="${#fields.hasErrors('hrtel')}" th:errors="*{hrtel}"></div>
         </div>
       </div>
+        
       
       <div class="row g-3">
         <div class="col">
         <br>
           <label for="formGroupExampleInput" class="form-label">E-mail</label>
           <input class="form-control" placeholder="exemplo@exemplo.com" id="email" type="text" th:field="*{email}"/>
-          <div th:if="${#fields.hasErrors('email')}" th:errors="*email}"></div>
+          <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
         </div>
+       
         
-     
-        
-        <div class="col-md-4"><br><br>
-          
-		 <div></div>
+    	<div class="col">
+          <br>
+          <label for="formGroupExampleInput" class="form-label-email">E-mail</label><br>
+          <input type="time" id="hremail" name="hremail" min="08:00" max="19:00" th:field="*{hremail}" required>
+          <div th:if="${#fields.hasErrors('hremail')}" th:errors="*{hremail}"></div>
         </div>
       </div>
       <hr>
@@ -231,18 +235,25 @@ As informações poderão ser alteradas após o cadastro.</p>
       <input class="form-control" placeholder="Nome da companhia" id="empresa" type="text" th:field="*{empresa}"/>
       <div th:if="${#fields.hasErrors('empresa')}" th:errors="*{empresa}"></div>
       </div>
-      <div class="col-sm">
-          <label for="formGroupExampleInput" class="form-label">CNPJ</label>
-          <input class="form-control-number" placeholder="ex.  XX.XXX.XXX/YYYY-ZZ" maxlength="14" id="cnpj" type="text" th:field="*{cnpj}"/>
+       <div class="col-sm">
+          <label for="formGroupExampleInput" class="form-label">CNPJ ou CPF</label>
+          <input class="form-control-number" placeholder="ex.  00.000.000/0000-00 ou 000.000.000-00"  id="cnpj" type="text" data-mask-for-cpf-cnpj  th:field="*{cnpj}"/>
           <div th:if="${#fields.hasErrors('cnpj')}" th:errors="*{cnpj}"></div>
         </div>
-        <div class="row g-3">
+        <div class="col-sm">
+        <br>
+          <label for="formGroupExampleInput" class="form-label">CEP</label>
+          <input class="form-control-number" placeholder="ex. 00000-000" id="cep" type="text"  onblur="pesquisacep(this.value);" th:field="*{cep}"/>
+          <div th:if="${#fields.hasErrors('cep')}" th:errors="*{cep}"></div>
+        </div>
+        
         <div class="col-sm-7">
         <br>
-            <label for="formGroupExampleInput" class="form-label">Endereço</label>
+            <label for="formGroupExampleInput" class="form-label">Rua</label>
           <input class="form-control-end" placeholder="Nome da rua/avenida" id="endereco" type="text" th:field="*{endereco}"/>
           <div th:if="${#fields.hasErrors('endereco')}" th:errors="*{endereco}"></div>
         </div>
+      <div class="row g-3">
         <div class="col-sm">
         <br>
           <label for="formGroupExampleInput" class="form-label">Número</label>
@@ -251,14 +262,20 @@ As informações poderão ser alteradas após o cadastro.</p>
         </div>
       </div>
       <br>
+ 
       <div class="mb-3">
       <label for="formGroupExampleInput" class="form-label">Cidade</label>
       <input class="form-control" placeholder="Cidade onde está localizada" id="cidade" type="text" th:field="*{cidade}"/>
       <div th:if="${#fields.hasErrors('cidade')}" th:errors="*{cidade}"></div>
       </div>
       <div class="mb-3">
+      <label for="formGroupExampleInput" class="form-label">Bairro</label>
+      <input class="form-control-cargo" placeholder="Bairro onde está localizada" id="bairro" type="text" th:field="*{bairro}"/>
+      <div th:if="${#fields.hasErrors('bairro')}" th:errors="*{bairro}"></div>
+      </div>
+      <div class="mb-3">
       <label for="formGroupExampleInput" class="form-label">Estado</label>
-      <input class="form-control" placeholder="Estado onde está localizada" id="estado" type="text" th:field="*{estado}"/>
+      <input class="form-control" placeholder="UF" id="estado" type="text" th:field="*{estado}"/>
       <div th:if="${#fields.hasErrors('estado')}" th:errors="*{estado}"></div>
       </div>
       <br>
@@ -269,7 +286,7 @@ As informações poderão ser alteradas após o cadastro.</p>
       <label class="form-check-label" for="inlineCheckbox1" th:text="${produto.nome}" >nMonitor</label>
       <div th:if="${#fields.hasErrors('produtEscolhido')}" th:errors="*{produtEscolhido}"></div>
     </div>  
-  <select class="form-select-temp" multiple aria-label="multiple select example" th:field="*{level}">
+  <select class="form-select" aria-label="Default select example" th:field="*{level}">
     <option value="Alta">Alta</option>
     <option value="Normal">Normal</option>
     <option value="Baixa">Baixa</option>
@@ -286,18 +303,114 @@ As informações poderão ser alteradas após o cadastro.</p>
 </form>
 
 
+</div>
+</div>
 
-<footer>
 
-    	<script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
+    			<script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
 				<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"
 					referrerpolicy="no-referrer"></script>
 				<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 				<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 				<script src="/js/function.js"></script>
-    
-</footer>
+				
+	 				<script type="text/javascript" src="/js/jquery-1.11.1.min.js"></script>
+					<script type="text/javascript" src="/js/jquery.mask.js"></script>
+					<script type="text/javascript">
+					$(document).ready(function(){
+				    			  
+				    $('#telefone').mask('(00) 00000-0000');
+				  	$('#cep').mask('00000-000');
+					});
+					</script>
+					
+					<script>
+					$(document).on('keydown', '[data-mask-for-cpf-cnpj]', function (e) {
 
- 
-</div>
+					    var digit = e.key.replace(/\D/g, '');
+					
+					    var value = $(this).val().replace(/\D/g, '');
+					
+					    var size = value.concat(digit).length;
+					
+					    $(this).mask((size <= 11) ? '000.000.000-00' : '00.000.000/0000-00');
+					});
+					</script>
+					
+					<script>
+    
+    function limpa_formulário_cep() {
+            //Limpa valores do formulário de cep.
+            document.getElementById('endereco').value=("");
+            document.getElementById('bairro').value=("");
+            document.getElementById('cidade').value=("");
+            document.getElementById('estado').value=("");
+            
+    }
+
+    function meu_callback(conteudo) {
+        if (!("erro" in conteudo)) {
+            //Atualiza os campos com os valores.
+            document.getElementById('endereco').value=(conteudo.logradouro);
+            document.getElementById('bairro').value=(conteudo.bairro);
+            document.getElementById('cidade').value=(conteudo.localidade);
+            document.getElementById('estado').value=(conteudo.uf);
+            
+        } //end if.
+        else {
+            //CEP não Encontrado.
+            limpa_formulário_cep();
+            alert("CEP não encontrado.");
+        }
+    }
+        
+    function pesquisacep(valor) {
+
+        //Nova variável "cep" somente com dígitos.
+        var cep = valor.replace(/\D/g, '');
+
+        //Verifica se campo cep possui valor informado.
+        if (cep != "") {
+
+            //Expressão regular para validar o CEP.
+            var validacep = /^[0-9]{8}$/;
+
+            //Valida o formato do CEP.
+            if(validacep.test(cep)) {
+
+                //Preenche os campos com "..." enquanto consulta webservice.
+                document.getElementById('endereco').value="...";
+                document.getElementById('bairro').value="...";
+                document.getElementById('cidade').value="...";
+                document.getElementById('estado').value="...";
+               
+
+                //Cria um elemento javascript.
+                var script = document.createElement('script');
+
+                //Sincroniza com o callback.
+                script.src = 'https://viacep.com.br/ws/'+ cep + '/json/?callback=meu_callback';
+
+                //Insere script no documento e carrega o conteúdo.
+                document.body.appendChild(script);
+
+            } //end if.
+            else {
+                //cep é inválido.
+                limpa_formulário_cep();
+                alert("Formato de CEP inválido.");
+            }
+        } //end if.
+        else {
+            //cep sem valor, limpa formulário.
+            limpa_formulário_cep();
+        }
+    };
+
+    </script>
+					
+	
+  </body>
+</html>
+
