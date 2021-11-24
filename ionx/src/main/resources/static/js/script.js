@@ -70,5 +70,3 @@ function drop() {
     this.classList.remove('over')
 }
 
-
-
