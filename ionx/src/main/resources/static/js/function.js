@@ -194,3 +194,27 @@ function updatePosition(id) {
 			}
 		})
 }
+
+function sendEmail(id) {
+
+	axios({
+		method: 'post',
+		url: '/email/sendEmail',
+		params: {
+			prospectId: id
+
+		}
+	})
+		.then(function(response) {
+			let status = response.status;
+			if (status === 200) {
+				Swal.fire({
+					position: 'center',
+					icon: 'success',
+					title: 'Alteração salva!',
+					showConfirmButton: false,
+					timer: 950
+				})
+			}
+		})
+}

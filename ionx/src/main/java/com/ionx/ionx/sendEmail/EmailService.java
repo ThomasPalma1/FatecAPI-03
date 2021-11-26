@@ -9,8 +9,8 @@ public class EmailService {
 	
 	private String host = "smtp.gmail.com";
 	private int port = 587;
-	private String ourEmail = "ionx@gmail.com";
-	private String ourPassword = "nossa-senha";
+	private String ourEmail = "";
+	private String ourPassword = "";
 
 	private JavaMailSenderImpl javaMailSender() {
 		JavaMailSenderImpl mailSender = new JavaMailSenderImpl();

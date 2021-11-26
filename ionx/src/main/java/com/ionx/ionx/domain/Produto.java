@@ -23,7 +23,7 @@ public class Produto {
 	//Não deve ser null e nem vazio, caractere > 2 e < 160
 	@NotBlank
 	@Size(min=2, max= 160)
-	@Column(nullable = false, length = 160)
+	@Column(nullable = false, length = 160, unique = true)
 	private String nome;
 	
 	private String photo;

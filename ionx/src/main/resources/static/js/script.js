@@ -30,6 +30,7 @@ function drag() {
 function dragend() {
     // log('CARD: Stop drag! ')
     dropzones.forEach( dropzone => dropzone.classList.remove('highlight'))
+	sendEmail(this.id)
 
     // this = card
     this.classList.remove('is-dragging')
