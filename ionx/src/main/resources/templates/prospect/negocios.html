@@ -233,12 +233,12 @@
 			</div>
 
 			<div class="boards" th:each="prospect : ${prospects}"
-				th:switch="${prospect.status.id}">
-				<div class="board">
+				th:switch="${prospect.status}">
+				<div class="board" id="1" ondrop="drop(event)" ondragover="allowDrop(event)">
 					<h3 class="contato">PRIMEIRO CONTATO</h3>
 					<div class="dropzone">
-						<div class="card" draggable="true" th:id="${prospect.id}">
-							<div class="card-list-item-button" th:case="1">
+						<div class="card" draggable="true" ondragstart="drag(event)" id="cardPrim">
+							<div class="card-list-item-button" th:case="'1'">
 								<div class="btn-group dropend">
 									<a type="button" class="bi bi-three-dots"
 										data-bs-toggle="dropdown" aria-expanded="false"> <svg
@@ -251,14 +251,11 @@
 											th:href="@{/prospects/details(id=${prospect.id})}">Detalhes</a></li>
 									</ul>
 
-									<div style="display: none">
-										<span th:text="${prospect.id}"></span>
-									</div>
-
 								</div>
 								<p class="content" th:text="${prospect.nome}">Theressa Webb</p>
 								<p></p>
 								<p th:text="${prospect.cargo}">Cargo</p>
+								<span id= "idCliente" th:text="${prospect.id}" style="visibility: hidden"></span>
 								<p th:text="${prospect.empresa}">Empresa</p>
 								<div th:switch="${prospect.level}">
 									<span th:case="'Alta'" class="temperature-alta"
@@ -271,11 +268,11 @@
 						</div>
 					</div>
 				</div>
-				<div class="board">
+				<div class="board" id="2" ondrop="drop(event)" ondragover="allowDrop(event)">
 					<h3 class="necessidades">NECESSIDADES</h3>
 					<div class="dropzone">
-						<div class="card" draggable="true">
-							<div class="card-list-item-button" th:case="2">
+						<div class="card" draggable="true" ondragstart="drag(event)" id="cardSegun">
+							<div class="card-list-item-button" th:case="'2'">
 								<div class="btn-group dropend">
 									<a type="button" class="bi bi-three-dots"
 										data-bs-toggle="dropdown" aria-expanded="false"> <svg
@@ -291,6 +288,7 @@
 								<p class="content" th:text="${prospect.nome}">Theressa Webb</p>
 								<p></p>
 								<p th:text="${prospect.cargo}">Cargo</p>
+								<span id= "idCliente" th:text="${prospect.id}" style="visibility: hidden"></span>
 								<p th:text="${prospect.empresa}">Empresa</p>
 								<div th:switch="${prospect.level}">
 									<span th:case="'Alta'" class="temperature-alta"
@@ -304,11 +302,11 @@
 					</div>
 				</div>
 
-				<div class="board">
+				<div class="board" id="3" ondrop="drop(event)" ondragover="allowDrop(event)">
 					<h3 class="proposta">PROPOSTA</h3>
 					<div class="dropzone">
-						<div class="card" draggable="true">
-							<div class="card-list-item-button" th:case="3">
+						<div class="card" draggable="true" ondragstart="drag(event)" id="cardTerc">
+							<div class="card-list-item-button" th:case="'3'">
 								<div class="btn-group dropend">
 									<a type="button" class="bi bi-three-dots"
 										data-bs-toggle="dropdown" aria-expanded="false"> <svg
@@ -324,6 +322,7 @@
 								<p class="content" th:text="${prospect.nome}">Theressa Webb</p>
 								<p></p>
 								<p th:text="${prospect.cargo}">Cargo</p>
+								<span id= "idCliente" th:text="${prospect.id}" style="visibility: hidden"></span>
 								<p th:text="${prospect.empresa}">Empresa</p>
 								<div th:switch="${prospect.level}">
 									<span th:case="'Alta'" class="temperature-alta"
@@ -337,11 +336,11 @@
 					</div>
 				</div>
 
-				<div class="board">
+				<div class="board" id="4" ondrop="drop(event)" ondragover="allowDrop(event)">
 					<h3 class="vistoria">1ª VISTORIA</h3>
 					<div class="dropzone">
-						<div class="card" draggable="true">
-							<div class="card-list-item-button" th:case="4">
+						<div class="card" draggable="true" ondragstart="drag(event)" id="cardQuat">
+							<div class="card-list-item-button"th:case="'4'">
 								>
 								<div class="btn-group dropend">
 									<a type="button" class="bi bi-three-dots"
@@ -358,6 +357,7 @@
 								<p class="content" th:text="${prospect.nome}">Theressa Webb</p>
 								<p></p>
 								<p th:text="${prospect.cargo}">Cargo</p>
+								<span id= "idCliente" th:text="${prospect.id}" style="visibility: hidden"></span>
 								<p th:text="${prospect.empresa}">Empresa</p>
 								<div th:switch="${prospect.level}">
 									<span th:case="'Alta'" class="temperature-alta"
@@ -371,11 +371,11 @@
 					</div>
 				</div>
 
-				<div class="board" th:case="'5'">
+				<div class="board" id="5" ondrop="drop(event)" ondragover="allowDrop(event)">
 					<h3 class="prod-equipamento">PROD. EQUIPAMENTO</h3>
 					<div class="dropzone">
-						<div class="card" draggable="true">
-							<div class="card-list-item-button" th:case="5">
+						<div class="card" draggable="true" ondragstart="drag(event)" id="cardCin">
+							<div class="card-list-item-button" th:case="'5'">
 								<div class="btn-group dropend">
 									<a type="button" class="bi bi-three-dots"
 										data-bs-toggle="dropdown" aria-expanded="false"> <svg
@@ -391,6 +391,7 @@
 								<p class="content" th:text="${prospect.nome}">Theressa Webb</p>
 								<p></p>
 								<p th:text="${prospect.cargo}">Cargo</p>
+								<span id= "idCliente" th:text="${prospect.id}" style="visibility: hidden"></span>
 								<p th:text="${prospect.empresa}">Empresa</p>
 								<div th:switch="${prospect.level}">
 									<span th:case="'Alta'" class="temperature-alta"
@@ -404,12 +405,12 @@
 					</div>
 				</div>
 
-				<div class="board">
+				<div class="board" id="6" ondrop="drop(event)" ondragover="allowDrop(event)">
 					<h3 class="vistoria2">2ª VISTORIA</h3>
 					<div class="dropzone">
 
-						<div class="card" draggable="true">
-							<div class="card-list-item-button" th:case="6">
+						<div class="card" draggable="true" ondragstart="drag(event)" id="cardSeis">
+							<div class="card-list-item-button" th:case="'6'">
 								<div class="btn-group dropend">
 									<a type="button" class="bi bi-three-dots"
 										data-bs-toggle="dropdown" aria-expanded="false"> <svg
@@ -425,6 +426,7 @@
 								<p class="content" th:text="${prospect.nome}">Theressa Webb</p>
 								<p></p>
 								<p th:text="${prospect.cargo}">Cargo</p>
+								<span id= "idCliente" th:text="${prospect.id}" style="visibility: hidden"></span>
 								<p th:text="${prospect.empresa}">Empresa</p>
 								<div th:switch="${prospect.level}">
 									<span th:case="'Alta'" class="temperature-alta"
@@ -438,11 +440,11 @@
 					</div>
 				</div>
 
-				<div class="board">
+				<div class="board" id="7" ondrop="drop(event)" ondragover="allowDrop(event)">
 					<h3 class="implantacao">IMPLANTAÇÃO</h3>
 					<div class="dropzone">
-						<div class="card" draggable="true">
-							<div class="card-list-item-button" th:case="7">
+					<div class="card" draggable="true" ondragstart="drag(event)" id="cardSete">
+							<div class="card-list-item-button" th:case="'7'">
 								<div class="btn-group dropend">
 									<a type="button" class="bi bi-three-dots"
 										data-bs-toggle="dropdown" aria-expanded="false"> <svg
@@ -458,6 +460,7 @@
 								<p class="content" th:text="${prospect.nome}">Theressa Webb</p>
 								<p></p>
 								<p th:text="${prospect.cargo}">Cargo</p>
+								<span id= "idCliente" th:text="${prospect.id}" style="visibility: hidden"></span>
 								<p th:text="${prospect.empresa}">Empresa</p>
 								<div th:switch="${prospect.level}">
 									<span th:case="'Alta'" class="temperature-alta"
@@ -471,11 +474,11 @@
 					</div>
 				</div>
 
-				<div class="board">
+				<div class="board" id="8" ondrop="drop(event)" ondragover="allowDrop(event)">
 					<h3 class="capacitacao">CAPACITAÇÃO</h3>
 					<div class="dropzone">
-						<div class="card" draggable="true">
-							<div class="card-list-item-button" th:case="8">
+						<div class="card" draggable="true" ondragstart="drag(event)" id="cardOit">
+							<div class="card-list-item-button" th:case="'8'">
 								<div class="btn-group dropend">
 									<a type="button" class="bi bi-three-dots"
 										data-bs-toggle="dropdown" aria-expanded="false"> <svg
@@ -491,6 +494,7 @@
 								<p class="content" th:text="${prospect.nome}">Theressa Webb</p>
 								<p></p>
 								<p th:text="${prospect.cargo}">Cargo</p>
+								<span id= "idCliente" th:text="${prospect.id}" style="visibility: hidden"></span>
 								<p th:text="${prospect.empresa}">Empresa</p>
 								<div th:switch="${prospect.level}">
 									<span th:case="'Alta'" class="temperature-alta"
@@ -504,11 +508,11 @@
 					</div>
 				</div>
 
-				<div class="board">
+				<div class="board" id="9" ondrop="drop(event)" ondragover="allowDrop(event)">
 					<h3 class="suporte">SUPORTE</h3>
 					<div class="dropzone">
-						<div class="card" draggable="true">
-							<div class="card-list-item-button" th:case="9">
+						<div class="card" draggable="true" ondragstart="drag(event)" id="cardNov">
+							<div class="card-list-item-button" th:case="'9'">
 								<div class="btn-group dropend">
 									<a type="button" class="bi bi-three-dots"
 										data-bs-toggle="dropdown" aria-expanded="false"> <svg
@@ -524,6 +528,7 @@
 								<p class="content" th:text="${prospect.nome}">Theressa Webb</p>
 								<p></p>
 								<p th:text="${prospect.cargo}">Cargo</p>
+								<span id= "idCliente" th:text="${prospect.id}" style="visibility: hidden"></span>
 								<p th:text="${prospect.empresa}">Empresa</p>
 								<div th:switch="${prospect.level}">
 									<span th:case="'Alta'" class="temperature-alta"

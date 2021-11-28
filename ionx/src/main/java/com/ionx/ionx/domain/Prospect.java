@@ -9,9 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.validation.constraints.Size;
@@ -28,7 +26,7 @@ public class Prospect {
 	
 	//Não deve ser null e nem vazio, caractere > 2 e < 160
 	@Size(min=2, max= 160)
-	@Column(nullable = false, length = 160)
+	@Column(length = 160)
 	private String nome;
 	
 	private String empresa;
@@ -58,19 +56,19 @@ public class Prospect {
 	}
 	
 	@Size(min=7, max= 20)
-	@Column(nullable = false, length = 20)
+	@Column(length = 20)
     private String telefone;
 
 	@Size(min=2, max= 60)
-	@Column(nullable = false, length = 60)
+	@Column(length = 60)
     private String email;
 	
 	@Size(min=2, max= 60)
-	@Column(nullable = false, length = 160)
+	@Column(length = 160)
     private String estado;
 
 	@Size(min=2, max= 160)
-	@Column(nullable = false, length = 160)
+	@Column(length = 160)
     private String cidade;
 	
 	private LocalTime hremail;
@@ -95,24 +93,16 @@ public class Prospect {
 		this.fileType = fileType;
 	}
 
-	public Status getStatus() {
-		return status;
-	}
-
-	public void setStatus(Status status) {
-		this.status = status;
-	}
-
 	@Size(min=11, max= 20)
     private String cnpj;
 	
 	
 	@Size(min=2, max= 160)
-	@Column(nullable = false, length = 160)
+	@Column(length = 160)
 	private String produtEscolhido;
 	
 	@Size(min=2, max=20)
-	@Column(nullable = false, length = 160)
+	@Column(length = 160)
 	private String level;
 	
 	@Transient
@@ -120,10 +110,18 @@ public class Prospect {
 	
 	@Column(name="file_type")
 	private String fileType;
-	 @OneToOne
-		@JoinColumn(name = "status", referencedColumnName = "id")
-		private Status status;
 	
+	private String status;
+	
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
 	public Prospect() {}
 	 
 	 public Prospect(String nome, String empresa, String cargo,String bairro, String cep, String telefone, String email, String estado, String cidade, 

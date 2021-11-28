@@ -7,8 +7,6 @@ import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -17,7 +15,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.ionx.ionx.domain.Prospect;
-import com.ionx.ionx.domain.Status;
+
 import com.ionx.ionx.repositories.ProspectRepository;
 import com.ionx.ionx.service.ProdutoService;
 import com.ionx.ionx.service.ProspectService;
@@ -39,7 +37,7 @@ public class ProspectController {
 		HttpSession session = ((HttpServletRequest) request).getSession(true);
 		
 		String permissao = session.getAttribute("tipo").toString();
-		if(permissao.equals("1")) {
+		if(permissao.equals("1") || permissao.equals("3")) {
 			
 			return new ModelAndView("prospect/list", model);
 		}
@@ -62,7 +60,7 @@ public class ProspectController {
     	HttpSession session = ((HttpServletRequest) request).getSession(true);
     	
 		String permissao = session.getAttribute("tipo").toString();
-		if(permissao.equals("1")) {
+		if(permissao.equals("1") || permissao.equals("3")) {
 			
 			return new ModelAndView("prospect/add", model);
 		}
@@ -76,7 +74,7 @@ public class ProspectController {
     @PostMapping("/salvar")
     public String salvar(@Valid @ModelAttribute("prospect") Prospect prospect, BindingResult result, RedirectAttributes attr) {
         
-    	prospect.setStatus(new Status(1));
+    	prospect.setStatus("1");
     	if (result.hasErrors()) {
             return "/prospect/add";
         }
@@ -93,7 +91,7 @@ public class ProspectController {
     	HttpSession session = ((HttpServletRequest) request).getSession(true);
 		
 		String permissao = session.getAttribute("tipo").toString();
-		if(permissao.equals("1")) {
+		if(permissao.equals("1") || permissao.equals("3")) {
 			Prospect prospect = prospectService.recuperarPorId(id);
 	        model.addAttribute("prospect", prospect);
 	        model.addAttribute("produtos", produtoService.recuperar());
@@ -112,7 +110,7 @@ public class ProspectController {
         HttpSession session = ((HttpServletRequest) request).getSession(true);
 		
 		String permissao = session.getAttribute("tipo").toString();
-		if(permissao.equals("1")) {
+		if(permissao.equals("1") || permissao.equals("3")) {
 			prospectService.excluir(id);
 	        attr.addFlashAttribute("mensagem", "prospect excluído com sucesso.");
 			return "/produto/add_produto";
@@ -132,14 +130,9 @@ public class ProspectController {
 		return new ModelAndView("prospect/prospect_detalhes", model);
 	}
 	
-	@PostMapping("/updateStatus")
-	public ResponseEntity<?> updatePosition(@RequestParam("prospectID") String id,
-			@RequestParam("selectedStatus") String status) {
-		Prospect prospect = prospectRepository.findById(Long.parseLong(id)).get();
-		prospect.setStatus(new Status(Integer.parseInt(status)));
-		prospectRepository.save(prospect);
-
-		return new ResponseEntity<Boolean>(true, HttpStatus.OK);
+	@GetMapping("/teste")
+	public ModelAndView teste(ModelMap model) {
+		return new ModelAndView("teste", model);
 	}
 	    
 }

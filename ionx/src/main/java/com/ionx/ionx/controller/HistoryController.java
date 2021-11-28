@@ -24,11 +24,19 @@ public class HistoryController {
 	    private HistoryService historyService;
 
 	    @GetMapping("/listar")
-	    public ModelAndView listar(@PathVariable("prospectId") long prospectId, ModelMap model) {
+	    public ModelAndView listar( ServletRequest request, @PathVariable("prospectId") long prospectId, ModelMap model) {
 	        model.addAttribute("historys", historyService.recuperarPorProspect(prospectId));
 	        model.addAttribute("prospectId", prospectId);
+	        HttpSession session = ((HttpServletRequest) request).getSession(true);
 	        
-	        return new ModelAndView("/history/list", model);
+	        String permissao = session.getAttribute("tipo").toString();
+	        
+			if(permissao.equals("1") || permissao.equals("3")) {
+	        return new ModelAndView("/history/list", model);}
+			
+			else {
+				return new ModelAndView("home", model);
+				}
 	    }
 
 	    @GetMapping("/cadastro")

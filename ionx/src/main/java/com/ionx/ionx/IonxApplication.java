@@ -10,10 +10,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.ionx.ionx.domain.Positions;
-import com.ionx.ionx.domain.Status;
 import com.ionx.ionx.domain.User;
 import com.ionx.ionx.repositories.PositionsRepository;
-import com.ionx.ionx.repositories.StatusRepository;
 import com.ionx.ionx.repositories.UserRepository;
 
 @SpringBootApplication
@@ -24,8 +22,6 @@ public class IonxApplication  implements CommandLineRunner{
 	@Autowired
 	PositionsRepository positionRepository;
 	
-	@Autowired
-	StatusRepository statusRepository;
 
 	public static void main(String[] args) {
 		LocalDateTime now = LocalDateTime.now();
@@ -45,20 +41,6 @@ public class IonxApplication  implements CommandLineRunner{
 			positionRepository.saveAll(positions);
 		}
 		
-		List<Status> status = statusRepository.findAll();
-		if (status.isEmpty()) {
-			status.add(0, new Status("Primeiro Contato"));
-			status.add(1, new Status("Necessidades"));
-			status.add(2, new Status("Proposta"));
-			status.add(3, new Status("1ª Vistoria"));
-			status.add(4, new Status("PROD. EQUIPAMENTO"));
-			status.add(5, new Status("2ª VISTORIA"));
-			status.add(6, new Status("IMPLANTAÇÃO"));
-			status.add(7, new Status("CAPACITAÇÃO"));
-			status.add(8, new Status("SUPORTE"));
-			
-			statusRepository.saveAll(status);
-		}
 		
 		List<User> user = userRepository.findAll();
 		if (user.isEmpty()) {

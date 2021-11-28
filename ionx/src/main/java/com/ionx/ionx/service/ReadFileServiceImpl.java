@@ -115,6 +115,7 @@ public class ReadFileServiceImpl implements ReadFileService{
 			if(row.getCell(13).getCellType() == Cell.CELL_TYPE_STRING) {
 				prospect.setLevel(formatter.formatCellValue(row.getCell(13)));
 			}
+			 prospect.setStatus("1");
 			 prospect.setFileType(FilenameUtils.getExtension(file.getOriginalFilename()));
 			 readFileRepository.save(prospect);
 			}
