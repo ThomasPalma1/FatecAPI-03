@@ -23,11 +23,12 @@
 - [O que entregamos](#o-que-entregamos)
 - [Valor da entrega](#valor-da-entrega)
 - [Backlog e User Stories](#backlog-e-user-stories)
-- [Gráfico de Burndown](#burndown-da-sprint)
-- [Formulário de interesse](#formulario-de-interesse)
-- [Aprimoramento de busca](#aprimoramento-de-busca)
-- [Funcionamento da ferramenta](#funcionamento-da-ferramenta)
-- [Modelo Conceitual - Diagrama de Entidade e Relacionamento](#modelo-conceitual---diagrama-de-entidade-e-relacionamento)
+- [Disparo de Email](#disparo-de-email)
+- [Importação de Dados](#importacao-de-dados)
+- [Melhorias Dashboard](#melhorias-dashboard)
+- [Fluxograma - Rotas](#fluxograma---rotas)
+- [Burndown da Sprint](#burndown-da-sprint)
+
 
        
 <h2>📜Descrição</h2>
@@ -47,49 +48,65 @@ Propor para IONIC health uma plataforma de gestão de relacionamento com o clien
        
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
        
+Nessa entrega focamos em desenvolver funcionalidades solicitadas pelo cliente, como a função de importar dados para a plataforma e algumas mudanças visuais em relação aos Dashboards, para assim apresentar uma visão melhor sobre o fluxo de vendas. Desenvolvemos também, como função extra, disparo de e-mails para alterações feitas na plataforma.
+       
 
 <h2>✔Valor da entrega</h2>
  
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
 
+A importação de dados já existentes, otimiza todo o processo de transferência de negócios para a plataforma, o que a torna mais prática.
+Ao utilizar um gráfico em funil, damos ao cliente uma visão mais clara sobre em quais etapas do processo de vendas se encontram mais negócios acumulados, dando assim a possibilidade de direcionar esforços para certas etapas.
+Comunicação é essencial para todo time ter sucesso, com a funcionalidade de disparo de e-mails, todo o time fica ciente sobre os processos, o que evita erros e conflitos de informações.
 
        
 <h2>📘<i>Backlog</i> e <i>User stories</i></h2>
 
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
+       
+Dividimos essa última etapa do desenvolvimento utilizando a metodologia ágil, separando funções em User stories e as pontuando de acordo com a complexidade de cada uma.
 
-<h1 align="center"><img src="docs/em desenvolvimento.png"></h1>
+<h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/76034ef1de78fb2881e6ff7bea19cfd4ecb17929/docs/V%C3%ADdeos%20de%20entrega/Sprint4/User_stories_4.png"></h1>
+      
+
+<h2>📝Disparo de Email</h2>
+[<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)   
+       
+Quando alguma alteração importante é feita na plataforma, como a alteração de estágio da venda de algum negócio, é exibido na tela um Pop-up ao usuário perguntando se ele quer que todos sejam avisados sobre a alteração, ao confirmar, um e-mail será disparado.
+ 
+<h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/35ccd754f743235e4e5a404ff6283fb037632a65/docs/V%C3%ADdeos%20de%20entrega/Sprint4/DisparoEmailGif.gif" width=750px height=400px></h1>       
+       
+       
+<h2>🔍Importação de Dados</h2>
+[<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)   
+Ao iniciar o cadastro de um novo negócio na plataforma, o usuário poderá importar arquivos do tipo Excel, CSV ou JSON, assim as informações serão cadastradas automaticamente.       
+
+<h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/35ccd754f743235e4e5a404ff6283fb037632a65/docs/V%C3%ADdeos%20de%20entrega/Sprint4/GifImportacaoDados.gif" width=750px height=400px></h1>
+
+       
+       
+<h2>🎥Melhorias Dashboard</h2>
+       
+[<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
+
+As cores dos Dashboards agora correspondem as etapas das vendas, o que facilita a visualização. Também foi adicionado um gráfico em Funil, que mostra o número de negócios em cada uma das etapas. É possível ter a visualização dos gráficos em tela cheia e fazer download deles em formato PNG, podendo ser apresentados em reuniões por exemplo.       
+
+<h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/f1a59bcbc447f1874d570ffefcfb12d3f8b980ed/docs/V%C3%ADdeos%20de%20entrega/Sprint4/MelhoriaDashGif.gif"></h1>
+<p>Caso deseje ver o vídeo com mais qualidade, assista-o no <a href="https://www.youtube.com/watch?v=O7HI43gddnQ">YouTube!</a></p>
+       
+<h2>📌Fluxograma - Rotas</h2>
+       
+[<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
+       
+Foram feitas melhorias no direcionamento das rotas de acordo com o cargo definido pelo administrador da plataforma.
+       
+<h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/83df58b862f8df6198b1ca2b771f3bb7bef2efca/docs/V%C3%ADdeos%20de%20entrega/Sprint4/DER.png"></h1>
+       
+       
+<p align="center"><a href="https://github.com/ThomasPalma1/FatecAPI-03"><img src="https://img.shields.io/badge/Retornar%20a%20main-informational?style=for-the-badge" width="14.4%"></a></p>
        
 <h2>📊Burndown da Sprint</h2>
        
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
 
-<h1 align="center"><img src="docs/em desenvolvimento.png" width=750px height=400px></h1>
-       
-
-<h2>📝Formulário de interesse</h2>
- 
-<h1 align="center"><img src="docs/em desenvolvimento.png" width=750px height=400px></h1>       
-       
-       
-<h2>🔍Aprimoramento de busca</h2>
- 
-<h1 align="center"><img src="docs/em desenvolvimento.png" width=750px height=400px></h1>
-
-       
-       
-<h2>🎥Funcionamento da ferramenta</h2>
-       
-[<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
-      
-<h1 align="center"><img src="docs/em desenvolvimento.png"></h1>
-<p>Caso deseje ver o vídeo com mais qualidade, assista-o no <a href="https://www.youtube.com/watch?v=xvQboy56TaU&feature=youtu.be&ab_channel=ThomasPalma">YouTube!</a></p>
-       
-<h2>📌Modelo Conceitual - Diagrama de Entidade e Relacionamento</h2>
-       
-[<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
-       
-<h1 align="center"><img src="docs/em desenvolvimento.png"></h1>
-       
-       
-<p align="center"><a href="https://github.com/ThomasPalma1/FatecAPI-03"><img src="https://img.shields.io/badge/Retornar%20a%20main-informational?style=for-the-badge" width="14.4%"></a></p>
+<h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/034b60b6e2bd685fe41c10ff1fe33020d3e0bd4f/docs/V%C3%ADdeos%20de%20entrega/Sprint4/BurndownSprint_4.png" width=750px height=400px></h1>
