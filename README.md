@@ -58,7 +58,7 @@ Propor para IONIC health uma plataforma de gestão de relacionamento com o clien
 
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
 
-<h1 align="center"><img src="docs/em desenvolvimento.png"></h1>
+<h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/76034ef1de78fb2881e6ff7bea19cfd4ecb17929/docs/V%C3%ADdeos%20de%20entrega/Sprint4/User_stories_4.png"></h1>
        
 <h2>📊Burndown da Sprint</h2>
        
