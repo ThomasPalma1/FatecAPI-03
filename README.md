@@ -27,7 +27,7 @@
 - [Importação de Dados](#importacao-de-dados)
 - [Melhorias Dashboard](#melhorias-dashboard)
 - [Fluxograma - Rotas](#fluxograma---rotas)
-- [Banco de dados conceitual](#banco-de-dados-conceitual)
+- [Modelo Conceitual - Diagrama de Entidade e Relacionamento](#modelo-conceitual---diagrama-de-entidade-e-relacionamento)
 - [Burndown da Sprint](#burndown-da-sprint)
 
 
@@ -107,7 +107,7 @@ Foram feitas melhorias no direcionamento das rotas de acordo com o cargo definid
 <h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/83df58b862f8df6198b1ca2b771f3bb7bef2efca/docs/V%C3%ADdeos%20de%20entrega/Sprint4/DER.png"></h1>
        
        
-<h2>Banco de dados conceitual</h2>
+<h2>📌Modelo Conceitual - Diagrama de Entidade e Relacionamento</h2>
        
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
 
