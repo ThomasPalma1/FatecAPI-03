@@ -76,7 +76,7 @@ Dividimos essa última etapa do desenvolvimento utilizando a metodologia ágil, 
 
 Quando alguma alteração importante é feita na plataforma, como a alteração de estágio da venda de algum negócio, é exibido na tela um Pop-up ao usuário perguntando se ele quer que todos sejam avisados sobre a alteração, ao confirmar, um e-mail será disparado.
  
-<h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/entrega-04/docs/V%C3%ADdeos%20de%20entrega/Sprint4/DisparoDeEmail.gif" width=750px height=400px></h1>       
+<h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/cf9e123a2580243ba51a4be3a6acff876dcfccfc/docs/V%C3%ADdeos%20de%20entrega/Sprint4/GifDisparoEmail.gif" width=750px height=400px></h1>       
        
        
 <h2>🔍Importação de Dados</h2>
