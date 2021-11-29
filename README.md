@@ -83,7 +83,7 @@ Propor para IONIC health uma plataforma de gestão de relacionamento com o clien
 [<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
       
 <h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/f1a59bcbc447f1874d570ffefcfb12d3f8b980ed/docs/V%C3%ADdeos%20de%20entrega/Sprint4/MelhoriaDashGif.gif"></h1>
-<p>Caso deseje ver o vídeo com mais qualidade, assista-o no <a href="https://www.youtube.com/watch?v=xvQboy56TaU&feature=youtu.be&ab_channel=ThomasPalma">YouTube!</a></p>
+<p>Caso deseje ver o vídeo com mais qualidade, assista-o no <a href="https://www.youtube.com/watch?v=O7HI43gddnQ">YouTube!</a></p>
        
 <h2>📌Modelo Conceitual - Diagrama de Entidade e Relacionamento</h2>
        
