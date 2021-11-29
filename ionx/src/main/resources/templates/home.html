@@ -21,6 +21,10 @@
         crossorigin="anonymous"></script>
       <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
       <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-3d.js"></script>
+<script src="https://code.highcharts.com/modules/cylinder.js"></script>
+<script src="https://code.highcharts.com/modules/funnel3d.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
 	 
 	
 </head>
@@ -110,9 +114,9 @@
 			</center>
 			<br> <br> <br>
 
-			<center>
+			<!--'<center>
 				<h6>Nome de usuário</h6>
-			</center>
+			</center>-->
 
 			<br>
 			<ul class="nav nav-pills flex-column mb-auto">
@@ -152,8 +156,7 @@
 	
 			<a href="adminconfig" class="nav-link text-black"><svg class="bi me-2" width="16" height="16">
 					<use xlink:href="#bi bi-people" /></svg>Gerenciar perfis </a> 
-			<a href="#" class="nav-link text-black"><svg class="bi me-2" width="16"	height="16">
-					<use xlink:href="#bi bi-gear" /></svg>Configurações </a>
+			
 			<a href="#" class="nav-link text-black" onclick="logout(event)"><svg class="bi-power" width="20" height="16">
 					<use xlink:href="#bi bi-power" /></svg> Sair </a>	
 			
@@ -232,7 +235,8 @@
 			
 		
 </div>
-	<div id="container" class = "container"style="width:70%; height:400px;"></div>
+	<div id="container" class ="container"style="width:70%; height:400px;"></div><br>
+	<div id="container1" class = "container1 "style="width:64%; height:600px;"></div>
 
 
 <script>
@@ -244,6 +248,17 @@
 	        var FECHADO = 0;
 	        var contatos = 0;
 	        var produtos = 0;
+	        
+	        var quantidades1 = [];
+	        var contato1 = 0;
+	        var necessidades = 0;
+	        var proposta = 0;
+	        var vistoria1 = 0;
+	        var prodEquipe = 0;
+	        var vistoria2 = 0;
+	        var implantacao = 0;
+	        var capacitacao = 0;
+	        var suporte = 0;
 		
 				$.ajax({
 					url: "/prospectcharts",
@@ -272,6 +287,48 @@
 				            
 				            
 				        });
+				        
+				        
+				        
+				        $.each(data, function(index1, item1){
+				        	if (item1.status == "1"){
+				        		contato1++;
+				        	}
+				        	
+				        	else if (item1.status == "2"){
+				        		necessidades++;
+				        	}
+							
+				        	else if (item1.status == "3"){
+				        		proposta++;
+				        	}
+				        	
+				        	else if (item1.status == "4"){
+				        		vistoria1++
+				        	}
+				        	
+				        	else if (item1.status == "5"){
+				        		prodEquipe++
+				        	}
+				        	
+				        	else if (item1.status == "6"){
+				        		vistoria2++
+				        	}
+				        	
+				        	else if (item1.status == "7"){
+				        		implantacao++
+				        	}
+				        	
+				        	else if (item1.status == "8"){
+				        		capacitacao++
+				        	}
+				        	
+				        	else{
+				        		suporte++
+				        	}
+
+				        })
+				        
 				        var res = document.querySelector('p#res');
 			            res.innerHTML += `${contatos}`;
 			            
@@ -283,6 +340,16 @@
 				         quantidades.push(BAIXA);
 				         quantidades.push(PERDIDO);
 				         quantidades.push(FECHADO);
+				         
+				         quantidades1.push(contato1);
+				         quantidades1.push(necessidades);
+				         quantidades1.push(proposta);
+				         quantidades1.push(vistoria1);
+				         quantidades1.push(prodEquipe);
+				         quantidades1.push(vistoria2);
+				         quantidades1.push(implantacao);
+				         quantidades1.push(capacitacao);
+				         quantidades1.push(suporte);
 	
 				    }
 				
@@ -299,7 +366,7 @@
 					            title: {
 					                text: 'PRIORIDADES DAS PROSPECTS'
 					            },
-					            colors: ['#212529', '#343a40', '#495057', '#6c757d', '#adb5bd'],
+					            colors: ['#F12B2C', '#29CC97', '#FEC400', '#7DE1E0', '#90A0B7'],
 					            xAxis: {
 					                categories: ['Alta', 'Normal', 'Baixa', 'Perdido', 'Fechado']
 					            },
@@ -315,6 +382,60 @@
 					            }]
 					        });
 					    });
+				
+				document.addEventListener('DOMContentLoaded', function () {
+			        const chart = Highcharts.chart('container1', {
+			            chart: {
+			            	type: 'funnel3d',
+			                options3d: {
+			                    enabled: true,
+			                    alpha: 10,
+			                    depth: 50,
+			                    viewDistance: 50
+			                }
+			            },
+			            title: {
+			                text: 'FUNIL DE VENDAS'
+			            }, 
+			            plotOptions: {
+			                series: {
+			                    dataLabels: {
+			                        enabled: true,
+			                        format: '<b>{point.name}</b> ({point.y:,.0f})',
+			                        allowOverlap: true,
+			                        y: 10
+			                    },
+			                    neckWidth: '30%',
+			                    neckHeight: '25%',
+			                    width: '80%',
+			                    height: '80%'
+			                }
+			            },
+			            colors: ['#F97800', '#E5F900', '#00CCF9', '#00F919', '#8B00F9', '#F9003C', '#8BBCF4', '#2D3748', '#598325'],
+			            xAxis: {
+			                categories: ['1º Contato', 'Necessidades', 'Proposta', '1ª Vistoria', 'Prod. Equipamento', '2ª Vistoria', 'Implantação', 'Capacitação', 'Suporte']
+			            },
+			            yAxis: {
+			                title: {
+			                    text: 'Quantidade'
+			                }
+			            },
+			            series: [{
+			              name: 'Quantidade',
+			              data: [
+			            	  ['1º Contato', quantidades1[0]],
+			            	  ['Necessidades', quantidades1[1]],
+			            	  ['Proposta', quantidades1[2]],
+			            	  ['1ª Vistoria', quantidades1[3]],
+			            	  ['Prod. Equipamento', quantidades1[4]],
+			            	  ['2ª Vistoria', quantidades1[5]],
+			            	  ['Implantação', quantidades1[6]],
+			            	  ['Capacitação', quantidades1[7]],
+			            	  ['Suporte', quantidades1[8]]],
+			              colorByPoint: true
+			            }]
+			        });
+			    });
 				
 				
 		        $.ajax({

@@ -14,6 +14,7 @@
 <link href="../css/index.css" rel="stylesheet">
 <link href="../css/sidebars.css" rel="stylesheet">
 <link href="../css/cadas_prospect.css" rel="stylesheet">
+<link href="../css/includefile.css" rel="stylesheet">
 <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/dashboard/">
 
 
@@ -89,9 +90,9 @@
 			</center>
 			<br> <br> <br>
 
-			<center>
+			<!--'<center>
 				<h6>Nome de usuário</h6>
-			</center>
+			</center>-->
 
 			<br>
 			<ul class="nav nav-pills flex-column mb-auto">
@@ -129,10 +130,9 @@
 			</ul>
 			<hr>
 	
-			<a href="#" class="nav-link text-black"><svg class="bi me-2" width="16" height="16">
+			<a href="adminconfig" class="nav-link text-black"><svg class="bi me-2" width="16" height="16">
 					<use xlink:href="#bi bi-people" /></svg>Gerenciar perfis </a> 
-			<a href="#" class="nav-link text-black"><svg class="bi me-2" width="16"	height="16">
-					<use xlink:href="#bi bi-gear" /></svg>Configurações </a>
+			
 			<a href="#" class="nav-link text-black" onclick="logout(event)"><svg class="bi-power" width="20" height="16">
 					<use xlink:href="#bi bi-power" /></svg> Sair </a>	
 			
@@ -177,15 +177,71 @@
 
 <h1 class="title">Adicionar Prospect</h1>
 <br>
-<p class="text">Preencha os campos abaixo para cadastrar um novo prospect na plataforma.<br>
+<p class="text">Preencha os campos abaixo para cadastrar um novo prospect na plataforma ou importe uma lista de um arquivo existente.<br>
 As informações poderão ser alteradas após o cadastro.</p>
 <br>
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-upload" viewBox="0 0 16 16">
+  <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"></path>
+  <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z"></path>
+</svg> Importar</button>
+
+<br><br>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Upload de Arquivo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                
+				<div class="wrapper">
+				  <div class="container-file">
+				   
+				    <div class="upload-container">
+				      <div class="border-container">
+				<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="#54C5CE" class="bi bi-cloud-arrow-up" viewBox="0 0 16 16">
+				  <path fill-rule="evenodd" d="M7.646 5.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 6.707V10.5a.5.5 0 0 1-1 0V6.707L6.354 7.854a.5.5 0 1 1-.708-.708l2-2z"/>
+				  <path d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383zm.653.757c-.757.653-1.153 1.44-1.153 2.056v.448l-.445.049C2.064 6.805 1 7.952 1 9.318 1 10.785 2.23 12 3.781 12h8.906C13.98 12 15 10.988 15 9.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 4.825 10.328 3 8 3a4.53 4.53 0 0 0-2.941 1.1z"/>
+				</svg>
+				        <!--<input type="file" id="file-upload">-->
+				        <p>Importar arquivo 
+				          <b>Excel, CSV ou JSON</b> do seu computador</p>
+				         <form action="" th:action="@{'/fileupload'}" th:object="${prospect}" method="post" enctype="multipart/form-data">
+				        <div class="form-group">
+				         <br>
+				        <input type="file" class="form-control" id="file" name="file" th:field="*{file}">
+				        
+				        </div>
+				        <br>	     
+				
+				      </div>
+				    </div>
+				  </div>
+				</div>
+				
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+                 </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
   <form th:action="@{/prospects/salvar}" th:method="${prospect.id} == 0 ? post : put" th:object="${prospect}" class="prospect">
   	 <input id="id" type="hidden" th:field="*{id}"/>
    	<div class="mb-3">
      	 <label for="formGroupExampleInput" class="form-label">Nome do Contato</label>
-      	<input class="form-control" placeholder="Digite seu primeiro nome"  id="nome" type="text" th:field="*{nome}"/>
+      	<input class="form-control" placeholder="Digite seu nome completo"  id="nome" type="text" th:field="*{nome}"/>
       	<div th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></div>
     </div>
     
@@ -198,7 +254,7 @@ As informações poderão ser alteradas após o cadastro.</p>
       <div class="row g-3">
         <div class="col">
           <label for="formGroupExampleInput" class="form-label">Contato</label>
-          <input class="form-control" placeholder="(99)9 9999-9999" maxlength="15" name="phone" id="telefone" type="text" th:field="*{telefone}"/>
+          <input class="form-control" placeholder="(99)9 9999-9999" name="phone" id="telefone" type="text" th:field="*{telefone}"/>
           <div th:if="${#fields.hasErrors('telefone')}" th:errors="*{telefone}"></div>
         </div>
         
@@ -236,33 +292,46 @@ As informações poderão ser alteradas após o cadastro.</p>
       <div th:if="${#fields.hasErrors('empresa')}" th:errors="*{empresa}"></div>
       </div>
       <div class="col-sm">
-          <label for="formGroupExampleInput" class="form-label">CNPJ</label>
-          <input class="form-control-number" placeholder="ex.  XX.XXX.XXX/YYYY-ZZ" maxlength="14" id="cnpj" type="text" th:field="*{cnpj}"/>
+          <label for="formGroupExampleInput" class="form-label">CNPJ ou CPF</label>
+          <input class="form-control-number" placeholder="ex.  00.000.000/0000-00 ou 000.000.000-00"  id="cnpj" type="text" data-mask-for-cpf-cnpj  th:field="*{cnpj}"/>
           <div th:if="${#fields.hasErrors('cnpj')}" th:errors="*{cnpj}"></div>
-        </div>
-        <div class="row g-3">
-        <div class="col-sm-7">
-        <br>
-            <label for="formGroupExampleInput" class="form-label">Endereço</label>
-          <input class="form-control-end" placeholder="Nome da rua/avenida" id="endereco" type="text" th:field="*{endereco}"/>
-          <div th:if="${#fields.hasErrors('endereco')}" th:errors="*{endereco}"></div>
         </div>
         <div class="col-sm">
         <br>
+          <label for="formGroupExampleInput" class="form-label">CEP</label>
+          <input class="form-control-number" placeholder="ex. 00000-000" id="cep" type="text"  onblur="pesquisacep(this.value);" th:field="*{cep}"/>
+          <div th:if="${#fields.hasErrors('cep')}" th:errors="*{cep}"></div>
+        </div>
+        
+        <div class="col-sm-7">
+        <br>
+            <label for="formGroupExampleInput" class="form-label">Rua</label>
+          <input class="form-control-end" placeholder="Nome da rua/avenida" id="endereco" type="text" th:field="*{endereco}"/>
+          <div th:if="${#fields.hasErrors('endereco')}" th:errors="*{endereco}"></div>
+        </div>
+      <div class="row g-3">
+        <div class="col-sm">
+        <br>
           <label for="formGroupExampleInput" class="form-label">Número</label>
-          <input class="form-control-number" placeholder="ex. 123" id="numero" type="text" th:field="*{numero}"/>
-          <div th:if="${#fields.hasErrors('numero')}" th:errors="*{numero}"></div>
+          <input class="form-control-number" placeholder="ex. 123" id="numeroCasa" type="text" th:field="*{numeroCasa}"/>
+          <div th:if="${#fields.hasErrors('numeroCasa')}" th:errors="*{numeroCasa}"></div>
         </div>
       </div>
       <br>
+ 
       <div class="mb-3">
       <label for="formGroupExampleInput" class="form-label">Cidade</label>
       <input class="form-control" placeholder="Cidade onde está localizada" id="cidade" type="text" th:field="*{cidade}"/>
       <div th:if="${#fields.hasErrors('cidade')}" th:errors="*{cidade}"></div>
       </div>
       <div class="mb-3">
+      <label for="formGroupExampleInput" class="form-label">Bairro</label>
+      <input class="form-control-cargo" placeholder="Bairro onde está localizada" id="bairro" type="text" th:field="*{bairro}"/>
+      <div th:if="${#fields.hasErrors('bairro')}" th:errors="*{bairro}"></div>
+      </div>
+      <div class="mb-3">
       <label for="formGroupExampleInput" class="form-label">Estado</label>
-      <input class="form-control" placeholder="Estado onde está localizada" id="estado" type="text" th:field="*{estado}"/>
+      <input class="form-control" placeholder="UF" id="estado" type="text" th:field="*{estado}"/>
       <div th:if="${#fields.hasErrors('estado')}" th:errors="*{estado}"></div>
       </div>
       <br>
@@ -273,6 +342,7 @@ As informações poderão ser alteradas após o cadastro.</p>
       <label class="form-check-label" for="inlineCheckbox1" th:text="${produto.nome}" >nMonitor</label>
       <div th:if="${#fields.hasErrors('produtEscolhido')}" th:errors="*{produtEscolhido}"></div>
     </div>  
+    
   <select class="form-select" aria-label="Default select example" th:field="*{level}">
     <option value="Alta">Alta</option>
     <option value="Normal">Normal</option>
@@ -290,8 +360,19 @@ As informações poderão ser alteradas após o cadastro.</p>
 </form>
 
 
+</div>
+</div>
 
-<footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+$('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+    })
+</script>
 
     			<script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
 				<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"
@@ -300,8 +381,102 @@ As informações poderão ser alteradas após o cadastro.</p>
 
 				<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 				<script src="/js/function.js"></script>
-    
-</footer>
+				
+	 				<script type="text/javascript" src="/js/jquery-1.11.1.min.js"></script>
+					<script type="text/javascript" src="/js/jquery.mask.js"></script>
+					<script type="text/javascript">
+					$(document).ready(function(){
+				    			  
+				    $('#telefone').mask('(00) 00000-0000');
+				    $('#cep').mask('00000-000');
+					});
+					</script>
+					
+					<script>
+					$(document).on('keydown', '[data-mask-for-cpf-cnpj]', function (e) {
 
- 
-</div>
+					    var digit = e.key.replace(/\D/g, '');
+					
+					    var value = $(this).val().replace(/\D/g, '');
+					
+					    var size = value.concat(digit).length;
+					
+					    $(this).mask((size <= 11) ? '000.000.000-00' : '00.000.000/0000-00');
+					});
+					</script>
+					
+					<script>
+    
+    function limpa_formulário_cep() {
+            //Limpa valores do formulário de cep.
+            document.getElementById('endereco').value=("");
+            document.getElementById('bairro').value=("");
+            document.getElementById('cidade').value=("");
+            document.getElementById('estado').value=("");
+            
+    }
+
+    function meu_callback(conteudo) {
+        if (!("erro" in conteudo)) {
+            //Atualiza os campos com os valores.
+            document.getElementById('endereco').value=(conteudo.logradouro);
+            document.getElementById('bairro').value=(conteudo.bairro);
+            document.getElementById('cidade').value=(conteudo.localidade);
+            document.getElementById('estado').value=(conteudo.uf);
+            
+        } //end if.
+        else {
+            //CEP não Encontrado.
+            limpa_formulário_cep();
+            alert("CEP não encontrado.");
+        }
+    }
+        
+    function pesquisacep(valor) {
+
+        //Nova variável "cep" somente com dígitos.
+        var cep = valor.replace(/\D/g, '');
+
+        //Verifica se campo cep possui valor informado.
+        if (cep != "") {
+
+            //Expressão regular para validar o CEP.
+            var validacep = /^[0-9]{8}$/;
+
+            //Valida o formato do CEP.
+            if(validacep.test(cep)) {
+
+                //Preenche os campos com "..." enquanto consulta webservice.
+                document.getElementById('endereco').value="...";
+                document.getElementById('bairro').value="...";
+                document.getElementById('cidade').value="...";
+                document.getElementById('estado').value="...";
+               
+
+                //Cria um elemento javascript.
+                var script = document.createElement('script');
+
+                //Sincroniza com o callback.
+                script.src = 'https://viacep.com.br/ws/'+ cep + '/json/?callback=meu_callback';
+
+                //Insere script no documento e carrega o conteúdo.
+                document.body.appendChild(script);
+
+            } //end if.
+            else {
+                //cep é inválido.
+                limpa_formulário_cep();
+                alert("Formato de CEP inválido.");
+            }
+        } //end if.
+        else {
+            //cep sem valor, limpa formulário.
+            limpa_formulário_cep();
+        }
+    };
+
+    </script>
+					
+	
+  </body>
+</html>

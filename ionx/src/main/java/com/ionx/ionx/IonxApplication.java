@@ -21,6 +21,7 @@ public class IonxApplication  implements CommandLineRunner{
 	
 	@Autowired
 	PositionsRepository positionRepository;
+	
 
 	public static void main(String[] args) {
 		LocalDateTime now = LocalDateTime.now();
@@ -39,6 +40,7 @@ public class IonxApplication  implements CommandLineRunner{
 			
 			positionRepository.saveAll(positions);
 		}
+		
 		
 		List<User> user = userRepository.findAll();
 		if (user.isEmpty()) {

@@ -23,8 +23,6 @@ function logar(event) {
 }
 
 function cadastrar(event) {
-	console.log("cadastrando");
-
 	let nomeInput = document.getElementById("input-nome").value;
 	let sobrenomeInput = document.getElementById("input-sobrenome").value;
 	let emailInput = document.getElementById("input-email").value;
@@ -145,26 +143,6 @@ function allUsers(event) {
 						let tbody = document.getElementById("usersList");
 						tbody.appendChild(tr);
 					}
-
-
-
-
-
-
-
-					// <tr>
-					// 	<th scope="row">2</th>
-					// 	<td>Floyd Miles</td>
-					// 	<td>albert.cruz@example.com</td>
-					// 	<td>
-					// 		<select class="form-select" >
-					// 			<option selected>Status...</option>
-					// 			<option value="1">Administrador</option>
-					// 			<option value="2">Vendedor</option>
-					// 			<option value="3">Gerente</option>
-					// 		</select>
-					// 	</td>
-					// </tr>
 				})
 		})
 		.catch(function(error) {
@@ -193,4 +171,50 @@ function updatePosition(id) {
 				})
 			}
 		})
+}
+
+function sendEmail(id) {
+
+	Swal.fire({
+		title: 'Enviar e-mail?',
+		text: "Você deseja notificar os integrantes desta Prospect via e-mail?",
+		icon: 'question',
+		showCancelButton: true,
+		confirmButtonColor: '#3085d6',
+		cancelButtonColor: '#d33',
+		confirmButtonText: 'Sim, eu desejo!',
+		cancelButtonText: 'Não, não quero!'
+	}).then((result) => {
+		if (result.isConfirmed) {
+			axios({
+				method: 'post',
+				url: '/email/sendEmail',
+				params: {
+					prospectId: id
+
+				}
+			})
+				.then(function(response) {
+					let status = response.status;
+					if (status === 200) {
+						Swal.fire({
+							position: 'center',
+							icon: 'success',
+							title: 'E-mail enviado!',
+							showConfirmButton: false,
+							timer: 950
+						})
+					}
+					else {
+						Swal.fire({
+							position: 'center',
+							icon: 'error',
+							title: 'Ops! O e-mail não foi enviado...',
+							showConfirmButton: false,
+							timer: 950
+						})
+					}
+				})
+		}
+	})
 }

@@ -2,8 +2,6 @@ package com.ionx.ionx.controller;
 
 import java.util.List;
 
-import javax.persistence.OrderBy;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.http.HttpStatus;

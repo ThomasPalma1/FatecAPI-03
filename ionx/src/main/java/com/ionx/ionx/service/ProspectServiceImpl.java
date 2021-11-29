@@ -1,6 +1,7 @@
 package com.ionx.ionx.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.validation.Valid;
 
@@ -10,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.ionx.ionx.dao.ProspectDao;
 import com.ionx.ionx.domain.Prospect;
+import com.ionx.ionx.repositories.ProspectRepository;
 
 @Service
 @Transactional
@@ -17,6 +19,8 @@ public class ProspectServiceImpl implements ProspectService {
 	
 	@Autowired
     private ProspectDao prospectDao;
+	@Autowired
+    private ProspectRepository prospectRepository;
 
 	@Override
 	public void salvar(Prospect prospect) {
@@ -30,6 +34,12 @@ public class ProspectServiceImpl implements ProspectService {
 		
 	}
 
+	 @Override
+	    public Optional<Prospect> findById(long id) {
+	        return prospectRepository.findById(id);
+	    }
+
+	
 	@Override
 	@Transactional(readOnly = true)
 	public Prospect recuperarPorId(long id) {
@@ -45,6 +55,12 @@ public class ProspectServiceImpl implements ProspectService {
 	public void excluir(long id) {
 		prospectDao.excluir(id);
 	}
+	
+
+    @Override
+    public Prospect saveProspect(Prospect prospect) {
+       return prospectRepository.save(prospect);
+    }
 
 	@Override
 	public void atualizar(@Valid long id) {

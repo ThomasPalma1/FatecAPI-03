@@ -1,7 +1,7 @@
 .container{
 	background-color: #ffff;
 	width: 80%;
-	height: 1850%;
+	height: 2200%;
 	padding-left: 30px;
 	margin-left: 16%;
 	
@@ -32,7 +32,7 @@ form.prospect{
 }
 
 .form-control{
-	width: 65%;
+	width: 50%;
 }
 
 input[type="time" i] {
@@ -68,7 +68,7 @@ label.hora{
 
 .form-control-end{
 	display: block;
-    width: 89%;
+    width: 66%;
     padding: .375rem .75rem;
     font-size: 1rem;
     font-weight: 400;
@@ -84,7 +84,7 @@ label.hora{
 
 .form-control-number{
 	display: block;
-    width: 35%;
+    width: 12%;
     padding: .375rem .75rem;
     font-size: 1rem;
     font-weight: 400;
@@ -116,7 +116,7 @@ label.hora{
 
 input#estado.form-control{
 	display: block;
-    width: 38%;
+    width: 5%;
     padding: .375rem .75rem;
     font-size: 1rem;
     font-weight: 400;
@@ -130,9 +130,11 @@ input#estado.form-control{
     
 }
 
+
+
 input#cidade.form-control{
 	display: block;
-    width: 38%;
+    width: 34%;
     padding: .375rem .75rem;
     font-size: 1rem;
     font-weight: 400;
@@ -161,6 +163,23 @@ input#cnpj.form-control-number{
   	margin-right: 80%;
     
 }
+
+input#email.form-control{
+	display: block;
+    width: 65%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+  	margin-right: 80%;
+    
+}
+
 
 
 .row.g-3{

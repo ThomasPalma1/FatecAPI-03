@@ -1,0 +1,96 @@
+.wrapper {
+  margin: auto;
+  max-width: 700px;
+  padding-top: 5px;
+  text-align: center;
+}
+
+.container-file {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  /*border: 0.5px solid rgba(130, 130, 130, 0.25);*/
+  /*box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 
+              0 0 0 1px rgba(0, 0, 0, 0.1);*/
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 110%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 0.3rem;
+    outline: 0;
+}
+
+h1 {
+  color: #130f40;
+  font-family: 'Varela Round', sans-serif;
+  letter-spacing: -.5px;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+
+.upload-container {
+  background-color: rgb(239, 239, 239);
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.border-container {
+  border: 5px dashed rgba(198, 198, 198, 0.65);
+/*   border-radius: 4px; */
+  padding: 20px;
+}
+
+.border-container p {
+  color: #130f40;
+  font-weight: 600;
+  font-size: 1.1em;
+  letter-spacing: -1px;
+  margin-top: 30px;
+  margin-bottom: 0;
+  opacity: 0.65;
+}
+
+#file-browser {
+  text-decoration: none;
+  color: rgb(22,42,255);
+  border-bottom: 3px dotted rgba(22, 22, 255, 0.85);
+}
+
+#file-browser:hover {
+  color: rgb(0, 0, 255);
+  border-bottom: 3px dotted rgba(0, 0, 255, 0.85);
+}
+
+.icons {
+  color: #95afc0;
+  opacity: 0.55;
+}
+
+.close {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+  
+}
+
+#file.form-control{
+	width:100%;
+	
+}
+
+.btn.btn-primary{
+	margin-left: 2%;
+	background-color: #54C5CE;
+	border-color: #54C5CE;
+}

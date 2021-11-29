@@ -1,5 +1,6 @@
 package com.ionx.ionx.controller;
 
+
 import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -14,13 +15,16 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.ionx.ionx.domain.Prospect;
+
+import com.ionx.ionx.repositories.ProspectRepository;
 import com.ionx.ionx.service.ProdutoService;
 import com.ionx.ionx.service.ProspectService;
 
 @Controller
 @RequestMapping("prospects")
 public class ProspectController {
-	
+	@Autowired
+	ProspectRepository prospectRepository;
 	@Autowired
 	private ProspectService prospectService;
 	@Autowired
@@ -33,7 +37,7 @@ public class ProspectController {
 		HttpSession session = ((HttpServletRequest) request).getSession(true);
 		
 		String permissao = session.getAttribute("tipo").toString();
-		if(permissao.equals("1")) {
+		if(permissao.equals("1") || permissao.equals("3")) {
 			
 			return new ModelAndView("prospect/list", model);
 		}
@@ -54,9 +58,9 @@ public class ProspectController {
     public ModelAndView preSalvar(ServletRequest request, ModelMap model, @ModelAttribute("prospect") Prospect prospect){
     	model.addAttribute("produtos", produtoService.recuperar());
     	HttpSession session = ((HttpServletRequest) request).getSession(true);
-		
+    	
 		String permissao = session.getAttribute("tipo").toString();
-		if(permissao.equals("1")) {
+		if(permissao.equals("1") || permissao.equals("3")) {
 			
 			return new ModelAndView("prospect/add", model);
 		}
@@ -69,7 +73,9 @@ public class ProspectController {
     //Metódo para salvar --> Tipo POST
     @PostMapping("/salvar")
     public String salvar(@Valid @ModelAttribute("prospect") Prospect prospect, BindingResult result, RedirectAttributes attr) {
-        if (result.hasErrors()) {
+        
+    	prospect.setStatus("1");
+    	if (result.hasErrors()) {
             return "/prospect/add";
         }
 
@@ -85,7 +91,7 @@ public class ProspectController {
     	HttpSession session = ((HttpServletRequest) request).getSession(true);
 		
 		String permissao = session.getAttribute("tipo").toString();
-		if(permissao.equals("1")) {
+		if(permissao.equals("1") || permissao.equals("3")) {
 			Prospect prospect = prospectService.recuperarPorId(id);
 	        model.addAttribute("prospect", prospect);
 	        model.addAttribute("produtos", produtoService.recuperar());
@@ -104,7 +110,7 @@ public class ProspectController {
         HttpSession session = ((HttpServletRequest) request).getSession(true);
 		
 		String permissao = session.getAttribute("tipo").toString();
-		if(permissao.equals("1")) {
+		if(permissao.equals("1") || permissao.equals("3")) {
 			prospectService.excluir(id);
 	        attr.addFlashAttribute("mensagem", "prospect excluído com sucesso.");
 			return "/produto/add_produto";
@@ -124,7 +130,9 @@ public class ProspectController {
 		return new ModelAndView("prospect/prospect_detalhes", model);
 	}
 	
-    
-    
-    
+	@GetMapping("/teste")
+	public ModelAndView teste(ModelMap model) {
+		return new ModelAndView("teste", model);
+	}
+	    
 }

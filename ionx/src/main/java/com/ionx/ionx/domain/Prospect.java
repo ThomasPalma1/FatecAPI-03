@@ -11,9 +11,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
+import javax.persistence.Transient;
 import javax.validation.constraints.Size;
+
+import org.springframework.web.multipart.MultipartFile;
 
 @Entity
 @Table(name = "prospect")
@@ -24,71 +25,126 @@ public class Prospect {
 	private long id;
 	
 	//Não deve ser null e nem vazio, caractere > 2 e < 160
-	@NotBlank
 	@Size(min=2, max= 160)
-	@Column(nullable = false, length = 160)
+	@Column(length = 160)
 	private String nome;
 	
-	//Não deve estar vazio, não deve ser null
-	@NotBlank
-    @Column(nullable = false)
-    private String empresa;
+	private String empresa;
 
+	private String cargo;
 	
-	@NotBlank
-    @Column(nullable = false)
-    private String cargo;
+    private String bairro;
+    
+    private String numeroCasa;
+	
+	public String getBairro() {
+		return bairro;
+	}
 
-	@NotBlank
+	public void setBairro(String bairro) {
+		this.bairro = bairro;
+	}
+
+    private String cep;
+
+	public String getCep() {
+		return cep;
+	}
+
+	public void setCep(String cep) {
+		this.cep = cep;
+	}
+	
 	@Size(min=7, max= 20)
-	@Column(nullable = false, length = 20)
+	@Column(length = 20)
     private String telefone;
-	
-	@NotBlank
+
 	@Size(min=2, max= 60)
-	@Column(nullable = false, length = 60)
+	@Column(length = 60)
     private String email;
 	
-	@NotBlank
 	@Size(min=2, max= 60)
-	@Column(nullable = false, length = 160)
+	@Column(length = 160)
     private String estado;
-	
-	@NotBlank
+
 	@Size(min=2, max= 160)
-	@Column(nullable = false, length = 160)
+	@Column(length = 160)
     private String cidade;
 	
-	@NotNull
 	private LocalTime hremail;
 	
-	@NotNull
 	private LocalTime hrtel;
 	
-	@NotBlank
-    @Column(nullable = false)
     private String endereco;
 	
+	public MultipartFile getFile() {
+		return file;
+	}
 
-	
-    @Column(nullable = false)
-    private String numero;
-    
-	@NotBlank
-	@Size(min=11, max= 14)
-    @Column(nullable = false)
+	public void setFile(MultipartFile file) {
+		this.file = file;
+	}
+
+	public String getFileType() {
+		return fileType;
+	}
+
+	public void setFileType(String fileType) {
+		this.fileType = fileType;
+	}
+
+	@Size(min=11, max= 20)
     private String cnpj;
 	
 	
-	@NotBlank
 	@Size(min=2, max= 160)
-	@Column(nullable = false, length = 160)
+	@Column(length = 160)
 	private String produtEscolhido;
 	
-	@NotBlank
 	@Size(min=2, max=20)
-	@Column(nullable = false, length = 160)
+	@Column(length = 160)
 	private String level;
+	
+	@Transient
+	private MultipartFile file;
+	
+	@Column(name="file_type")
+	private String fileType;
+	
+	private String status;
+	
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public Prospect() {}
+	 
+	 public Prospect(String nome, String empresa, String cargo,String bairro, String cep, String telefone, String email, String estado, String cidade, 
+			String endereco,String cnpj,String numeroCasa, String produtEscolhido, String level, String fileType) {
+		 super();
+		 this.nome = nome;
+		 this.empresa = empresa;
+		 this.cargo = cargo;
+		 this.bairro = bairro;
+		 this.cep = cep;
+		 this.telefone = telefone;
+		 this.email = email;
+		 this.estado = estado;
+		 this.cidade = cidade;
+		 this.endereco = endereco;
+		 this.cnpj = cnpj;
+		 this.numeroCasa = numeroCasa;
+		 this.produtEscolhido = produtEscolhido;
+		 this.level = level;
+		 this.fileType = fileType;
+	 }
+	
+	
 	
 	public String getLevel() {
 		return level;
@@ -182,13 +238,6 @@ public class Prospect {
         this.endereco = endereco;
     }
     
-    public String getNumero() {
-        return numero;
-    }
-
-    public void setNumero(String numero) {
-        this.numero = numero;
-    }
     
     public LocalTime getHremail() {
         return hremail;
@@ -222,5 +271,13 @@ public class Prospect {
     public void setHistorys(List<History> historys) {
         this.historys = historys;
     }
+
+	public String getNumeroCasa() {
+		return numeroCasa;
+	}
+
+	public void setNumeroCasa(String numeroCasa) {
+		this.numeroCasa = numeroCasa;
+	}
 }
 	

@@ -5,6 +5,8 @@
 
     
     <title>Contatos</title>
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <link rel="sortcut icon" href="../imgs/logo.ico" type="image/x-icon"/>
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sidebars/">
@@ -15,6 +17,7 @@
 <link href="../css/index.css" rel="stylesheet">
 <link href="../css/sidebars.css" rel="stylesheet">
 <link href="../css/contacts.css" rel="stylesheet">
+
 <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/dashboard/">
 
 
@@ -196,6 +199,11 @@
                 <span th:text="${mensagem}">mensagem</span>
             </div>
         </div>
+        
+
+        
+        <br><br>
+        
  	<div class="users" th:each="prospect : ${prospects}">
    		<div class="card-contatos">
       		<div class="card-body">
@@ -242,6 +250,15 @@
 </main>
 
 
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+$('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+    })
+</script>
 
 
 <footer>
@@ -249,10 +266,9 @@
 				<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"
 					referrerpolicy="no-referrer"></script>
 				<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
 				<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 				<script src="/js/function.js"></script>
-			</footer>
+			
 
 </footer>
 

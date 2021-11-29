@@ -1,74 +1,33 @@
-/** help */
-function log(message) {
-    console.log('> ' + message)
+function allowDrop(ev) {
+	ev.preventDefault();
 }
 
-/** app */
-const cards = document.querySelectorAll('.card')
-const dropzones = document.querySelectorAll('.dropzone')
-
-
-/** our cards */
-cards.forEach(card => {
-    card.addEventListener('dragstart', dragstart)
-    card.addEventListener('drag', drag)
-    card.addEventListener('dragend', dragend)
-})
-
-function dragstart() {
-    // log('CARD: Start dragging ')
-    dropzones.forEach( dropzone => dropzone.classList.add('highlight'))
-
-    // this = card
-    this.classList.add('is-dragging')
+function drag(ev) {
+	ev.dataTransfer.setData("text", ev.target.id);
 }
 
-function drag() {
-    // log('CARD: Is dragging ')
-}
+function drop(ev) {
+	ev.preventDefault();
 
-function dragend() {
-    // log('CARD: Stop drag! ')
-    dropzones.forEach( dropzone => dropzone.classList.remove('highlight'))
+	var data = ev.dataTransfer.getData("text");
+	let cardId = data.split("card-").pop();
 
-    // this = card
-    this.classList.remove('is-dragging')
-}
+	ev.currentTarget.appendChild(document.getElementById(data));
 
-/** place where we will drop cards */
-dropzones.forEach( dropzone => {
-    dropzone.addEventListener('dragenter', dragenter)
-    dropzone.addEventListener('dragover', dragover)
-    dropzone.addEventListener('dragleave', dragleave)
-    dropzone.addEventListener('drop', drop)
-})
+	let dados = ev.currentTarget.id
 
-function dragenter() {
-    // log('DROPZONE: Enter in zone ')
-}
+	//let statusID = document.getElementById('cardStatus').value
+	fetch("http://localhost:8080/edit/" + cardId, {
+		method: "PUT",
+		headers: { "Content-Type": "application/json" },
+		body: JSON.stringify({
+			status: dados,
+		})
 
-function dragover() {
-    // this = dropzone
-    this.classList.add('over')
+	}).then((resposta) => resposta.json())
+		.then((data) => console.log(data))
 
-    // get dragging card
-    const cardBeingDragged = document.querySelector('.is-dragging')
-
-    // this = dropzone
-    this.appendChild(cardBeingDragged)
-}
-
-function dragleave() {
-    // log('DROPZONE: Leave ')
-    // this = dropzone
-    this.classList.remove('over')
+	sendEmail(cardId);
 
 }
-
-function drop() {
-    // log('DROPZONE: dropped ')
-    this.classList.remove('over')
-}
-
-
 

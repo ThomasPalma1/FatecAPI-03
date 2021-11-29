@@ -38,7 +38,7 @@ public class ProdutoController {
 		HttpSession session = ((HttpServletRequest) request).getSession(true);
 		
 		String permissao = session.getAttribute("tipo").toString();
-		if(permissao.equals("1")) {
+		if(permissao.equals("1")|| permissao.equals("2")) {
 			
 			return new ModelAndView("produto/list_produto", model);
 		}
@@ -54,7 +54,7 @@ public class ProdutoController {
     	HttpSession session = ((HttpServletRequest) request).getSession(true);
 		
 		String permissao = session.getAttribute("tipo").toString();
-		if(permissao.equals("1")) {
+		if(permissao.equals("1") || permissao.equals("2")) {
 			
 			return "/produto/add_produto";
 		}
@@ -99,7 +99,7 @@ public class ProdutoController {
 		HttpSession session = ((HttpServletRequest) request).getSession(true);
 		
 		String permissao = session.getAttribute("tipo").toString();
-		if(permissao.equals("1")) {
+		if(permissao.equals("1") || permissao.equals("2")) {
 			Produto produto = produtoService.recuperarPorId(id);
 			model.addAttribute("produto", produto);
 			return new ModelAndView("/produto/add_produto", model);
@@ -119,7 +119,7 @@ public class ProdutoController {
 		HttpSession session = ((HttpServletRequest) request).getSession(true);
 		
 		String permissao = session.getAttribute("tipo").toString();
-		if(permissao.equals("1")) {
+		if(permissao.equals("1") || permissao.equals("2")) {
 			produtoService.excluir(id);
 			attr.addFlashAttribute("mensagem", "Produto excluído com sucesso.");
 			return "redirect:/produtos/listar";
