@@ -70,7 +70,7 @@ Dividimos essa última etapa do desenvolvimento utilizando a metodologia ágil, 
       
 
 <h2>📝Disparo de Email</h2>
-[<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
+[<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)   
        
 Quando alguma alteração importante é feita na plataforma, como a alteração de estágio da venda de algum negócio, é exibido na tela um Pop-up ao usuário perguntando se ele quer que todos sejam avisados sobre a alteração, ao confirmar, um e-mail será disparado.
  
@@ -78,7 +78,7 @@ Quando alguma alteração importante é feita na plataforma, como a alteração 
        
        
 <h2>🔍Importação de Dados</h2>
-[<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)
+[<img src="https://svgshare.com/i/WF7.svg" width = "40%">](#menu-de-navegação)   
 Ao iniciar o cadastro de um novo negócio na plataforma, o usuário poderá importar arquivos do tipo Excel, CSV ou JSON, assim as informações serão cadastradas automaticamente.       
 
 <h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/35ccd754f743235e4e5a404ff6283fb037632a65/docs/V%C3%ADdeos%20de%20entrega/Sprint4/GifImportacaoDados.gif" width=750px height=400px></h1>
