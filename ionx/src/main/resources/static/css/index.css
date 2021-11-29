@@ -1,0 +1,27 @@
+body {
+margin: 0;
+font-family: Roboto,sans-serif;
+font-size: 16px;
+font-weight: 400;
+line-height: 19px;
+letter-spacing: 0em;
+text-align: left;
+background-color: #E5E5E5;
+}
+
+h1 {
+  font-size: 34px;
+} 
+
+h2 {
+  font-size: 21px;
+} 
+
+p {
+  font-size:  16px;
+}
+
+li {
+   font-size:  16px; 
+
+}

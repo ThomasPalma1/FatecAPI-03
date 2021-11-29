@@ -1,0 +1,202 @@
+b{
+  color: black;
+  font-weight: bold;
+}
+
+.card-body{
+  padding-top: 10px;
+}
+
+.card-contatos{
+  width: 95%;
+  height: 150px;
+  margin-right: 5%;
+  margin-bottom: 2%;
+  background-color: white;
+  
+ 
+}
+
+.card-contatos-title{
+  text-align: left;
+  color: #323C47;
+  font-family: Mulish,sans-serif;
+  font-size: 17px;
+  font-style: normal;
+  line-height: 49px;
+  padding-left: 15px;
+  font-style: bold;
+  font-weight: 700;
+
+}
+
+.card-contatos-number{
+  top:-34px;
+  text-align: left;
+  position: relative; 
+  color: #707683;
+  font-weight: bold;
+  font-family: Mulish,sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 49px;
+  padding-left: 15px;
+
+}
+
+.card-contatos-email{
+  top:-77px;
+  text-align: left;
+  position: relative; 
+  color: #707683;
+  font-weight: bold;
+  font-family: Mulish,sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 49px;
+  padding-left: 15px;
+
+}
+
+.card-contatos-empresa{
+  top:-172px;
+  text-align: center;
+  position: relative; 
+  color: #707683;
+  font-weight: bold;
+  font-family: Mulish,sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 49px;
+  padding-right: 15px;
+  margin-left: 200px;
+
+}
+
+.card-contatos-cargo{
+  top:-210px;
+
+  text-align: center;
+  position: relative; 
+  color: #707683;
+  font-weight: bold;
+  font-family: Mulish,sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 49px;
+  padding-right: 15px;
+  margin-left: 200px;
+
+}
+
+
+.users{
+  overflow-y: hidden;
+}
+
+.btn-group, .btn-group-vertical {
+    position: relative;
+    display: inline-flex;
+    vertical-align: middle;
+    float: right;
+}
+
+.temperature-alta {
+  position: relative;
+  text-align: right;
+  top: -257px;
+  left: 96%;
+  width: 54px;
+  height: 24px;
+  background: #F12B2C;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 45%;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.temperature-normal {
+  position: relative;
+  text-align: right;
+  top: -257px;
+  left: 96%;
+  width: 54px;
+  height: 24px;
+  background: #29CC97;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 45%;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.temperature-baixa {
+  position: relative;
+  text-align: right;
+  top: -257px;
+  left: 96%;
+  width: 54px;
+  height: 24px;
+  background: #FEC400;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 45%;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.temperature-fechado {
+  position: relative;
+  text-align: right;
+  top: -257px;
+  left: 96%;
+  width: 54px;
+  height: 24px;
+  background: #7DE1E0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 45%;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.temperature-perdido {
+  position: relative;
+  text-align: right;
+  top: -257px;
+  left: 96%;
+  width: 54px;
+  height: 24px;
+  background: #90A0B7	;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 45%;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+
+
+a {
+    color: #212529;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #6c757d;
+}

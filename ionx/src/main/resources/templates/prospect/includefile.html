@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-br">
+
+<head>
+<meta charset="utf-8">
+<title> ImportExcel </title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<h2>Upload do Arquivo</h2>
+			<div class="alert alert-success alert-dismissible fode show" role="alert" th:if="${successmessage}">
+				<button type="button" class="close" data-dismimss="alert" aria-label="Close">
+				 <span>&times;</span>
+				</button>
+				<strong th:text="${successmessage}"></strong>
+			</div>
+			
+			<div class="alert alert-success alert-dismissible fode show" role="alert" th:if="${errormessage}">
+				<button type="button" class="close" data-dismimss="alert" aria-label="Close">
+				 <span>&times;</span>
+				</button>
+				<strong th:text="${errormessage}"></strong>
+			</div>
+			
+			<form action="" th:action="@{'/fileupload'}" th:object="${prospect}" method="post" enctype="multipart/form-data">
+				<div class="form-group">
+					<label for="fileupload">Upload do Arquivo (Excel, CSV ou JSON)</label>
+					<input type="file" class="form-control" id="file" name="file" th:field="*{file}">
+					
+				</div>
+				<button type="submit" class="btn btn-primary">Enviar</button>
+			</form>
+
+		</div>
+		
+	</div>
+</div>
+
+
+</body>
+
+</html>
