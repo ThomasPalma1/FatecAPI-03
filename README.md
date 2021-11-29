@@ -67,14 +67,14 @@ Propor para IONIC health uma plataforma de gestão de relacionamento com o clien
 <h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/034b60b6e2bd685fe41c10ff1fe33020d3e0bd4f/docs/V%C3%ADdeos%20de%20entrega/Sprint4/BurndownSprint_4.png" width=750px height=400px></h1>
        
 
-<h2>📝Formulário de interesse</h2>
+<h2>📝Disparo de Email</h2>
  
-<h1 align="center"><img src="docs/em desenvolvimento.png" width=750px height=400px></h1>       
+<h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/35ccd754f743235e4e5a404ff6283fb037632a65/docs/V%C3%ADdeos%20de%20entrega/Sprint4/GifImportacaoDados.gif" width=750px height=400px></h1>       
        
        
-<h2>🔍Aprimoramento de busca</h2>
+<h2>🔍Importação de Dados</h2>
  
-<h1 align="center"><img src="docs/em desenvolvimento.png" width=750px height=400px></h1>
+<h1 align="center"><img src="https://github.com/ThomasPalma1/FatecAPI-03/blob/35ccd754f743235e4e5a404ff6283fb037632a65/docs/V%C3%ADdeos%20de%20entrega/Sprint4/DisparoEmailGif.gif" width=750px height=400px></h1>
 
        
        
