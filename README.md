@@ -73,6 +73,7 @@ Propor para IONIC health uma plataforma de gestão de relacionamento com o clien
         <td style="text-align: center; vertical-align: middle;">Sprint 4</td> 
         <td style="text-align: center; vertical-align: middle;">Funcionalidades extras como formulário de interesse para os clientes. Aprimoramento de busca dentro da plataforma e de filtros de busca.</td>
         <td style="text-align: center; vertical-align: middle;">28/11/2021</td>
+            <td style="text-align: center; vertical-align: middle;"> <p><a href="https://github.com/ThomasPalma1/FatecAPI-03/tree/entrega-04">Visualizar</a></p> </td>
         <td style="text-align: center; vertical-align: middle;"> <p></p> </td>
     </tr>
 </table>
